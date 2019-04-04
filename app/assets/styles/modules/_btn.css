@@ -1,0 +1,16 @@
+.btn {
+  color: #fff;
+  padding: 0.41rem 2.18rem;
+  background-color: rgba(255, 255, 255, 0.33);
+  font-weight: 300;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  line-height: 0;
+  &--large {
+    font-size: 2rem;
+  }
+  &:hover {
+    background-color: $mainBlue;
+  }
+}
