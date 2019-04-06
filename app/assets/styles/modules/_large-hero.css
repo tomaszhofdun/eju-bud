@@ -1,12 +1,31 @@
 .large-hero {
   color: #fff;
   position: relative;
-  &__text-content {
+  &__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+  }
+  &__frame {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
-    width: 100%;
+    left: 19%;
+    width: 63%;
+    height: 55%;
+    background-color: rgba(86, 78, 86, 0.75);
+    border-radius: 17px;
+  }
+
+  &__text-content {
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    left: 54px;
+    width: 77%;
     text-align: center;
   }
   &__title {
