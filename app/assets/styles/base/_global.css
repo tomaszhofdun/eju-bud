@@ -11,3 +11,12 @@ img {
 * {
   box-sizing: border-box;
 }
+
+.float {
+  float: left;
+  &-small {
+    @mixin atMedium {
+      float: left;
+    }
+  }
+}
