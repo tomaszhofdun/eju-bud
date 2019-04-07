@@ -1,6 +1,9 @@
 .large-hero {
   color: #fff;
   position: relative;
+  &__image {
+    height: 100%;
+  }
   &__bar {
     position: absolute;
     top: 0;
