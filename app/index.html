@@ -21,11 +21,17 @@
   </head>
   <body>
     <!-- górny footer gdzie są dane kontaktowe, facebook i data -->
-    <div class="top-footer"></div>
+    <div class="top-footer" style="height:42px; background-color:black; ">
+      top-footer
+    </div>
     <!-- div dla headera -->
-    <div class="header">header</div>
+    <div class="header" style="height:120px; background-color:black;">
+      header
+    </div>
     <!-- div dla menu -->
-    <div class="navbar">navbar</div>
+    <div class="navbar" style="height:45px; background-color:black;">
+      navbar
+    </div>
 
     <!-- sekcja główna -->
     <div class="wrapper">
@@ -38,11 +44,17 @@
                 src="./assets/images/large-hero__bar.jpg"
                 alt=""
               />
-              <img
-                class="large-hero__image"
-                src="assets/images/tape-measure.jpg"
-                alt="tło dla slidera"
-              />
+              <picture>
+                <source
+                  media="(max-width:512px)"
+                  srcset="assets/images/tape-measure-small.jpg"
+                />
+                <img
+                  class="large-hero__image"
+                  src="assets/images/tape-measure.jpg"
+                  alt="tło dla slidera"
+                />
+              </picture>
               <div class="large-hero__frame">
                 <div class="large-hero__text-content">
                   <h1 class="large-hero__title">
@@ -61,11 +73,19 @@
               class="mini-gallery row__small-6 row__gutter-left row__gutter-right row__gutter-bottom"
             >
               <!-- background-image -->
-              <img
-                class="responsive"
-                src="./assets/images/mirror2.jpg"
-                alt=""
-              />
+              <picture>
+                <source
+                  media="(max-width:800px)"
+                  srcset="assets/images/mirror.jpg"
+                />
+                <img
+                  class="responsive"
+                  src="./assets/images/mirror2.jpg"
+                  alt=""
+                />
+              </picture>
+
+              <a class="mini-gallery__button" href="">GALERIA</a>
             </div>
             <div
               class="mini-gallery row__small-6 row__gutter-left row__gutter-right row__gutter-bottom "
