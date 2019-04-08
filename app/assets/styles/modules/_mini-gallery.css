@@ -7,25 +7,26 @@
     text-decoration: none;
     background-color: rgba(0, 176, 240, 0.75);
     color: #fff;
-    padding: 0.1rem 1.6rem;
+    padding: 5% 8%;
     display: inline-block;
     border-radius: 8px;
-    left: 0;
+    left: 50%;
     top: 50%;
-    font-size: 1.5rem;
-    font-weight: 300;
-    width: 100%;
+    font-size: 1.2rem;
     text-align: center;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-out;
+    z-index: 1;
+
+    &:hover {
+      background-color: rgba(0, 176, 240, 0.95);
+    }
   }
-  @mixin atMedium {
-  }
+
+
 }
+
 .responsive {
-  width: 100%;
-  height: auto;
+
   display: block;
-}
-.percent {
-  background-color: yellow;
-  height: 50%;
 }

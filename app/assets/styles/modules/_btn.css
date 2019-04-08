@@ -7,19 +7,23 @@
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.3s ease-out;
+
   @mixin atMedium {
     padding: 0.41rem 2.18rem;
   }
+
   @mixin atSmall {
     padding: 1rem 1rem;
   }
 
   &--large {
     font-size: 1.5rem;
+
     @mixin atSmall {
       font-size: 2rem;
     }
   }
+
   &:hover {
     background-color: $mainBlue;
   }
