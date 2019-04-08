@@ -1,0 +1,31 @@
+.mini-gallery {
+  position: relative;
+  text-align: center;
+
+  &__button {
+    position: absolute;
+    text-decoration: none;
+    background-color: rgba(0, 176, 240, 0.75);
+    color: #fff;
+    padding: 0.1rem 1.6rem;
+    display: inline-block;
+    border-radius: 8px;
+    left: 0;
+    top: 50%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+  }
+  @mixin atMedium {
+  }
+}
+.responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.percent {
+  background-color: yellow;
+  height: 50%;
+}

@@ -1,0 +1,6 @@
+.main-section {
+  @mixin atMedium {
+    max-height: 435px;
+    overflow: hidden;
+  }
+}
