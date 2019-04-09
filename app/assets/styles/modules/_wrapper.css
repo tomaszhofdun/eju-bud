@@ -1,10 +1,23 @@
 .wrapper {
   /* background-color: green; */
-
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+
   @mixin atMedium {
+    width: 760px;
+
+  }
+
+  @mixin atLarge {
+    width: 960px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  @mixin atXLarge {
+    width: 1150px;
     padding-left: 18px;
     padding-right: 18px;
   }

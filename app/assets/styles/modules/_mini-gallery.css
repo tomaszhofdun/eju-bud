@@ -2,6 +2,22 @@
   position: relative;
   text-align: center;
 
+  &--md-none {
+    display: none;
+
+    @mixin atMedium {
+      display: block;
+    }
+  }
+
+  &--sm-none {
+    display: none;
+
+    @mixin atSmall {
+      display: block;
+    }
+  }
+
   &__button {
     position: absolute;
     text-decoration: none;
@@ -21,6 +37,8 @@
     &:hover {
       background-color: rgba(0, 176, 240, 0.95);
     }
+
+
   }
 
 
