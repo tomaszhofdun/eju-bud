@@ -20,19 +20,24 @@
 
   &__button {
     position: absolute;
-    text-decoration: none;
-    background-color: rgba(0, 176, 240, 0.75);
-    color: #fff;
-    padding: 5% 8%;
-    display: inline-block;
-    border-radius: 8px;
+    width: 100%;
     left: 50%;
-    top: 50%;
-    font-size: 1.2rem;
-    text-align: center;
-    transform: translateX(-50%);
-    transition: all 0.3s ease-out;
-    z-index: 1;
+    top: 76%;
+    transform: translate(-50%, 0);
+    border-radius: 0;
+    text-decoration: none;
+    padding: 0.41rem 0rem;
+    font-size: 1.8rem;
+
+    @mixin atSmall {
+      width: 98%;
+    }
+
+    @mixin atMedium {
+      width: 96%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     &:hover {
       background-color: rgba(0, 176, 240, 0.95);

@@ -1,6 +1,6 @@
 .btn {
   color: #fff;
-  padding: 0.5rem 0.7rem;
+
   background-color: rgba(255, 255, 255, 0.33);
   font-weight: 300;
   display: inline-block;
@@ -8,19 +8,29 @@
   border-radius: 8px;
   transition: all 0.3s ease-out;
 
-  @mixin atMedium {
-    padding: 0.41rem 2.18rem;
-  }
 
-  @mixin atSmall {
-    padding: 1rem 1rem;
-  }
 
+
+
+  /* duży przycisk */
   &--large {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    padding: 0.5rem 0.7rem;
 
     @mixin atSmall {
       font-size: 2rem;
+      padding: 0.41rem 2.18rem;
+    }
+  }
+
+  /* mały przycisk */
+  &--small {
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+
+    @mixin atSmall {
+      font-size: 1.2rem;
+      padding: .3rem .5rem;
     }
   }
 

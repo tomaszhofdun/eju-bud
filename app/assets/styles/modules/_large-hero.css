@@ -10,6 +10,7 @@
     height: auto;
     opacity: 0.9;
   }
+
   &__frame {
     position: absolute;
     background-color: rgba(86, 78, 86, 0.75);
@@ -26,6 +27,7 @@
       width: 78%;
       height: 74%;
     }
+
     @mixin atMedium {
       top: 52%;
       left: 18%;
@@ -38,19 +40,24 @@
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
-    left: 11%;
-    width: 78%;
+    left: 0;
+    width: 100%;
     text-align: center;
+
+    @mixin atSmall {
+      width: 78%;
+      left: 11%;
+    }
   }
+
   &__title {
     font-weight: 300;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
     max-width: 38.3125rem;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.4rem;
-    @mixin atSmall {
-      font-size: 2rem;
-    }
+    font-size: 1.9rem;
+
+
   }
 }

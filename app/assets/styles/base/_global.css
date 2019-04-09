@@ -14,7 +14,10 @@ img {
 
 .float {
   float: left;
-  &-small {
+
+  &-medium {
+    float: none;
+
     @mixin atMedium {
       float: left;
     }
