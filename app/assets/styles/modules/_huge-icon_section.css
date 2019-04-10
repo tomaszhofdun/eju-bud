@@ -1,7 +1,14 @@
 .huge-icon-section {
     &_div {
+        text-align: center;
+
         &_icon {
-            padding: 4rem;
+            width: 32%;
+        }
+
+        &_title {
+            font-size: 2rem;
+            color: $mainBlue;
         }
     }
 }
