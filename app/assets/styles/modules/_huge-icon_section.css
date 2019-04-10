@@ -1,0 +1,7 @@
+.huge-icon-section {
+    &_div {
+        &_icon {
+            padding: 4rem;
+        }
+    }
+}

@@ -2,6 +2,8 @@
   /* background-color: green; */
   margin-left: auto;
   margin-right: auto;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
 
   @mixin atMedium {
     width: 760px;

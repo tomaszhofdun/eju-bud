@@ -3,9 +3,9 @@
 @import "base/_mixins";
 @import "base/_global";
 @import "modules/_large-hero";
-
 @import "modules/_btn";
 @import "modules/_wrapper";
 @import "modules/_row";
 @import "modules/_main-section";
 @import "modules/_mini-gallery";
+@import "modules/_huge-icon_section";
