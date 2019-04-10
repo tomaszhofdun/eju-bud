@@ -18,6 +18,21 @@
     }
   }
 
+  &__container {
+    overflow: hidden;
+
+    & img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
   &__button {
     position: absolute;
     width: 100%;
@@ -42,14 +57,5 @@
     &:hover {
       background-color: rgba(0, 176, 240, 0.95);
     }
-
-
   }
-
-
-}
-
-.responsive {
-
-  display: block;
 }
