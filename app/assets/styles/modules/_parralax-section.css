@@ -1,0 +1,5 @@
+.parralax-section {
+    & img {
+        width: 100%;
+    }
+}
