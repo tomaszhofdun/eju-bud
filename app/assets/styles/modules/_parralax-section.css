@@ -1,5 +1,24 @@
 .parralax-section {
+    height: 100%;
+
     & img {
         width: 100%;
+
+        display: block;
     }
+
+    &__bg-1 {
+        background: #fff url("/assets/images/jackhammer-1380.jpg") no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        height: 632px;
+    }
+
+    &__bg-2 {
+        background: #fff url("/assets/images/worker-jump-1380.jpg") no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        height: 632px;
+    }
+
 }

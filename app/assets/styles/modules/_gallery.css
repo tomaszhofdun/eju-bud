@@ -1,0 +1,47 @@
+.gallery {
+    box-sizing: border-box;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    border: 1px solid darkgray;
+    float: left;
+}
+
+.background1 {
+    box-sizing: border-box;
+    width: 198px;
+    height: 302px;
+    background: url("/assets/images/mirror.jpg") center center;
+    background-size: cover;
+    float: left;
+    margin-right: 2px;
+
+}
+
+.background2 {
+    box-sizing: border-box;
+    width: 98px;
+    height: 150px;
+    background: url("/assets/images/mirror.jpg") center center;
+    background-size: cover;
+    float: left;
+    margin-bottom: 2px;
+}
+
+.background3 {
+    box-sizing: border-box;
+    width: 98px;
+    height: 150px;
+    background: url("/assets/images/mirror.jpg") center center;
+    background-size: cover;
+    margin-bottom: 2px;
+    float: left;
+}
+
+.gallery__title {
+    box-sizing: border-box;
+    clear: both;
+    text-align: center;
+    padding: 16px;
+    color: darkgray;
+}
