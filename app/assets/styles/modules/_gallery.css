@@ -1,10 +1,26 @@
-.gallery {
+.gallery-thumbnails {
     box-sizing: border-box;
     width: 300px;
     height: 350px;
     margin: 20px;
     border: 1px solid darkgray;
-    float: left;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 4em;
+        margin: 0.67em 0;
+        text-align: center;
+        color: #292828;
+        font-weight: 300;
+    }
+
+    &__subtitle {
+        box-sizing: border-box;
+        clear: both;
+        text-align: center;
+        padding: 16px;
+        color: darkgray;
+    }
 }
 
 .background1 {
@@ -36,12 +52,4 @@
     background-size: cover;
     margin-bottom: 2px;
     float: left;
-}
-
-.gallery__title {
-    box-sizing: border-box;
-    clear: both;
-    text-align: center;
-    padding: 16px;
-    color: darkgray;
 }
