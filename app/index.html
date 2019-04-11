@@ -108,8 +108,10 @@
   <div class="parralax-section">
     <div class="parralax-section__img">
       <picture>
-        <source media="(max-width:799px)" srcset="assets/images/house-building-300.jpg" type="">
-        <img src="./assets/images/house-building-1380.jpg" alt="" />
+        <source media="(min-width:1380px)" srcset="assets/images/house-building-1920.jpg 1920w">
+        <source media="(min-width:990px)" srcset="assets/images/house-building-1380.jpg 1380w">
+        <source media="(min-width:640px)" srcset="assets/images/house-building-990.jpg 990w">
+        <img srcset="assets/images/house-building-640.jpg 640w" alt="" />
       </picture>
       <h1 class="parralax-section__title">
         Kompleksowa usługa, nie musisz się martwić o nic

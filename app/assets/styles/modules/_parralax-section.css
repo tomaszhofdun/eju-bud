@@ -34,7 +34,41 @@
     }
 
     &__bg-1 {
-        background: #fff url("/assets/images/jackhammer-1380.jpg") no-repeat;
+
+        @mixin atMedium {
+            background: #fff url("/assets/images/jackhammer-990.jpg") no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 632px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @mixin atLarge {
+            background: #fff url("/assets/images/jackhammer-1380.jpg") no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 632px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @mixin atXLarge {
+            background: #fff url("/assets/images/jackhammer-1920.jpg") no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 632px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        background: #fff url("/assets/images/jackhammer-640.jpg") no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center center;
