@@ -1,0 +1,21 @@
+.form {
+    background-color: $formBlue;
+    color: #fff;
+    padding: 2rem 6rem;
+
+    &__title {
+        font-weight: 300;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    &__textarea {
+        border-radius: 17px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+
+    &__labels {
+        color: mainGrey;
+    }
+}
