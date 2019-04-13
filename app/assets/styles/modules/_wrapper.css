@@ -4,6 +4,11 @@
   margin-right: auto;
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
+  overflow: hidden;
+
+  &__infinite {
+    width: 5000px;
+  }
 
   @mixin atMedium {
     width: 760px;

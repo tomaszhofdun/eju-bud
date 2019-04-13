@@ -1,10 +1,62 @@
 .gallery-thumbnails {
-    box-sizing: border-box;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    border: 1px solid darkgray;
-    margin: 0 auto;
+    position: relative;
+
+    &__button-left {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+
+        left: 4px;
+
+        @mixin atLarge {
+            left: 23px;
+        }
+
+        & img {
+            &:hover {
+                transition: all .5s ease-out;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__button-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+
+        right: 0;
+
+        @mixin atLarge {
+            right: 23px;
+        }
+
+        & img {
+            &:hover {
+                transition: all .5s ease-out;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+
+    &__container_outer {
+        float: left;
+    }
+
+    &__container {
+        box-sizing: border-box;
+        width: 300px;
+        height: 350px;
+        border: 1px solid darkgray;
+        margin: 0 auto;
+
+    }
 
     &__title {
         font-size: 4em;

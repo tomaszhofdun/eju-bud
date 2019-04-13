@@ -33,6 +33,14 @@
       }
     }
 
+    &-sm {
+      padding-left: 0;
+
+      @mixin atSmall {
+        padding-left: 0.237rem;
+      }
+    }
+
   }
 
   &__gutter-top {
@@ -60,6 +68,8 @@
     }
 
   }
+
+
 
   &__medium-12 {
     @mixin atMedium {
