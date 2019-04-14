@@ -1,21 +1,66 @@
 .form {
     background-color: $formBlue;
     color: #fff;
-    padding: 2rem 6rem;
+    padding: 2rem 2rem;
+    margin-top: 60px;
+    overflow: hidden;
+    font-weight: 100;
+    font-size: 1.4rem;
+
+    @mixin atSmall {
+        padding: 2rem 6rem;
+    }
 
     &__title {
-        font-weight: 300;
+        font-weight: 100;
         text-align: center;
-        font-size: 4rem;
+
+        @mixin atMedium {
+            font-size: 5rem;
+
+        }
     }
 
     &__textarea {
-        border-radius: 17px;
-        border: 2px solid #ccc;
-        border-radius: 4px;
+        border: 1px solid #ccc;
+        border-radius: 13px;
+        padding: 8% 8%;
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+
+        @mixin atMedium {
+            width: 80%;
+        }
     }
 
     &__labels {
-        color: mainGrey;
+        color: $mainGrey;
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    &__input {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    &__button {
+        margin-top: 20px;
+        background-color: $mainGreen;
+        width: 100%;
+        padding: 14px;
+        color: #fff;
+        border: none;
+
+        &:hover {
+            border: 1px solid #fff;
+        }
     }
 }

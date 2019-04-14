@@ -188,30 +188,47 @@
           <p class="gallery-thumbnails__subtitle">Coś tutaj napisz o tym albumie...</p>
         </div>
       </div>
+      <div class="gallery-thumbnails__container_outer row__gutter-left row__gutter-right">
+        <div class="gallery-thumbnails__container">
+          <a href="https://www.google.pl">
+            <div class="background1"></div>
+          </a>
+          <a href="https://www.google.pl">
+            <div class="background2"></div>
+          </a>
+          <a href="https://www.google.pl">
+            <div class="background3"></div>
+          </a>
+          <p class="gallery-thumbnails__subtitle">Coś tutaj napisz o tym albumie...</p>
+        </div>
+      </div>
     </div>
   </div>
   <!-- następna sekcja -->
 
-  <div class="wrapper">
-    <form class="form" action="#">
-      <h1 class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
 
-      <label class="form_labels" for="message">Twoja wiadomość*</label>
-      <textarea class="form__textarea" rows="15" cols="50" type="text" id="message" name="message" placeholder="Your name.."></textarea>
+  <form class="form" action="#">
+    <h1 class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
+    <div class="row__medium-8">
+      <label class="form__labels" for="message">Twoja wiadomość*</label>
+      <textarea class="form__textarea" rows="8" cols="65" type="text" id="message" name="message" placeholder="Witam, chciałbym zapytać......"></textarea>
+    </div>
+    <div class="row__medium-4">
+      <label class="form__labels" for="fname">Imię</label>
+      <input class="form__input" type="text" id="fname" name="fname">
 
-      <label for="fname">Imię</label>
-      <input class="form__" rows="15" cols="50" type="email" id="fname" name="fname">
+      <label class="form__labels" for="email">Twój email*</label>
+      <input class="form__input" type="email" id="email" name="email">
 
-      <label for="email">Twój email*</label>
-      <input class="form__" rows="15" cols="50" type="email" id="mesdsage" name="medssage">
+      <label class="form__labels" for="tel">Nr telefonu</label>
+      <input class="form__input" type="tel" id="tel" name="tel">
 
-      <input class="form__" rows="15" cols="50" type="tel" id="messaage" name="mesasage">
+      <input class="form__button" type="submit">
+    </div>
 
-      <input class="form__" rows="15" cols="50" type="submit">
 
+  </form>
 
-    </form>
-  </div>
 
   <!-- następna sekcja -->
 </body>
