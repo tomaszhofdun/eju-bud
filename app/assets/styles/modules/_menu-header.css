@@ -1,4 +1,4 @@
-.header {
+.menu-header {
     background-color: $mainGrey;
 
     &::after {
