@@ -6,12 +6,9 @@
   padding-bottom: 0.875rem;
   overflow: hidden;
 
-  &__infinite {
-    width: 5000px;
-  }
-
-  &__maxWidth {
-    width: 100%;
+  &--noTopPadding {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @mixin atMedium {
@@ -29,4 +26,13 @@
     padding-left: 18px;
     padding-right: 18px;
   }
+
+  &__infinite {
+    width: 5000px;
+  }
+
+  &__maxWidth {
+    width: 100%;
+  }
+
 }

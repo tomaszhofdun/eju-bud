@@ -21,13 +21,31 @@
     top-footer
   </div>
   <!-- div dla headera -->
-  <div class="header" style="height:120px; background-color:black;">
+  <div class="header2" style="height:120px; background-color:black;">
     header
   </div>
   <!-- div dla menu -->
-  <div class="navbar">
-    <img src="./assets/images/temp/navbar.jpg" alt="" />
+
+  <header class="wrapper__maxWidth header">
+    <div class="wrapper wrapper--noTopPadding">
+
+
+      <nav class="header__nav">
+        <a href=""><img class="header__icon-home" src="/assets/images/icons/home-nav.svg" alt=""></a>
+        <ul>
+          <li><a href="">OFERTA</a></li>
+          <li><a href="">NASZE REALIZACJE</a></li>
+          <li><a href="">CENNIK</a></li>
+          <li><a href="">GALERIA</a></li>
+          <li><a href="">KONTAKT</a></li>
+        </ul>
+      </nav>
+  </header>
   </div>
+
+
+  </header>
+
 
   <!-- sekcja główna -->
   <div class="wrapper">
@@ -213,7 +231,7 @@
       <label class="form__labels" for="message">Twoja wiadomość*</label>
       <textarea class="form__textarea" rows="8" cols="65" type="text" id="message" name="message" placeholder="Witam, chciałbym zapytać......"></textarea>
     </div>
-    <div class="row__medium-4">
+    <div class="row__medium-4 form__container">
       <label class="form__labels" for="fname">Imię</label>
       <input class="form__input" type="text" id="fname" name="fname">
 
@@ -230,7 +248,7 @@
 
   <!-- następna sekcja -->
   <div class="wrapper__maxWidth">
-    <footer class="footer">
+    <footer class="footer row">
       <div class="row__medium-4">
         <ul class="footer__list">
           <li>Oferta</li>
@@ -246,7 +264,16 @@
       <div class="row__medium-4">
         <p class="footer__follows">Śledź nas na <img class="footer__facebook" src="/assets/images/icons/facebook.png" alt=""></p>
       </div>
+
+
+
+
     </footer>
+    <div class="row row__medium-12">
+      <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> <span>Icons made by Smashicons from www.flaticon.com</span> </div>
+
+    </div>
+
   </div>
 </body>
 

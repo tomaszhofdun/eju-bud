@@ -7,6 +7,15 @@
     font-weight: 100;
     font-size: 1.4rem;
 
+    &__container {
+
+        margin-bottom: 30px;
+
+        @mixin atLarge {
+            margin-bottom: 100px;
+        }
+    }
+
     @mixin atSmall {
         padding: 2rem 6rem;
     }
