@@ -1,0 +1,30 @@
+.footer {
+    background-color: $mainGrey;
+    height: 13.625rem;
+    /* text-align: center; */
+    color: #fff;
+    font-style: italic;
+
+
+    &__list {
+        /* list-style: none inside url("/assets/images/icons/flower.png"); */
+        margin-top: 2px;
+
+        li {
+            position: relative;
+            list-style-type: none;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: -16px;
+                width: 14px;
+                height: 14px;
+                background-image: url('/assets/images/icons/flower.png');
+            }
+        }
+
+
+    }
+}

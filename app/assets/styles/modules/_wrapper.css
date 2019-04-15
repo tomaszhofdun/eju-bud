@@ -10,6 +10,10 @@
     width: 5000px;
   }
 
+  &__maxWidth {
+    width: 100%;
+  }
+
   @mixin atMedium {
     width: 760px;
   }
