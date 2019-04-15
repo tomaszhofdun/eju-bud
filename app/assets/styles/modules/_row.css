@@ -79,6 +79,14 @@
     }
   }
 
+  &__medium-10 {
+    @mixin atMedium {
+      float: left;
+      width: 83.33%;
+      /* background-color: rgba(255, 145, 145, 1); */
+    }
+  }
+
   &__medium-8 {
     @mixin atMedium {
       float: left;
@@ -99,6 +107,14 @@
     @mixin atMedium {
       float: left;
       width: 33.33%;
+      /* background-color: rgba(3, 42, 255, 1); */
+    }
+  }
+
+  &__medium-2 {
+    @mixin atMedium {
+      float: left;
+      width: 16.66%;
       /* background-color: rgba(3, 42, 255, 1); */
     }
   }
