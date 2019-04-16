@@ -1,6 +1,5 @@
 .menu-header {
     background-color: $mainGrey;
-
     /* &::after {
         content: "";
         width: 100%;
@@ -9,7 +8,23 @@
         display: block;
     } */
 
-    &__mobile-menu {
+
+
+
+    &__nav {
+
+        &--toogleVisibility {
+            display: none;
+
+            &--visible {
+                display: block;
+            }
+
+            @mixin atMedium {
+                display: block;
+            }
+        }
+
         &__button {
             content: "";
             width: 15px;
@@ -29,24 +44,22 @@
             }
         }
 
-    }
 
-    &__icon-home {
-        float: left;
-        width: 3.5rem;
-        padding: 6px 10px;
-        display: none;
+        &__icon-home {
+            float: left;
+            width: 3.5rem;
+            padding: 6px 10px;
+            display: none;
 
-        @mixin atMedium {
-            display: block;
+            @mixin atMedium {
+                display: block;
+            }
+
+            &:hover {
+                background-color: $mainBlue;
+            }
         }
 
-        &:hover {
-            background-color: $mainBlue;
-        }
-    }
-
-    &__nav {
 
         @mixin clearBoth;
         color: #fff;

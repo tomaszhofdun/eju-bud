@@ -103,19 +103,20 @@ var MobileMenu = function () {
     function MobileMenu() {
         _classCallCheck(this, MobileMenu);
 
-        this.menuButton = (0, _jquery2.default)(".menu-header__mobile-menu__button");
+        this.menuButton = (0, _jquery2.default)(".menu-header__nav__button");
+        this.menuContent = (0, _jquery2.default)(".menu-header__nav--toogleVisibility");
         this.events();
     }
 
     _createClass(MobileMenu, [{
         key: "events",
         value: function events() {
-            this.menuButton.click(this.toogleTheMenu);
+            this.menuButton.click(this.toogleTheMenu.bind(this));
         }
     }, {
         key: "toogleTheMenu",
         value: function toogleTheMenu() {
-            console.log("udal soe");
+            this.menuContent.toggleClass("menu-header__nav--toogleVisibility--visible");
         }
     }]);
 

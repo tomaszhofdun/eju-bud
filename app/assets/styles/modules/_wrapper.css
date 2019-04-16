@@ -27,11 +27,11 @@
     padding-right: 18px;
   }
 
-  &__infinite {
+  &--infinite {
     width: 5000px;
   }
 
-  &__maxWidth {
+  &--maxWidth {
     width: 100%;
   }
 
