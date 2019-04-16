@@ -1,6 +1,3 @@
-var Person2 = require("./modules/Person");
+import MobileMenu from "./modules/_mobileMenu";
 
-alert("watch is working");
-
-var tomek = new Person2("tomek", 32);
-tomek.greet();
+var mobileMenu = new MobileMenu();
