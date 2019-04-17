@@ -12,17 +12,20 @@
 
 
     &__nav {
+        @mixin clearBoth;
+        color: #fff;
+
+        &--always-visible-button {
+            display: block;
+            cursor: pointer;
+
+            @mixin atMedium {
+                display: none;
+            }
+        }
 
         &--toogleVisibility {
             display: none;
-
-            &--visible {
-                display: block;
-            }
-
-            @mixin atMedium {
-                display: block;
-            }
         }
 
         &__button {
@@ -61,8 +64,7 @@
         }
 
 
-        @mixin clearBoth;
-        color: #fff;
+
 
         & ul {
             float: left;
@@ -71,10 +73,6 @@
             text-align: center;
             width: 100%;
             @mixin clearBoth;
-
-            @mixin atMedium {
-                width: auto;
-            }
 
             & li {
 

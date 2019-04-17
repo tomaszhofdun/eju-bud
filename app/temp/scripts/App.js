@@ -103,8 +103,9 @@ var MobileMenu = function () {
     function MobileMenu() {
         _classCallCheck(this, MobileMenu);
 
-        this.menuButton = (0, _jquery2.default)(".menu-header__nav__button");
+        this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
         this.menuContent = (0, _jquery2.default)(".menu-header__nav--toogleVisibility");
+
         this.events();
     }
 
@@ -112,11 +113,19 @@ var MobileMenu = function () {
         key: "events",
         value: function events() {
             this.menuButton.click(this.toogleTheMenu.bind(this));
+            this.menuButton.click(this.toogleIconMenu.bind(this));
         }
     }, {
         key: "toogleTheMenu",
         value: function toogleTheMenu() {
-            this.menuContent.toggleClass("menu-header__nav--toogleVisibility--visible");
+            // this.menuContent.toggleClass("menu-header__nav--toogleVisibility--visible");
+            this.menuContent.slideToggle("slow");
+        }
+    }, {
+        key: "toogleIconMenu",
+        value: function toogleIconMenu() {
+
+            this.menuButton.html() == "MENU" ? this.menuButton.html('before') : this.menuButton.html('MENU');
         }
     }]);
 
