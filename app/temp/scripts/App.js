@@ -118,14 +118,12 @@ var MobileMenu = function () {
     }, {
         key: "toogleTheMenu",
         value: function toogleTheMenu() {
-            // this.menuContent.toggleClass("menu-header__nav--toogleVisibility--visible");
             this.menuContent.slideToggle("slow");
         }
     }, {
         key: "toogleIconMenu",
         value: function toogleIconMenu() {
-
-            this.menuButton.html() == "MENU" ? this.menuButton.html('before') : this.menuButton.html('MENU');
+            this.menuButton.html() == "≡" ? this.menuButton.html('&times;') : this.menuButton.html('&equiv;');
         }
     }]);
 

@@ -18,6 +18,7 @@
         &--always-visible-button {
             display: block;
             cursor: pointer;
+            font-size: 2rem;
 
             @mixin atMedium {
                 display: none;

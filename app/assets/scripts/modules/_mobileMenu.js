@@ -12,12 +12,10 @@ class MobileMenu {
         this.menuButton.click(this.toogleIconMenu.bind(this));
     }
     toogleTheMenu() {
-        // this.menuContent.toggleClass("menu-header__nav--toogleVisibility--visible");
         this.menuContent.slideToggle("slow");
     }
     toogleIconMenu() {
-
-        this.menuButton.html() == "MENU" ? this.menuButton.html('before') : this.menuButton.html('MENU');
+        this.menuButton.html() == "≡" ? this.menuButton.html('&times;') : this.menuButton.html('&equiv;');
 
     }
 }
