@@ -104,7 +104,15 @@ var MobileMenu = function () {
         _classCallCheck(this, MobileMenu);
 
         this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
-        this.menuContent = (0, _jquery2.default)(".menu-header__nav--toogleVisibility");
+        this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
+
+        // $(window).resize(function () {
+        //     if ($(this).width() > 800) {
+        //         $(".menu-header__nav--toggleVisibility").css("display", "block");
+        //     } else {
+
+        //     }
+        // });
 
         this.events();
     }
@@ -112,18 +120,20 @@ var MobileMenu = function () {
     _createClass(MobileMenu, [{
         key: "events",
         value: function events() {
-            this.menuButton.click(this.toogleTheMenu.bind(this));
-            this.menuButton.click(this.toogleIconMenu.bind(this));
+            this.menuButton.click(this.toggleTheMenu.bind(this));
+            this.menuButton.click(this.toggleIconMenu.bind(this));
         }
     }, {
-        key: "toogleTheMenu",
-        value: function toogleTheMenu() {
+        key: "toggleTheMenu",
+        value: function toggleTheMenu() {
+            console.log(this.menuWidth);
+
             this.menuContent.slideToggle("slow");
         }
     }, {
-        key: "toogleIconMenu",
-        value: function toogleIconMenu() {
-            this.menuButton.html() == "≡" ? this.menuButton.html('&times;') : this.menuButton.html('&equiv;');
+        key: "toggleIconMenu",
+        value: function toggleIconMenu() {
+            this.menuButton.html() == "≡" ? this.menuButton.html("&times;") : this.menuButton.html("&equiv;");
         }
     }]);
 

@@ -1,22 +1,34 @@
-import $ from 'jquery';
+import $ from "jquery";
 
 class MobileMenu {
     constructor() {
         this.menuButton = $(".menu-header__nav--always-visible-button");
-        this.menuContent = $(".menu-header__nav--toogleVisibility");
+        this.menuContent = $(".menu-header__nav--toggleVisibility");
+
+        // $(window).resize(function () {
+        //     if ($(this).width() > 800) {
+        //         $(".menu-header__nav--toggleVisibility").css("display", "block");
+        //     } else {
+
+        //     }
+        // });
 
         this.events();
     }
     events() {
-        this.menuButton.click(this.toogleTheMenu.bind(this));
-        this.menuButton.click(this.toogleIconMenu.bind(this));
+        this.menuButton.click(this.toggleTheMenu.bind(this));
+        this.menuButton.click(this.toggleIconMenu.bind(this));
     }
-    toogleTheMenu() {
-        this.menuContent.slideToggle("slow");
-    }
-    toogleIconMenu() {
-        this.menuButton.html() == "≡" ? this.menuButton.html('&times;') : this.menuButton.html('&equiv;');
+    toggleTheMenu() {
+        console.log(this.menuWidth);
 
+        this.menuContent.slideToggle("slow");
+
+    }
+    toggleIconMenu() {
+        this.menuButton.html() == "≡" ?
+            this.menuButton.html("&times;") :
+            this.menuButton.html("&equiv;");
     }
 }
 
