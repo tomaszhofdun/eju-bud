@@ -60,90 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _mobileMenu = __webpack_require__(1);
-
-var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mobileMenu = new _mobileMenu2.default();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(2);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobileMenu = function () {
-    function MobileMenu() {
-        _classCallCheck(this, MobileMenu);
-
-        this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
-        this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
-
-        // $(window).resize(function () {
-        //     if ($(this).width() > 800) {
-        //         $(".menu-header__nav--toggleVisibility").css("display", "block");
-        //     } else {
-
-        //     }
-        // });
-
-        this.events();
-    }
-
-    _createClass(MobileMenu, [{
-        key: "events",
-        value: function events() {
-            this.menuButton.click(this.toggleTheMenu.bind(this));
-            this.menuButton.click(this.toggleIconMenu.bind(this));
-        }
-    }, {
-        key: "toggleTheMenu",
-        value: function toggleTheMenu() {
-            console.log(this.menuWidth);
-
-            this.menuContent.slideToggle("slow");
-        }
-    }, {
-        key: "toggleIconMenu",
-        value: function toggleIconMenu() {
-            this.menuButton.html() == "≡" ? this.menuButton.html("&times;") : this.menuButton.html("&equiv;");
-        }
-    }]);
-
-    return MobileMenu;
-}();
-
-exports.default = MobileMenu;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10401,6 +10322,142 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _mobileMenu = __webpack_require__(2);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _currentDate = __webpack_require__(3);
+
+var _currentDate2 = _interopRequireDefault(_currentDate);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mobileMenu = new _mobileMenu2.default();
+var currentDate = new _currentDate2.default();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+    function MobileMenu() {
+        _classCallCheck(this, MobileMenu);
+
+        this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
+        this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
+
+        // $(window).resize(function () {
+        //     if ($(this).width() > 800) {
+        //         $(".menu-header__nav--toggleVisibility").css("display", "block");
+        //     } else {
+
+        //     }
+        // });
+
+        this.events();
+    }
+
+    _createClass(MobileMenu, [{
+        key: "events",
+        value: function events() {
+            this.menuButton.click(this.toggleTheMenu.bind(this));
+            this.menuButton.click(this.toggleIconMenu.bind(this));
+        }
+    }, {
+        key: "toggleTheMenu",
+        value: function toggleTheMenu() {
+            console.log(this.menuWidth);
+
+            this.menuContent.slideToggle("slow");
+        }
+    }, {
+        key: "toggleIconMenu",
+        value: function toggleIconMenu() {
+            this.menuButton.html() == "≡" ? this.menuButton.html("&times;") : this.menuButton.html("&equiv;");
+        }
+    }]);
+
+    return MobileMenu;
+}();
+
+exports.default = MobileMenu;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CurrentDate = function () {
+    function CurrentDate() {
+        _classCallCheck(this, CurrentDate);
+
+        this.currentDate = (0, _jquery2.default)(".currentDate");
+        this.formatter = new Intl.DateTimeFormat('pl', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+        this.events();
+    }
+
+    _createClass(CurrentDate, [{
+        key: "events",
+        value: function events() {
+            (0, _jquery2.default)(document).ready(this.injectDate());
+        }
+    }, {
+        key: "injectDate",
+        value: function injectDate() {
+            // console.log(this.formatter.format(new Date()));
+            this.currentDate.html(this.formatter.format(new Date()));
+        }
+    }]);
+
+    return CurrentDate;
+}();
+
+exports.default = CurrentDate;
 
 /***/ })
 /******/ ]);
