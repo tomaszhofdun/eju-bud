@@ -1,12 +1,16 @@
 .menu-header {
     background-color: $mainGrey;
-    /* &::after {
-        content: "";
-        width: 100%;
-        height: 3px;
-        background-color: $mainBlue;
-        display: block;
-    } */
+
+    @mixin atMedium {
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: $mainBlue;
+            display: block;
+        }
+    }
 
 
 

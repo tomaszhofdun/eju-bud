@@ -10338,10 +10338,15 @@ var _currentDate = __webpack_require__(3);
 
 var _currentDate2 = _interopRequireDefault(_currentDate);
 
+var _gallerySlider = __webpack_require__(4);
+
+var _gallerySlider2 = _interopRequireDefault(_gallerySlider);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _mobileMenu2.default();
 var currentDate = new _currentDate2.default();
+var gallerySlider = new _gallerySlider2.default();
 
 /***/ }),
 /* 2 */
@@ -10370,15 +10375,6 @@ var MobileMenu = function () {
 
         this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
         this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
-
-        // $(window).resize(function () {
-        //     if ($(this).width() > 800) {
-        //         $(".menu-header__nav--toggleVisibility").css("display", "block");
-        //     } else {
-
-        //     }
-        // });
-
         this.events();
     }
 
@@ -10391,8 +10387,6 @@ var MobileMenu = function () {
     }, {
         key: "toggleTheMenu",
         value: function toggleTheMenu() {
-            console.log(this.menuWidth);
-
             this.menuContent.slideToggle("slow");
         }
     }, {
@@ -10458,6 +10452,60 @@ var CurrentDate = function () {
 }();
 
 exports.default = CurrentDate;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var GallerySlider = function () {
+    function GallerySlider() {
+        _classCallCheck(this, GallerySlider);
+
+        this.buttonLeft = (0, _jquery2.default)(".gallery-thumbnails__button-left");
+        this.buttonRight = (0, _jquery2.default)(".gallery-thumbnails__button-right");
+        this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--moving");
+        this.events();
+    }
+
+    _createClass(GallerySlider, [{
+        key: "events",
+        value: function events() {
+            this.buttonRight.click(this.slideToRight.bind(this));
+            this.buttonLeft.click(this.slideToLeft.bind(this));
+        }
+    }, {
+        key: "slideToLeft",
+        value: function slideToLeft() {
+            this.galleryThumbnails.css("transform", "translateX(0px)");
+        }
+    }, {
+        key: "slideToRight",
+        value: function slideToRight() {
+            this.galleryThumbnails.css("transform", "translateX(-350px)");
+        }
+    }]);
+
+    return GallerySlider;
+}();
+
+exports.default = GallerySlider;
 
 /***/ })
 /******/ ]);

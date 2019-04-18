@@ -95,10 +95,26 @@
     }
   }
 
+  &__medium-7 {
+    @mixin atMedium {
+      float: left;
+      width: 58.33%;
+      /* background-color: rgba(255, 145, 145, 1); */
+    }
+  }
+
   &__medium-6 {
     @mixin atMedium {
       float: left;
       width: 50%;
+      /* background-color: rgba(24, 255, 0, 1); */
+    }
+  }
+
+  &__medium-5 {
+    @mixin atMedium {
+      float: left;
+      width: 41.66%;
       /* background-color: rgba(24, 255, 0, 1); */
     }
   }
@@ -131,6 +147,14 @@
     @mixin atSmall {
       float: left;
       width: 50%;
+      /* background-color: rgba(24, 255, 0, 1); */
+    }
+  }
+
+  &__small-4 {
+    @mixin atSmall {
+      float: left;
+      width: 33.33%;
       /* background-color: rgba(24, 255, 0, 1); */
     }
   }

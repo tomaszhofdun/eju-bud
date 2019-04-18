@@ -7,11 +7,11 @@
         transform: translateY(-50%);
         width: 40px;
         height: 40px;
-
         left: 4px;
+        z-index: 1;
 
         @mixin atLarge {
-            left: 23px;
+            left: 41px;
         }
 
         & img {
@@ -29,7 +29,7 @@
         width: 40px;
         height: 40px;
         right: 0;
-
+        z-index: 1;
 
         & img {
             &:hover {
@@ -39,7 +39,9 @@
         }
     }
 
-
+    &--moving {
+        transition: all 1s ease-out;
+    }
 
     &__container_outer {
         float: left;
@@ -50,7 +52,43 @@
         width: 300px;
         height: 350px;
         border: 1px solid darkgray;
-        margin: 0 auto;
+        margin: 0 20px;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        &__big-img {
+            box-sizing: border-box;
+            width: 198px;
+            height: 302px;
+            /* background: url("/assets/images/mirror.jpg") center center; */
+            /* background-size: cover; */
+            float: left;
+            margin-right: 2px;
+
+        }
+
+        &__small-img {
+            box-sizing: border-box;
+            width: 98px;
+            height: 150px;
+            /* background: url("/assets/images/mirror.jpg") center center; */
+            /* background-size: cover; */
+            float: left;
+            margin-bottom: 2px;
+        }
+
+        &__subtitle {
+            box-sizing: border-box;
+            clear: both;
+            text-align: center;
+            padding: 16px;
+            color: darkgray;
+        }
 
     }
 
@@ -62,42 +100,5 @@
         font-weight: 300;
     }
 
-    &__subtitle {
-        box-sizing: border-box;
-        clear: both;
-        text-align: center;
-        padding: 16px;
-        color: darkgray;
-    }
-}
 
-.background1 {
-    box-sizing: border-box;
-    width: 198px;
-    height: 302px;
-    background: url("/assets/images/mirror.jpg") center center;
-    background-size: cover;
-    float: left;
-    margin-right: 2px;
-
-}
-
-.background2 {
-    box-sizing: border-box;
-    width: 98px;
-    height: 150px;
-    background: url("/assets/images/mirror.jpg") center center;
-    background-size: cover;
-    float: left;
-    margin-bottom: 2px;
-}
-
-.background3 {
-    box-sizing: border-box;
-    width: 98px;
-    height: 150px;
-    background: url("/assets/images/mirror.jpg") center center;
-    background-size: cover;
-    margin-bottom: 2px;
-    float: left;
 }

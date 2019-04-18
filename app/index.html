@@ -19,10 +19,20 @@
 
   <!-- górny footer gdzie są dane kontaktowe, facebook i data -->
   <!-- top-footer -->
-  <section class="top-footer" style="height:42px; background-color:black; ">
+  <section class="top-footer">
     <div class="wrapper">
-      <div class="row row__medium-8 currentDate">g</div>
-      <div class="row row__medium-4">ds</div>
+      <div class="row row__medium-6 currentDate"></div>
+      <div class="row row__medium-6">
+        <div class="top-footer__socials">
+          <div class="top-footer__socials__icons"><a href="https://www.facebook.com/Zaklad-Og%C3%B3lnobudowlany-Patryk-Springer-285270644961803/" target="_blank"><img class="top-footer__socials__icons--facebook" src="./assets/images/icons/facebook-icon-preview-1-400x400.png" alt=""></a> </div>
+          <div class="top-footer__socials__icons"> <a href="mailto:kontakt@eju-bud.pl"><img class="top-footer__socials__icons--envelope" src="./assets/images/icons/envelope.svg" alt="">kontakt@eju-bud.pl</a></div>
+          <div class="top-footer__socials__icons"><img class="top-footer__socials__icons--telephone" src="./assets/images/icons/telephone-symbol-button.svg" alt="">727 531 213</div>
+
+        </div>
+
+
+
+      </div>
     </div>
   </section>
 
@@ -50,10 +60,10 @@
           <li class="menu-header__nav--always-visible-button">&equiv;</li>
           <div class="menu-header__nav--toggleVisibility">
             <li><a href="">OFERTA</a></li>
-            <li><a href="">NASZE REALIZACJE</a></li>
+            <li><a href="#nasze-realizacje">NASZE REALIZACJE</a></li>
             <li><a href="">CENNIK</a></li>
             <li><a href="">GALERIA</a></li>
-            <li><a href="">KONTAKT</a></li>
+            <li><a href="#skontaktuj-sie-z-nami">KONTAKT</a></li>
           </div>
 
         </ul>
@@ -70,7 +80,7 @@
       <div class="row">
         <div class="row__medium-8 row__gutter-right-md">
           <div class="large-hero">
-            <img class="large-hero__bar" src="./assets/images/gif-zadzwon-blue.gif" alt="" />
+            <img class="large-hero__bar" src="./assets/images/gif/gif-zadzwon-blue.gif" alt="" />
             <picture>
               <source media="(max-width:512px)" srcset="assets/images/tape-measure-small.jpg" />
               <img class="large-hero__image" src="assets/images/tape-measure.jpg" alt="tło dla slidera" />
@@ -90,28 +100,28 @@
 
         <div class="row__medium-4 ">
           <!-- pierwszy obrazek -->
-          <div class="mini-gallery row__small-6 row__gutter-left-md row__gutter-right-sm row__gutter-bottom-md">
+          <div class="mini-gallery mini-gallery--md-none row__small-6 row__gutter-left-md row__gutter-right-sm row__gutter-bottom-md">
             <div class="mini-gallery__container">
               <picture>
-                <source media="(max-width:799px)" srcset="assets/images/mirror.jpg" />
-                <img src="./assets/images/mirror-atLarge.jpg" alt="" />
+                <source media="(max-width:799px)" srcset="./assets/images/realizacje/cool-mirror/mirror.jpg" />
+                <img src="./assets/images/realizacje/cool-mirror/mirror-atLarge.jpg" alt="" />
               </picture>
             </div>
             <a class="btn btn--large mini-gallery__button" href="">GALERIA</a>
           </div>
           <!-- drugi obrazek -->
-          <div class="mini-gallery mini-gallery--sm-none row__small-6 row__gutter-left row__gutter-right-md row__gutter-bottom-md ">
+          <div class="mini-gallery mini-gallery--md-none row__small-6 row__gutter-left row__gutter-right-md row__gutter-bottom-md ">
             <div class="mini-gallery__container">
               <picture>
-                <source media="(max-width:799px)" srcset="assets/images/lazienka.jpg" />
-                <img src="assets/images/lazienka-atLarge.jpg" alt="" />
+                <source media="(max-width:799px)" srcset="assets/images/realizacje/lazienka.jpg" />
+                <img src="assets/images/realizacje/lazienka-atLarge.jpg" alt="" />
               </picture>
             </div>
           </div>
           <!-- trzeci obrazek -->
           <div class="mini-gallery mini-gallery--md-none row__small-12 row__gutter-left-md  row__gutter-right-md row__gutter-top-md ">
             <div class="mini-gallery__container">
-              <img src="./assets/images/fence.jpg" alt="" />
+              <img src="./assets/images/realizacje/fence.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -126,19 +136,19 @@
   <!-- następna sekcja -->
   <div class="wrapper">
     <div class="row huge-icon-section">
-      <div class="row__medium-4">
+      <div class="row__small-4">
         <div class="huge-icon-section_div">
           <img class="huge-icon-section_div_icon" src="./assets/images/icons/calendar.svg" alt="" />
           <p class="huge-icon-section_div_title">Realne Terminy</p>
         </div>
       </div>
-      <div class="row__medium-4">
+      <div class="row__small-4">
         <div class="huge-icon-section_div">
           <img class="huge-icon-section_div_icon" src="./assets/images/icons/house.svg" alt="" />
           <p class="huge-icon-section_div_title">Budujemy od A do Z</p>
         </div>
       </div>
-      <div class="row__medium-4">
+      <div class="row__small-4">
         <div class="huge-icon-section_div">
           <img class="huge-icon-section_div_icon" src="./assets/images/icons/stopwatch.svg" alt="" />
           <p class="huge-icon-section_div_title">Bez opóźnień</p>
@@ -173,77 +183,108 @@
     </div>
   </div>
   <!-- następna sekcja -->
-  <h1 class="gallery-thumbnails__title">Ostatnie nasze realizacje</h1>
+  <h1 id="nasze-realizacje" class="gallery-thumbnails__title">Ostatnie nasze realizacje</h1>
   <div class="wrapper gallery-thumbnails">
 
-    <a class="gallery-thumbnails__button-left" href="#"><img src="./assets/images/icons/play-button-left.svg" alt=""></a>
-    <a class="gallery-thumbnails__button-right" href="#"><img src="./assets/images/icons/play-button-right.svg" alt=""></a>
+    <div class="gallery-thumbnails__button-left" href="#"><img src="./assets/images/icons/play-button-left.svg" alt=""></div>
+    <div class="gallery-thumbnails__button-right" href="#"><img src="./assets/images/icons/play-button-right.svg" alt=""></div>
 
 
-    <div class="wrapper--infinite">
+    <div class="wrapper--infinite gallery-thumbnails--moving">
+      <div class="row gallery-thumbnails__container_outer row__gutter-left row__gutter-right">
+        <div class="gallery-thumbnails__container">
+          <a href="https://www.google.pl">
+            <div class="gallery-thumbnails__container__big-img">
+              <img src="./assets/images/realizacje/bathroom_1/54727664_1241122826043242_634421610840850432_n.jpg" alt="">
+            </div>
+          </a>
+          <a href="https://www.google.pl">
+            <div class="gallery-thumbnails__container__small-img">
+              <img src="./assets/images/realizacje/bathroom_1/54729532_1241122579376600_5238439119780052992_n.jpg" alt="">
+            </div>
+          </a>
+          <a href="https://www.google.pl">
+            <div class="gallery-thumbnails__container__small-img">
+              <img src="./assets/images/realizacje/bathroom_1/54519946_1241122876043237_1291121762506899456_n.jpg" alt="">
+            </div>
+          </a>
+          <p class="gallery-thumbnails__container__subtitle">Do uzupełnienia...</p>
+        </div>
+      </div>
+      <!-- nastepny div z 3 obrazkami -->
       <div class="gallery-thumbnails__container_outer row__gutter-left row__gutter-right">
         <div class="gallery-thumbnails__container">
           <a href="https://www.google.pl">
-            <div class="background1"></div>
+            <div class="gallery-thumbnails__container__big-img">
+              <img src="./assets/images/realizacje/elewacja/52531042_1221117744710417_6060095217095147520_n.jpg" alt="">
+            </div>
           </a>
           <a href="https://www.google.pl">
-            <div class="background2"></div>
+            <div class="gallery-thumbnails__container__small-img">
+              <img src="./assets/images/realizacje/elewacja/52590212_1221117638043761_4069929568243286016_n.jpg" alt="">
+            </div>
           </a>
           <a href="https://www.google.pl">
-            <div class="background3"></div>
+            <div class="gallery-thumbnails__container__small-img">
+              <img src="./assets/images/realizacje/elewacja/53077674_1221117608043764_2580573345376370688_n.jpg" alt="">
+            </div>
           </a>
-          <p class="gallery-thumbnails__subtitle">Coś tutaj napisz o tym albumie...</p>
+          <p class="gallery-thumbnails__container__subtitle">Do uzupełnienia...</p>
         </div>
       </div>
+      <!-- nastepny div z 3 obrazkami -->
       <div class="gallery-thumbnails__container_outer row__gutter-left row__gutter-right">
         <div class="gallery-thumbnails__container">
           <a href="https://www.google.pl">
-            <div class="background1"></div>
+            <div class="gallery-thumbnails__container__big-img">
+              <img src="./assets/images/realizacje/tiles/52444223_1217815938373931_198143398463406080_n.jpg" alt="">
+            </div>
           </a>
           <a href="https://www.google.pl">
-            <div class="background2"></div>
+            <div class="gallery-thumbnails__container__small-img">
+              <img src="./assets/images/realizacje/tiles/52588587_1217816005040591_7595487180068225024_n.jpg" alt="">
+            </div>
           </a>
           <a href="https://www.google.pl">
-            <div class="background3"></div>
+            <div class="gallery-thumbnails__container__small-img">
+              <img src="./assets/images/realizacje/tiles/52262033_1217815985040593_3822348716791037952_n.jpg" alt="">
+            </div>
           </a>
-          <p class="gallery-thumbnails__subtitle">Coś tutaj napisz o tym albumie...</p>
+          <p class="gallery-thumbnails__container__subtitle">Do uzupełnienia...</p>
         </div>
       </div>
+
+      <!-- nastepny div z 3 obrazkami -->
+
       <div class="gallery-thumbnails__container_outer row__gutter-left row__gutter-right">
         <div class="gallery-thumbnails__container">
           <a href="https://www.google.pl">
-            <div class="background1"></div>
+            <div class="gallery-thumbnails__container__big-img">
+              <img src="./assets/images/realizacje/bathroom_2/48377618_1179196122235913_2291740647306035200_n.jpg" alt="">
+            </div>
           </a>
           <a href="https://www.google.pl">
-            <div class="background2"></div>
+            <div class="gallery-thumbnails__container__small-img">
+              <img src="./assets/images/realizacje/bathroom_2/48406858_1179196088902583_1529106793731457024_n.jpg" alt="">
+            </div>
           </a>
           <a href="https://www.google.pl">
-            <div class="background3"></div>
+            <div class="gallery-thumbnails__container__small-img">
+              <img src="./assets/images/realizacje/bathroom_2/48383307_1179196168902575_1345677137180360704_n.jpg" alt="">
+            </div>
           </a>
-          <p class="gallery-thumbnails__subtitle">Coś tutaj napisz o tym albumie...</p>
+          <p class="gallery-thumbnails__container__subtitle">Do uzupełnienia...</p>
         </div>
       </div>
-      <div class="gallery-thumbnails__container_outer row__gutter-left row__gutter-right">
-        <div class="gallery-thumbnails__container">
-          <a href="https://www.google.pl">
-            <div class="background1"></div>
-          </a>
-          <a href="https://www.google.pl">
-            <div class="background2"></div>
-          </a>
-          <a href="https://www.google.pl">
-            <div class="background3"></div>
-          </a>
-          <p class="gallery-thumbnails__subtitle">Coś tutaj napisz o tym albumie...</p>
-        </div>
-      </div>
+      <!-- nastepny div z 3 obrazkami -->
+
     </div>
   </div>
   <!-- następna sekcja -->
 
 
   <form class="form" action="#">
-    <h1 class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
+    <h1 id="skontaktuj-sie-z-nami" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
     <div class="row__medium-8">
       <label class="form__labels" for="message">Twoja wiadomość*</label>
       <textarea class="form__textarea" rows="8" cols="65" type="text" id="message" name="message" placeholder="Witam, chciałbym zapytać......"></textarea>
