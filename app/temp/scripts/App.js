@@ -10342,11 +10342,16 @@ var _gallerySlider = __webpack_require__(4);
 
 var _gallerySlider2 = _interopRequireDefault(_gallerySlider);
 
+var _ltrScale = __webpack_require__(5);
+
+var _ltrScale2 = _interopRequireDefault(_ltrScale);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _mobileMenu2.default();
 var currentDate = new _currentDate2.default();
 var gallerySlider = new _gallerySlider2.default();
+var ltrScale = new _ltrScale2.default();
 
 /***/ }),
 /* 2 */
@@ -10480,7 +10485,10 @@ var GallerySlider = function () {
 
         this.buttonLeft = (0, _jquery2.default)(".gallery-thumbnails__button-left");
         this.buttonRight = (0, _jquery2.default)(".gallery-thumbnails__button-right");
-        this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--moving");
+        this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--slides");
+        this.liczbaSlides = (0, _jquery2.default)(".gallery-thumbnails__container__slide").length;
+        this.slideFlag = 1;
+        this.translate = 0;
         this.events();
     }
 
@@ -10490,15 +10498,44 @@ var GallerySlider = function () {
             this.buttonRight.click(this.slideToRight.bind(this));
             this.buttonLeft.click(this.slideToLeft.bind(this));
         }
-    }, {
-        key: "slideToLeft",
-        value: function slideToLeft() {
-            this.galleryThumbnails.css("transform", "translateX(0px)");
-        }
+        // slideToLeft() {
+        //     this.galleryThumbnails.css("transform", "translateX(0px)");
+
+        // }
+
     }, {
         key: "slideToRight",
         value: function slideToRight() {
-            this.galleryThumbnails.css("transform", "translateX(-350px)");
+            // console.log(this.liczbaSlides);
+            if (this.slideFlag === this.liczbaSlides - 2) {
+                //   this.galleryThumbnails.css("transform", "translateX(0)");
+                //   this.slideFlag = 1;
+                //   this.translate = -347.6;
+            } else {
+                this.galleryThumbnails.css("transform", "translateX(" + (this.translate - 347.6) + "px)");
+                this.translate -= 347.6;
+                this.slideFlag += 1;
+
+                //   console.log(this.translate);
+                //   console.log(this.liczbaSlides);
+                //   console.log(this.slideFlag);
+            }
+        }
+    }, {
+        key: "slideToLeft",
+        value: function slideToLeft() {
+            // console.log(this.liczbaSlides);
+            if (this.slideFlag === 1) {
+                //   this.galleryThumbnails.css("transform", "translateX(0)");
+                //   this.slideFlag = 1;
+                //   this.translate = -347.6;
+            } else {
+                this.galleryThumbnails.css("transform", "translateX(" + (this.translate + 347.6) + "px)");
+                this.translate += 347.6;
+                this.slideFlag -= 1;
+
+                //  console.log(this.translate);
+            }
         }
     }]);
 
@@ -10506,6 +10543,63 @@ var GallerySlider = function () {
 }();
 
 exports.default = GallerySlider;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var LtrScale = function () {
+    function LtrScale() {
+        _classCallCheck(this, LtrScale);
+
+        // this.html = "<a class="
+        // btn btn--large mini - gallery__button " href="
+        // ">GALERIA</a>;"
+        this.container = (0, _jquery2.default)(".mini-gallery__container");
+        this.ltrScale = (0, _jquery2.default)(".ltrScale");
+        this.events();
+    }
+
+    _createClass(LtrScale, [{
+        key: "events",
+        value: function events() {
+            this.container.click(this.showButton.bind(this));
+            this.container.mouseleave(this.hideButton.bind(this));
+        }
+    }, {
+        key: "showButton",
+        value: function showButton() {
+            // console.log("fs")
+            this.ltrScale.html("<a class='btn btn--large mini-gallery__button' href=''>GALERIA</a>");
+        }
+    }, {
+        key: "hideButton",
+        value: function hideButton() {
+            this.ltrScale.html("");
+        }
+    }]);
+
+    return LtrScale;
+}();
+
+exports.default = LtrScale;
 
 /***/ })
 /******/ ]);
