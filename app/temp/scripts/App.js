@@ -10552,7 +10552,7 @@ exports.default = GallerySlider;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -10566,37 +10566,35 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var LtrScale = function () {
-    function LtrScale() {
-        _classCallCheck(this, LtrScale);
+  function LtrScale() {
+    _classCallCheck(this, LtrScale);
 
-        // this.html = "<a class="
-        // btn btn--large mini - gallery__button " href="
-        // ">GALERIA</a>;"
-        this.container = (0, _jquery2.default)(".mini-gallery__container");
-        this.ltrScale = (0, _jquery2.default)(".ltrScale");
-        this.events();
+    this.container = (0, _jquery2.default)(".mini-gallery");
+    this.button = (0, _jquery2.default)(".mini-gallery__button");
+    this.events();
+  }
+
+  _createClass(LtrScale, [{
+    key: "events",
+    value: function events() {
+      this.container.mouseenter(this.showButton);
+      this.container.mouseleave(this.hideButton);
     }
+  }, {
+    key: "showButton",
+    value: function showButton() {
+      console.log(this);
+      (0, _jquery2.default)(this).find('a').show("fast");
+    }
+  }, {
+    key: "hideButton",
+    value: function hideButton() {
+      console.log(this);
+      (0, _jquery2.default)(this).find('a').hide("fast");
+    }
+  }]);
 
-    _createClass(LtrScale, [{
-        key: "events",
-        value: function events() {
-            this.container.click(this.showButton.bind(this));
-            this.container.mouseleave(this.hideButton.bind(this));
-        }
-    }, {
-        key: "showButton",
-        value: function showButton() {
-            // console.log("fs")
-            this.ltrScale.html("<a class='btn btn--large mini-gallery__button' href=''>GALERIA</a>");
-        }
-    }, {
-        key: "hideButton",
-        value: function hideButton() {
-            this.ltrScale.html("");
-        }
-    }]);
-
-    return LtrScale;
+  return LtrScale;
 }();
 
 exports.default = LtrScale;

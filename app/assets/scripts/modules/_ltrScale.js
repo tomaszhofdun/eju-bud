@@ -1,26 +1,23 @@
 import $ from "jquery";
 
 class LtrScale {
-    constructor() {
-        // this.html = "<a class="
-        // btn btn--large mini - gallery__button " href="
-        // ">GALERIA</a>;"
-        this.container = $(".mini-gallery__container");
-        this.ltrScale = $(".ltrScale");
-        this.events();
-    }
-    events() {
-        this.container.click(this.showButton.bind(this));
-        this.container.mouseleave(this.hideButton.bind(this));
-    }
-    showButton() {
-        // console.log("fs")
-        this.ltrScale.html("<a class='btn btn--large mini-gallery__button' href=''>GALERIA</a>")
-
-    }
-    hideButton() {
-        this.ltrScale.html("")
-    }
+  constructor() {
+    this.container = $(".mini-gallery");
+    this.button = $(".mini-gallery__button");
+    this.events();
+  }
+  events() {
+    this.container.mouseenter(this.showButton);
+    this.container.mouseleave(this.hideButton);
+  }
+  showButton() {
+    console.log(this);
+    $(this).find('a').show("fast");
+  }
+  hideButton() {
+    console.log(this);
+    $(this).find('a').hide("fast");
+  }
 }
 
 export default LtrScale;

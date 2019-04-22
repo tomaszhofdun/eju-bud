@@ -7,11 +7,15 @@
         transform: translateY(-50%);
         width: 40px;
         height: 40px;
-        left: 0;
+        left: 4px;
         z-index: 1;
 
         @mixin atMedium {
             left: 23px;
+        }
+
+        @mixin atLarge {
+            left: 43px;
         }
 
 
