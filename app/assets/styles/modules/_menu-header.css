@@ -107,6 +107,10 @@
                     color: #fff;
                     padding: 15px 16px;
                     display: block;
+
+                    &.is-current-link {
+                        color: yellow;
+                    }
                 }
 
                 &:hover {

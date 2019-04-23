@@ -25,7 +25,7 @@
       <div class="row row__medium-6">
         <div class="top-footer__socials">
           <div class="top-footer__socials__icons"><a href="https://www.facebook.com/Zaklad-Og%C3%B3lnobudowlany-Patryk-Springer-285270644961803/" target="_blank"><img class="top-footer__socials__icons--facebook" src="./assets/images/icons/facebook-icon-preview-1-400x400.png" alt=""></a> </div>
-          <div class="top-footer__socials__icons"> <a href="mailto:kontakt@eju-bud.pl"><img class="top-footer__socials__icons--envelope" src="./assets/images/icons/envelope.svg" alt="">kontakt@eju-bud.pl</a></div>
+          <div class="top-footer__socials__icons"> <a href="mailto:kontakt@eju-bud.pl"><img class="top-footer__socials__icons--envelope" src="./assets/images/icons/envelope.svg" alt="">kontakt@eju-bud.pl </a></div>
           <div class="top-footer__socials__icons"><img class="top-footer__socials__icons--telephone" src="./assets/images/icons/telephone-symbol-button.svg" alt="">727 531 213</div>
 
         </div>
@@ -60,10 +60,10 @@
           <li class="menu-header__nav--always-visible-button">&equiv;</li>
           <div class="menu-header__nav--toggleVisibility">
             <li><a href="">OFERTA</a></li>
-            <li><a href="#nasze-realizacje">NASZE REALIZACJE</a></li>
+            <li><a id="nasze-realizacje-link" href="#nasze-realizacje">NASZE REALIZACJE</a></li>
             <li><a href="">CENNIK</a></li>
             <li><a href="">GALERIA</a></li>
-            <li><a href="#skontaktuj-sie-z-nami">KONTAKT</a></li>
+            <li><a id="skontaktuj-sie-z-nami-link" href="#skontaktuj-sie-z-nami">KONTAKT</a></li>
           </div>
 
         </ul>
@@ -192,8 +192,8 @@
     </div>
   </div>
   <!-- następna sekcja -->
-  <h1 id="nasze-realizacje" class="gallery-thumbnails__title">Ostatnie nasze realizacje</h1>
-  <div class="wrapper gallery-thumbnails">
+  <h1 id="nasze-realizacje" data-matching-link="#nasze-realizacje-link" class="gallery-thumbnails__title">Ostatnie nasze realizacje</h1>
+  <div class="wrapper gallery-thumbnails ">
 
     <div class="gallery-thumbnails__button-left" href="#"><img src="./assets/images/icons/play-button-left.svg" alt=""></div>
     <div class="gallery-thumbnails__button-right" href="#"><img src="./assets/images/icons/play-button-right.svg" alt=""></div>
@@ -762,7 +762,7 @@
 
 
   <form class="form" action="#">
-    <h1 id="skontaktuj-sie-z-nami" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
+    <h1 id="skontaktuj-sie-z-nami" data-matching-link="#skontaktuj-sie-z-nami-link" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
     <div class="row__medium-8">
       <label class="form__labels" for="message">Twoja wiadomość*</label>
       <textarea class="form__textarea" rows="8" cols="65" type="text" id="message" name="message" placeholder="Witam, chciałbym zapytać......"></textarea>
@@ -788,10 +788,10 @@
       <div class="row__medium-4">
         <ul class="footer__list">
           <li>Oferta</li>
-          <li>Realizacje</li>
+          <li><a id="nasze-realizacje-link" href="#nasze-realizacje">Realizacje</a></li>
           <li>Cennik</li>
           <li>Galeria</li>
-          <li>Kontakt</li>
+          <li><a id="skontaktuj-sie-z-nami-link" href="#skontaktuj-sie-z-nami">Kontakt</a></li>
         </ul>
       </div>
       <div class="row__medium-4">
