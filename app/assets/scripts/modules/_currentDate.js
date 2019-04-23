@@ -9,11 +9,7 @@ class CurrentDate {
             month: 'long',
             year: 'numeric'
         });
-        this.events();
-    }
-
-    events() {
-        $(document).ready(this.injectDate());
+        this.injectDate();
     }
 
     injectDate() {

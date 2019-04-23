@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10325,355 +10325,6 @@ return jQuery;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _mobileMenu = __webpack_require__(2);
-
-var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
-
-var _currentDate = __webpack_require__(3);
-
-var _currentDate2 = _interopRequireDefault(_currentDate);
-
-var _gallerySlider = __webpack_require__(4);
-
-var _gallerySlider2 = _interopRequireDefault(_gallerySlider);
-
-var _ltrScale = __webpack_require__(5);
-
-var _ltrScale2 = _interopRequireDefault(_ltrScale);
-
-var _revealOnScroll = __webpack_require__(6);
-
-var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mobileMenu = new _mobileMenu2.default();
-var currentDate = new _currentDate2.default();
-var gallerySlider = new _gallerySlider2.default();
-var ltrScale = new _ltrScale2.default();
-new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), '70%');
-new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), '70%');
-new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), '80%');
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobileMenu = function () {
-    function MobileMenu() {
-        _classCallCheck(this, MobileMenu);
-
-        this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
-        this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
-        this.events();
-    }
-
-    _createClass(MobileMenu, [{
-        key: "events",
-        value: function events() {
-            this.menuButton.click(this.toggleTheMenu.bind(this));
-            this.menuButton.click(this.toggleIconMenu.bind(this));
-        }
-    }, {
-        key: "toggleTheMenu",
-        value: function toggleTheMenu() {
-            this.menuContent.slideToggle("slow");
-        }
-    }, {
-        key: "toggleIconMenu",
-        value: function toggleIconMenu() {
-            this.menuButton.html() == "≡" ? this.menuButton.html("&times;") : this.menuButton.html("&equiv;");
-        }
-    }]);
-
-    return MobileMenu;
-}();
-
-exports.default = MobileMenu;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var CurrentDate = function () {
-    function CurrentDate() {
-        _classCallCheck(this, CurrentDate);
-
-        this.currentDate = (0, _jquery2.default)(".currentDate");
-        this.formatter = new Intl.DateTimeFormat('pl', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        });
-        this.events();
-    }
-
-    _createClass(CurrentDate, [{
-        key: "events",
-        value: function events() {
-            (0, _jquery2.default)(document).ready(this.injectDate());
-        }
-    }, {
-        key: "injectDate",
-        value: function injectDate() {
-            // console.log(this.formatter.format(new Date()));
-            this.currentDate.html(this.formatter.format(new Date()));
-        }
-    }]);
-
-    return CurrentDate;
-}();
-
-exports.default = CurrentDate;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var GallerySlider = function () {
-    function GallerySlider() {
-        _classCallCheck(this, GallerySlider);
-
-        this.buttonLeft = (0, _jquery2.default)(".gallery-thumbnails__button-left");
-        this.buttonRight = (0, _jquery2.default)(".gallery-thumbnails__button-right");
-        this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--slides");
-        this.liczbaSlides = (0, _jquery2.default)(".gallery-thumbnails__container__slide").length;
-        this.slideFlag = 1;
-        this.translate = 0;
-        this.events();
-    }
-
-    _createClass(GallerySlider, [{
-        key: "events",
-        value: function events() {
-            this.buttonRight.click(this.slideToRight.bind(this));
-            this.buttonLeft.click(this.slideToLeft.bind(this));
-        }
-        // slideToLeft() {
-        //     this.galleryThumbnails.css("transform", "translateX(0px)");
-
-        // }
-
-    }, {
-        key: "slideToRight",
-        value: function slideToRight() {
-            // console.log(this.liczbaSlides);
-            if (this.slideFlag === this.liczbaSlides - 2) {
-                //   this.galleryThumbnails.css("transform", "translateX(0)");
-                //   this.slideFlag = 1;
-                //   this.translate = -347.6;
-            } else {
-                this.galleryThumbnails.css("transform", "translateX(" + (this.translate - 347.6) + "px)");
-                this.translate -= 347.6;
-                this.slideFlag += 1;
-
-                //   console.log(this.translate);
-                //   console.log(this.liczbaSlides);
-                //   console.log(this.slideFlag);
-            }
-        }
-    }, {
-        key: "slideToLeft",
-        value: function slideToLeft() {
-            // console.log(this.liczbaSlides);
-            if (this.slideFlag === 1) {
-                //   this.galleryThumbnails.css("transform", "translateX(0)");
-                //   this.slideFlag = 1;
-                //   this.translate = -347.6;
-            } else {
-                this.galleryThumbnails.css("transform", "translateX(" + (this.translate + 347.6) + "px)");
-                this.translate += 347.6;
-                this.slideFlag -= 1;
-
-                //  console.log(this.translate);
-            }
-        }
-    }]);
-
-    return GallerySlider;
-}();
-
-exports.default = GallerySlider;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var LtrScale = function () {
-  function LtrScale() {
-    _classCallCheck(this, LtrScale);
-
-    this.container = (0, _jquery2.default)(".mini-gallery");
-    this.button = (0, _jquery2.default)(".mini-gallery__button");
-    this.events();
-  }
-
-  _createClass(LtrScale, [{
-    key: "events",
-    value: function events() {
-      this.container.mouseenter(this.showButton);
-      this.container.mouseleave(this.hideButton);
-    }
-  }, {
-    key: "showButton",
-    value: function showButton() {
-      console.log(this);
-      (0, _jquery2.default)(this).find('a').show("fast");
-    }
-  }, {
-    key: "hideButton",
-    value: function hideButton() {
-      console.log(this);
-      (0, _jquery2.default)(this).find('a').hide("fast");
-    }
-  }]);
-
-  return LtrScale;
-}();
-
-exports.default = LtrScale;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _noframework = __webpack_require__(7);
-
-var _noframework2 = _interopRequireDefault(_noframework);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var RevealOnScroll = function () {
-    function RevealOnScroll(elem, offset) {
-        _classCallCheck(this, RevealOnScroll);
-
-        this.itemsToReveal = elem;
-        this.offsetPercentage = offset;
-        this.hide();
-        this.createWaypoints();
-    }
-
-    _createClass(RevealOnScroll, [{
-        key: "hide",
-        value: function hide() {
-            this.itemsToReveal.addClass("reveal-item");
-        }
-    }, {
-        key: "createWaypoints",
-        value: function createWaypoints() {
-            var that = this;
-            this.itemsToReveal.each(function () {
-                var currentItem = this;
-                new Waypoint({
-                    element: currentItem,
-                    handler: function handler() {
-                        (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
-                    },
-                    offset: that.offsetPercentage
-                });
-            });
-        }
-    }]);
-
-    return RevealOnScroll;
-}();
-
-exports.default = RevealOnScroll;
-
-/***/ }),
-/* 7 */
 /***/ (function(module, exports) {
 
 /*!
@@ -11434,6 +11085,410 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.Adapter = NoFrameworkAdapter
 }())
 ;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _mobileMenu = __webpack_require__(3);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _currentDate = __webpack_require__(4);
+
+var _currentDate2 = _interopRequireDefault(_currentDate);
+
+var _gallerySlider = __webpack_require__(5);
+
+var _gallerySlider2 = _interopRequireDefault(_gallerySlider);
+
+var _ltrScale = __webpack_require__(6);
+
+var _ltrScale2 = _interopRequireDefault(_ltrScale);
+
+var _revealOnScroll = __webpack_require__(7);
+
+var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
+
+var _stickyHeader = __webpack_require__(8);
+
+var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mobileMenu = new _mobileMenu2.default();
+var currentDate = new _currentDate2.default();
+var gallerySlider = new _gallerySlider2.default();
+var ltrScale = new _ltrScale2.default();
+var stickyHeader = new _stickyHeader2.default();
+new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), '70%');
+new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), '70%');
+new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), '80%');
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+    function MobileMenu() {
+        _classCallCheck(this, MobileMenu);
+
+        this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
+        this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
+        this.events();
+    }
+
+    _createClass(MobileMenu, [{
+        key: "events",
+        value: function events() {
+            this.menuButton.click(this.toggleTheMenu.bind(this));
+            this.menuButton.click(this.toggleIconMenu.bind(this));
+        }
+    }, {
+        key: "toggleTheMenu",
+        value: function toggleTheMenu() {
+            this.menuContent.slideToggle("slow");
+        }
+    }, {
+        key: "toggleIconMenu",
+        value: function toggleIconMenu() {
+            this.menuButton.html() == "≡" ? this.menuButton.html("&times;") : this.menuButton.html("&equiv;");
+        }
+    }]);
+
+    return MobileMenu;
+}();
+
+exports.default = MobileMenu;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CurrentDate = function () {
+    function CurrentDate() {
+        _classCallCheck(this, CurrentDate);
+
+        this.currentDate = (0, _jquery2.default)(".currentDate");
+        this.formatter = new Intl.DateTimeFormat('pl', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+        this.injectDate();
+    }
+
+    _createClass(CurrentDate, [{
+        key: "injectDate",
+        value: function injectDate() {
+            // console.log(this.formatter.format(new Date()));
+            this.currentDate.html(this.formatter.format(new Date()));
+        }
+    }]);
+
+    return CurrentDate;
+}();
+
+exports.default = CurrentDate;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var GallerySlider = function () {
+    function GallerySlider() {
+        _classCallCheck(this, GallerySlider);
+
+        this.buttonLeft = (0, _jquery2.default)(".gallery-thumbnails__button-left");
+        this.buttonRight = (0, _jquery2.default)(".gallery-thumbnails__button-right");
+        this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--slides");
+        this.liczbaSlides = (0, _jquery2.default)(".gallery-thumbnails__container__slide").length;
+        this.slideFlag = 1;
+        this.translate = 0;
+        this.events();
+    }
+
+    _createClass(GallerySlider, [{
+        key: "events",
+        value: function events() {
+            this.buttonRight.click(this.slideToRight.bind(this));
+            this.buttonLeft.click(this.slideToLeft.bind(this));
+        }
+        // slideToLeft() {
+        //     this.galleryThumbnails.css("transform", "translateX(0px)");
+
+        // }
+
+    }, {
+        key: "slideToRight",
+        value: function slideToRight() {
+            // console.log(this.liczbaSlides);
+            if (this.slideFlag === this.liczbaSlides - 2) {
+                //   this.galleryThumbnails.css("transform", "translateX(0)");
+                //   this.slideFlag = 1;
+                //   this.translate = -347.6;
+            } else {
+                this.galleryThumbnails.css("transform", "translateX(" + (this.translate - 347.6) + "px)");
+                this.translate -= 347.6;
+                this.slideFlag += 1;
+
+                //   console.log(this.translate);
+                //   console.log(this.liczbaSlides);
+                //   console.log(this.slideFlag);
+            }
+        }
+    }, {
+        key: "slideToLeft",
+        value: function slideToLeft() {
+            // console.log(this.liczbaSlides);
+            if (this.slideFlag === 1) {
+                //   this.galleryThumbnails.css("transform", "translateX(0)");
+                //   this.slideFlag = 1;
+                //   this.translate = -347.6;
+            } else {
+                this.galleryThumbnails.css("transform", "translateX(" + (this.translate + 347.6) + "px)");
+                this.translate += 347.6;
+                this.slideFlag -= 1;
+
+                //  console.log(this.translate);
+            }
+        }
+    }]);
+
+    return GallerySlider;
+}();
+
+exports.default = GallerySlider;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var LtrScale = function () {
+  function LtrScale() {
+    _classCallCheck(this, LtrScale);
+
+    this.container = (0, _jquery2.default)(".mini-gallery");
+    this.button = (0, _jquery2.default)(".mini-gallery__button");
+    this.events();
+  }
+
+  _createClass(LtrScale, [{
+    key: "events",
+    value: function events() {
+      this.container.mouseenter(this.showButton);
+      this.container.mouseleave(this.hideButton);
+    }
+  }, {
+    key: "showButton",
+    value: function showButton() {
+      console.log(this);
+      (0, _jquery2.default)(this).find('a').show("fast");
+    }
+  }, {
+    key: "hideButton",
+    value: function hideButton() {
+      console.log(this);
+      (0, _jquery2.default)(this).find('a').hide("fast");
+    }
+  }]);
+
+  return LtrScale;
+}();
+
+exports.default = LtrScale;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+    function RevealOnScroll(elem, offset) {
+        _classCallCheck(this, RevealOnScroll);
+
+        this.itemsToReveal = elem;
+        this.offsetPercentage = offset;
+        this.hide();
+        this.createWaypoints();
+    }
+
+    _createClass(RevealOnScroll, [{
+        key: "hide",
+        value: function hide() {
+            this.itemsToReveal.addClass("reveal-item");
+        }
+    }, {
+        key: "createWaypoints",
+        value: function createWaypoints() {
+            var that = this;
+            this.itemsToReveal.each(function () {
+                var currentItem = this;
+                new Waypoint({
+                    element: currentItem,
+                    handler: function handler() {
+                        (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+                    },
+                    offset: that.offsetPercentage
+                });
+            });
+        }
+    }]);
+
+    return RevealOnScroll;
+}();
+
+exports.default = RevealOnScroll;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StickyHeader = function () {
+    function StickyHeader() {
+        _classCallCheck(this, StickyHeader);
+
+        this.stickyTrigger = (0, _jquery2.default)(".menu-header");
+        this.createHeaderWaypoint();
+    }
+
+    _createClass(StickyHeader, [{
+        key: "createHeaderWaypoint",
+        value: function createHeaderWaypoint() {
+            var that = this;
+            new Waypoint({
+                element: this.stickyTrigger[0],
+                handler: function handler(direction) {
+                    if (direction == "down") {
+                        that.stickyTrigger.addClass("menu-header--sticky");
+                    } else {
+                        that.stickyTrigger.removeClass("menu-header--sticky");
+                    }
+                }
+            });
+        }
+    }]);
+
+    return StickyHeader;
+}();
+
+exports.default = StickyHeader;
 
 /***/ })
 /******/ ]);
