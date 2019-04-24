@@ -4,9 +4,9 @@
     font-style: italic;
     overflow: hidden;
 
-    @mixin atMedium {
+    /* @mixin atMedium {
         height: 13.625rem;
-    }
+    } */
 
     &__follows {
         text-align: center;

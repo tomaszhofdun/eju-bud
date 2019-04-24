@@ -5,7 +5,7 @@ import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoi
 class StickyHeader {
     constructor() {
         this.stickyTrigger = $(".menu-header");
-        this.pageSections = $(".gallery-thumbnails__title , .form__title");
+        this.pageSections = $(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2");
         this.headerLinks = $(".menu-header__nav--toggleVisibility a");
         this.createHeaderWaypoint();
         this.createPageSectionWaypoints();

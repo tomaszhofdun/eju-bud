@@ -36,7 +36,7 @@
     &__bg-1 {
 
         @mixin atMedium {
-            background: #fff url("/assets/images/jackhammer-990.jpg") no-repeat;
+            background: #fff url("../../assets/images/jackhammer-990.jpg") no-repeat;
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
@@ -47,7 +47,7 @@
         }
 
         @mixin atLarge {
-            background: #fff url("/assets/images/jackhammer-1380.jpg") no-repeat;
+            background: #fff url("../../assets/images/jackhammer-1380.jpg") no-repeat;
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
@@ -58,7 +58,7 @@
         }
 
         @mixin atXLarge {
-            background: #fff url("/assets/images/jackhammer-1920.jpg") no-repeat;
+            background: #fff url("../../assets/images/jackhammer-1920.jpg") no-repeat;
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;
@@ -68,7 +68,7 @@
             overflow: hidden;
         }
 
-        background: #fff url("/assets/images/jackhammer-640.jpg") no-repeat;
+        background: #fff url("../../assets/images/jackhammer-640.jpg") no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center center;
@@ -81,7 +81,7 @@
     }
 
     &__bg-2 {
-        background: #fff url("/assets/images/worker-jump-1380.jpg") no-repeat;
+        background: #fff url("../../assets/images/worker-jump-1380.jpg") no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-position: center center;

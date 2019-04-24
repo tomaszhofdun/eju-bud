@@ -11469,7 +11469,7 @@ var StickyHeader = function () {
         _classCallCheck(this, StickyHeader);
 
         this.stickyTrigger = (0, _jquery2.default)(".menu-header");
-        this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title");
+        this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2");
         this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a");
         this.createHeaderWaypoint();
         this.createPageSectionWaypoints();
