@@ -11527,7 +11527,6 @@ var StickyHeader = function () {
                     offset: '-20%'
                 });
             });
-            var that = this;
         }
     }]);
 

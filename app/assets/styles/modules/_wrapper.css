@@ -6,6 +6,10 @@
   padding-bottom: 0.875rem;
   overflow: hidden;
 
+  &--scroll-positioner {
+    margin-top: -20px;
+  }
+
   &--noTopPadding {
     padding-top: 0;
     padding-bottom: 0;
