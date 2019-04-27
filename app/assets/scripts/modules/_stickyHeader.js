@@ -6,7 +6,7 @@ class StickyHeader {
     constructor() {
         this.stickyTrigger = $(".menu-header");
         this.pageSections = $(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2");
-        this.headerLinks = $(".menu-header__nav--toggleVisibility a");
+        this.headerLinks = $(".menu-header__nav--toggleVisibility a, .footer__list a");
         this.createHeaderWaypoint();
         this.createPageSectionWaypoints();
         this.addSmoothScrolling();

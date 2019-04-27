@@ -53,9 +53,6 @@
             background-image: url("../../assets/images/jackhammer-Large-i.jpg");
         }
 
-        @mixin atXLarge {
-            background-image: url("../../assets/images/jackhammer-Xlarge-i.jpg");
-        }
     }
 
     &__bg-2 {
@@ -78,9 +75,6 @@
             background-image: url("../../assets/images/worker-jump-Large-i.jpg");
         }
 
-        @mixin atXLarge {
-            background-image: url("../../assets/images/worker-jump-Xlarge-i.jpg");
-        }
     }
 
 }

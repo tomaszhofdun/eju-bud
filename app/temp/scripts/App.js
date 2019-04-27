@@ -11470,7 +11470,7 @@ var StickyHeader = function () {
 
         this.stickyTrigger = (0, _jquery2.default)(".menu-header");
         this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2");
-        this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a");
+        this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a, .footer__list a");
         this.createHeaderWaypoint();
         this.createPageSectionWaypoints();
         this.addSmoothScrolling();
