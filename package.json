@@ -1,0 +1,41 @@
+{
+  "name": "eju-bud",
+  "version": "1.0.0",
+  "description": "stronka budowlana",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomaszhofdun/eju-bud.git"
+  },
+  "author": "Tomasz Hofdun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomaszhofdun/eju-bud/issues"
+  },
+  "homepage": "https://github.com/tomaszhofdun/eju-bud#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-smooth-scroll": "^2.2.0",
+    "normalize.css": "^7.0.0",
+    "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sourcemaps": "^2.1.1",
+    "gulp-watch": "^4.3.11",
+    "postcss-import": "^11.0.0",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-simple-vars": "^4.1.0",
+    "webpack": "^3.8.1"
+  }
+}

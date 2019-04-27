@@ -1,5 +1,12 @@
 .menu-header {
     background-color: $mainGrey;
+    z-index: 2;
+
+    &--sticky {
+        position: fixed;
+        top: 0;
+        opacity: 0.8;
+    }
 
     @mixin atMedium {
 
@@ -10,6 +17,8 @@
             background-color: $mainBlue;
             display: block;
         }
+
+
     }
 
 
@@ -87,7 +96,7 @@
             & li {
 
                 list-style: none;
-                padding: 15px 16px;
+                /* padding: 15px 16px; */
 
                 @mixin atMedium {
                     float: left;
@@ -96,6 +105,12 @@
                 & a {
                     text-decoration: none;
                     color: #fff;
+                    padding: 15px 16px;
+                    display: block;
+
+                    &.is-current-link {
+                        color: yellow;
+                    }
                 }
 
                 &:hover {

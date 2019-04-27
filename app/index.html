@@ -21,11 +21,11 @@
   <!-- top-footer -->
   <section class="top-footer">
     <div class="wrapper">
-      <div class="row row__medium-6 currentDate"></div>
+      <div class="row row__medium-6 currentDate">eju-bud</div>
       <div class="row row__medium-6">
         <div class="top-footer__socials">
           <div class="top-footer__socials__icons"><a href="https://www.facebook.com/Zaklad-Og%C3%B3lnobudowlany-Patryk-Springer-285270644961803/" target="_blank"><img class="top-footer__socials__icons--facebook" src="./assets/images/icons/facebook-icon-preview-1-400x400.png" alt=""></a> </div>
-          <div class="top-footer__socials__icons"> <a href="mailto:kontakt@eju-bud.pl"><img class="top-footer__socials__icons--envelope" src="./assets/images/icons/envelope.svg" alt="">kontakt@eju-bud.pl</a></div>
+          <div class="top-footer__socials__icons"> <a href="mailto:kontakt@eju-bud.pl"><img class="top-footer__socials__icons--envelope" src="./assets/images/icons/envelope.svg" alt="">kontakt@eju-bud.pl </a></div>
           <div class="top-footer__socials__icons"><img class="top-footer__socials__icons--telephone" src="./assets/images/icons/telephone-symbol-button.svg" alt="">727 531 213</div>
 
         </div>
@@ -41,7 +41,7 @@
   <header class="main-header">
     <div class="wrapper">
       <div class="row__medium-2">
-        <a href=""><img class="main-header__logo" src="/assets/images/icons/logo_black.png" alt=""></a>
+        <a href="index.html"><img class="main-header__logo" src="./assets/images/icons/logo_black.png" alt=""></a>
       </div>
       <div class="row__medium-10">
         <h1 class="main-header__title">PROFESJONALNE USŁUGI BUDOWLANE</h1>
@@ -56,14 +56,15 @@
       <nav class="menu-header__nav">
         <ul>
           <!-- <div class="menu-header__nav__button"></div> -->
-          <a href=""><img class="menu-header__nav__icon-home" src="/assets/images/icons/home-nav.svg" alt=""></a>
+          <a href="index.html"><img class="menu-header__nav__icon-home" src="/assets/images/icons/home-nav.svg" alt=""></a>
           <li class="menu-header__nav--always-visible-button">&equiv;</li>
           <div class="menu-header__nav--toggleVisibility">
             <li><a href="">OFERTA</a></li>
-            <li><a href="#nasze-realizacje">NASZE REALIZACJE</a></li>
-            <li><a href="">CENNIK</a></li>
+            <!-- <li><a href=""></a></li> -->
+            <li><a id="nasze-realizacje-link" href="#nasze-realizacje">NASZE REALIZACJE</a></li>
+            <li><a href="cennik.html">CENNIK</a></li>
             <li><a href="">GALERIA</a></li>
-            <li><a href="#skontaktuj-sie-z-nami">KONTAKT</a></li>
+            <li><a id="skontaktuj-sie-z-nami-link" href="#skontaktuj-sie-z-nami">KONTAKT</a></li>
           </div>
 
         </ul>
@@ -82,8 +83,11 @@
           <div class="large-hero">
             <img class="large-hero__bar" src="./assets/images/gif/gif-zadzwon-blue.gif" alt="" />
             <picture>
-              <source media="(max-width:512px)" srcset="assets/images/tape-measure-small.jpg" />
-              <img class="large-hero__image" src="assets/images/tape-measure.jpg" alt="tło dla slidera" />
+              <source sizes="739px" media="(min-width:1200px)" srcset="assets/images/tape-measure-XLarge-i.jpg 739w, assets/images/tape-measure-XLarge-hdpi-i.jpg 1478w" />
+              <source sizes="612px" media="(min-width:1000px)" srcset="assets/images/tape-measure-Large-hdpi-i.jpg 1224w,assets/images/tape-measure-Large-i.jpg  612w" />
+              <source sizes="503px" media="(min-width:800px)" srcset="assets/images/tape-measure-Medium-hdpi-i.jpg 1006w,assets/images/tape-measure-Medium-i.jpg  503w" />
+              <source sizes="800px" media="(min-width:500px)" srcset="assets/images/tape-measure-Medium-hdpi-i.jpg 1006w,assets/images/tape-measure-Medium-i.jpg  503w" />
+              <img class="large-hero__image" src="assets/images/tape-measure-small.jpg" alt="" />
             </picture>
             <div class="large-hero__frame">
               <div class="large-hero__text-content">
@@ -103,23 +107,21 @@
           <div class="mini-gallery mini-gallery--md-none row__small-6 row__gutter-left-md row__gutter-right-sm row__gutter-bottom-md">
             <div class="mini-gallery__container">
               <picture>
-                <source media="(max-width:799px)" srcset="./assets/images/realizacje/cool-mirror/mirror.jpg" />
-                <img src="./assets/images/realizacje/cool-mirror/mirror-atLarge.jpg" alt="" />
+                <img src="./assets/images/mirror-atLarge.jpg" alt="" />
               </picture>
             </div>
-           
-              <a class="btn btn--large mini-gallery__button" href="">GALERIA</a>
-           
-              
-           
+
+            <a class="btn btn--large mini-gallery__button" href="">GALERIA</a>
+
+
+
 
           </div>
           <!-- drugi obrazek -->
           <div class="mini-gallery mini-gallery--md-none row__small-6 row__gutter-left row__gutter-right-md row__gutter-bottom-md ">
             <div class="mini-gallery__container">
               <picture>
-                <source media="(max-width:799px)" srcset="assets/images/realizacje/lazienka.jpg" />
-                <img src="assets/images/realizacje/lazienka-atLarge.jpg" alt="" />
+                <img src="assets/images/lazienka-atLarge.jpg" alt="" />
               </picture>
             </div>
             <a class="btn btn--large mini-gallery__button" href="">GALERIA</a>
@@ -128,7 +130,7 @@
           <!-- trzeci obrazek -->
           <div class="mini-gallery mini-gallery--md-none row__small-12 row__gutter-left-md  row__gutter-right-md row__gutter-top-md ">
             <div class="mini-gallery__container">
-              <img src="./assets/images/realizacje/fence.jpg" alt="" />
+              <img src="./assets/images/fence.jpg" alt="" />
             </div>
             <a class="btn btn--large mini-gallery__button" href="">GALERIA</a>
 
@@ -169,10 +171,10 @@
   <div class="parralax-section">
     <div class="parralax-section__img">
       <picture>
-        <source media="(min-width:1380px)" srcset="assets/images/house-building-1920.jpg 1920w">
-        <source media="(min-width:990px)" srcset="assets/images/house-building-1380.jpg 1380w">
-        <source media="(min-width:640px)" srcset="assets/images/house-building-990.jpg 990w">
-        <img srcset="assets/images/house-building-640.jpg 640w" alt="" />
+        <source media="(min-width:1380px)" srcset="assets/images/house-XLarge-i.jpg 1920w, assets/images/house-XLarge-hdpi-i.jpg 3840w">
+        <source media="(min-width:990px)" srcset="assets/images/house-Large-i.jpg 1380w, assets/images/house-Large-hdpi-i.jpg 2760w">
+        <source media="(min-width:640px)" srcset="assets/images/house-Medium-i.jpg 990w, assets/images/house-Medium-hdpi-i.jpg 1980w">
+        <img srcset="assets/images/house-Small-i.jpg 640w, assets/images/house-Small-hdpi-i.jpg 1280w" alt="" />
       </picture>
       <h1 class="parralax-section__title">
         Kompleksowa usługa, nie musisz się martwić o nic
@@ -184,16 +186,17 @@
       </h1>
     </div>
 
-    <div class="parralax-section__bg-2">
-      <h1 class="parralax-section__title">
+    <div class="parralax-section__bg-2" data-matching-link="">
+      <h1 class=" parralax-section__title">
         Tobie zostanie już tylko cieszenie się
         z końcowego efektu
       </h1>
     </div>
   </div>
   <!-- następna sekcja -->
-  <h1 id="nasze-realizacje" class="gallery-thumbnails__title">Ostatnie nasze realizacje</h1>
-  <div class="wrapper gallery-thumbnails">
+  <div id="nasze-realizacje" class="wrapper--scroll-positioner"></div>
+  <h1 data-matching-link="#nasze-realizacje-link" class="gallery-thumbnails__title">Ostatnie nasze realizacje</h1>
+  <div class="wrapper gallery-thumbnails ">
 
     <div class="gallery-thumbnails__button-left" href="#"><img src="./assets/images/icons/play-button-left.svg" alt=""></div>
     <div class="gallery-thumbnails__button-right" href="#"><img src="./assets/images/icons/play-button-right.svg" alt=""></div>
@@ -760,9 +763,9 @@
   </div>
   <!-- następna sekcja -->
 
-
-  <form class="form" action="#">
-    <h1 id="skontaktuj-sie-z-nami" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
+  <div id="skontaktuj-sie-z-nami" class="wrapper--scroll-positioner"></div>
+  <form class="form" method="POST" action="mail.php">
+    <h1 data-matching-link="#skontaktuj-sie-z-nami-link" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
     <div class="row__medium-8">
       <label class="form__labels" for="message">Twoja wiadomość*</label>
       <textarea class="form__textarea" rows="8" cols="65" type="text" id="message" name="message" placeholder="Witam, chciałbym zapytać......"></textarea>
@@ -782,33 +785,36 @@
   </form>
 
 
-  <!-- następna sekcja -->
+  <!-- FOOTER -->
   <div class="wrapper__maxWidth">
     <footer class="footer row">
       <div class="row__medium-4">
         <ul class="footer__list">
-          <li>Oferta</li>
-          <li>Realizacje</li>
-          <li>Cennik</li>
-          <li>Galeria</li>
-          <li>Kontakt</li>
+          <li><a href="">Oferta</a></li>
+          <li><a id="nasze-realizacje-link" href="#nasze-realizacje">Realizacje</a></li>
+          <li><a href="cennik.html">Cennik</a></li>
+          <li><a href="">Galeria</a></li>
+          <li><a id="skontaktuj-sie-z-nami-link" href="#skontaktuj-sie-z-nami">Kontakt</a></li>
         </ul>
       </div>
       <div class="row__medium-4">
-        <img class="footer__logo" src="/assets/images/icons/logo_white.png" alt="">
+        <a href="index.html"><img class="footer__logo" src="./assets/images/icons/logo_white.png" alt=""></a>
       </div>
       <div class="row__medium-4">
-        <p class="footer__follows">Śledź nas na <a href="https://www.facebook.com/Zaklad-Og%C3%B3lnobudowlany-Patryk-Springer-285270644961803/" target="_blank"><img class="footer__facebook" src="/assets/images/icons/facebook.png" alt=""></a> </p>
+        <p class="footer__follows">Śledź nas na <a href="https://www.facebook.com/Zaklad-Og%C3%B3lnobudowlany-Patryk-Springer-285270644961803/" target="_blank"><img class="footer__facebook" src="./assets/images/icons/facebook.png" alt=""></a> </p>
       </div>
+      <div class="footer__license">
+        <div class="row row__medium-12">
+          <div>Copyright © 2019<a href="" title="Tomasz Hofdun" target="_blank">Tomasz Hofdun</a> </div>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> <span>Icons made by Smashicons from www.flaticon.com</span> </div>
 
+        </div>
+      </div>
 
 
 
     </footer>
-    <div class="row row__medium-12">
-      <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> <span>Icons made by Smashicons from www.flaticon.com</span> </div>
 
-    </div>
 
   </div>
   <script src="./temp/scripts/App.js"></script>

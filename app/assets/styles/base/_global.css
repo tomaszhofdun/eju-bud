@@ -8,6 +8,11 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 * {
   box-sizing: border-box;
 }
