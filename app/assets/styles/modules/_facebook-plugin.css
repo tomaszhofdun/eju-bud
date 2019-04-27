@@ -1,5 +1,7 @@
-.facebook-plugin12 {
-    position: fixed;
+.facebook-plugin {
+    display: none;
+    position: absolute;
     right: 0;
     top: 20%;
+    z-index: 4;
 }
