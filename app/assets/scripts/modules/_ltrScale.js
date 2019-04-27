@@ -11,11 +11,9 @@ class LtrScale {
     this.container.mouseleave(this.hideButton);
   }
   showButton() {
-    console.log(this);
     $(this).find('a').show("fast");
   }
   hideButton() {
-    console.log(this);
     $(this).find('a').hide("fast");
   }
 }

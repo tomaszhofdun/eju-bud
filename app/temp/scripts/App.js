@@ -11117,6 +11117,10 @@ var _stickyHeader = __webpack_require__(8);
 
 var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
 
+var _facebook = __webpack_require__(10);
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11128,6 +11132,7 @@ var currentDate = new _currentDate2.default();
 var gallerySlider = new _gallerySlider2.default();
 var ltrScale = new _ltrScale2.default();
 var stickyHeader = new _stickyHeader2.default();
+var facebookPlugin = new _facebook2.default();
 new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), '70%');
 new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), '70%');
 new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), '80%');
@@ -11272,43 +11277,22 @@ var GallerySlider = function () {
             this.buttonRight.click(this.slideToRight.bind(this));
             this.buttonLeft.click(this.slideToLeft.bind(this));
         }
-        // slideToLeft() {
-        //     this.galleryThumbnails.css("transform", "translateX(0px)");
-
-        // }
-
     }, {
         key: "slideToRight",
         value: function slideToRight() {
-            // console.log(this.liczbaSlides);
-            if (this.slideFlag === this.liczbaSlides - 2) {
-                //   this.galleryThumbnails.css("transform", "translateX(0)");
-                //   this.slideFlag = 1;
-                //   this.translate = -347.6;
-            } else {
+            if (this.slideFlag === this.liczbaSlides - 2) {} else {
                 this.galleryThumbnails.css("transform", "translateX(" + (this.translate - 347.6) + "px)");
                 this.translate -= 347.6;
                 this.slideFlag += 1;
-
-                //   console.log(this.translate);
-                //   console.log(this.liczbaSlides);
-                //   console.log(this.slideFlag);
             }
         }
     }, {
         key: "slideToLeft",
         value: function slideToLeft() {
-            // console.log(this.liczbaSlides);
-            if (this.slideFlag === 1) {
-                //   this.galleryThumbnails.css("transform", "translateX(0)");
-                //   this.slideFlag = 1;
-                //   this.translate = -347.6;
-            } else {
+            if (this.slideFlag === 1) {} else {
                 this.galleryThumbnails.css("transform", "translateX(" + (this.translate + 347.6) + "px)");
                 this.translate += 347.6;
                 this.slideFlag -= 1;
-
-                //  console.log(this.translate);
             }
         }
     }]);
@@ -11357,13 +11341,11 @@ var LtrScale = function () {
   }, {
     key: "showButton",
     value: function showButton() {
-      console.log(this);
       (0, _jquery2.default)(this).find('a').show("fast");
     }
   }, {
     key: "hideButton",
     value: function hideButton() {
-      console.log(this);
       (0, _jquery2.default)(this).find('a').hide("fast");
     }
   }]);
@@ -11901,6 +11883,66 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FacebookPlugin = function () {
+    function FacebookPlugin() {
+        _classCallCheck(this, FacebookPlugin);
+
+        this.facebookDiv = (0, _jquery2.default)(".facebook-plugin");
+        this.facebookButton = (0, _jquery2.default)(".facebook-button")[0];
+        this.enywhere = (0, _jquery2.default)(document);
+        this.events();
+    }
+
+    _createClass(FacebookPlugin, [{
+        key: "events",
+        value: function events() {
+            var that = this;
+            this.enywhere.click(function () {
+                if (event.target != that.facebookButton) {
+                    that.hideFacebookButton();
+                } else {
+                    that.revealFacebookPlugin();
+                }
+            });
+        }
+    }, {
+        key: "revealFacebookPlugin",
+        value: function revealFacebookPlugin() {
+            this.facebookDiv.addClass("facebook-plugin--visible");
+        }
+    }, {
+        key: "hideFacebookButton",
+        value: function hideFacebookButton() {
+            this.facebookDiv.removeClass("facebook-plugin--visible");
+        }
+    }]);
+
+    return FacebookPlugin;
+}();
+
+exports.default = FacebookPlugin;
 
 /***/ })
 /******/ ]);
