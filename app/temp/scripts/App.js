@@ -11912,6 +11912,8 @@ var FacebookPlugin = function () {
         this.facebookDiv = (0, _jquery2.default)(".facebook-plugin");
         this.facebookButton = (0, _jquery2.default)(".facebook-button")[0];
         this.enywhere = (0, _jquery2.default)(document);
+        this.widgetWith = (0, _jquery2.default)(".fb-page");
+
         this.events();
     }
 
@@ -11926,6 +11928,11 @@ var FacebookPlugin = function () {
                     that.revealFacebookPlugin();
                 }
             });
+            if ((0, _jquery2.default)(window).width() < 800) {
+                this.widgetWith.attr('data-width', '300');
+                // this.widgetWith.hide();
+                console.log((0, _jquery2.default)(window).width());
+            }
         }
     }, {
         key: "revealFacebookPlugin",
