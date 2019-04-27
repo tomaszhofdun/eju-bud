@@ -6,8 +6,8 @@ class FacebookPlugin {
         this.facebookButton = $(".facebook-button")[0];
         this.enywhere = $(document);
         this.widgetWith = $(".fb-page");
-
         this.events();
+        this.keepFacebookWidgetSize();
     }
     events() {
         var that = this;
@@ -18,19 +18,20 @@ class FacebookPlugin {
                 that.revealFacebookPlugin();
             }
         })
-        if ($(window).width() < 800) {
-            this.widgetWith.attr('data-width', '300');
-            // this.widgetWith.hide();
-            console.log($(window).width());
-        }
-
     }
     revealFacebookPlugin() {
         this.facebookDiv.addClass("facebook-plugin--visible");
-
     }
     hideFacebookButton() {
         this.facebookDiv.removeClass("facebook-plugin--visible");
+    }
+    keepFacebookWidgetSize() {
+        if ($(window).width() < 800) {
+            this.widgetWith.attr('data-width', '300');
+            console.log($(window).width());
+        } else {
+            this.widgetWith.attr('data-width', '350');
+        }
     }
 }
 

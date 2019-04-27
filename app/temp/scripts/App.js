@@ -11913,8 +11913,8 @@ var FacebookPlugin = function () {
         this.facebookButton = (0, _jquery2.default)(".facebook-button")[0];
         this.enywhere = (0, _jquery2.default)(document);
         this.widgetWith = (0, _jquery2.default)(".fb-page");
-
         this.events();
+        this.keepFacebookWidgetSize();
     }
 
     _createClass(FacebookPlugin, [{
@@ -11928,11 +11928,6 @@ var FacebookPlugin = function () {
                     that.revealFacebookPlugin();
                 }
             });
-            if ((0, _jquery2.default)(window).width() < 800) {
-                this.widgetWith.attr('data-width', '300');
-                // this.widgetWith.hide();
-                console.log((0, _jquery2.default)(window).width());
-            }
         }
     }, {
         key: "revealFacebookPlugin",
@@ -11943,6 +11938,16 @@ var FacebookPlugin = function () {
         key: "hideFacebookButton",
         value: function hideFacebookButton() {
             this.facebookDiv.removeClass("facebook-plugin--visible");
+        }
+    }, {
+        key: "keepFacebookWidgetSize",
+        value: function keepFacebookWidgetSize() {
+            if ((0, _jquery2.default)(window).width() < 800) {
+                this.widgetWith.attr('data-width', '300');
+                console.log((0, _jquery2.default)(window).width());
+            } else {
+                this.widgetWith.attr('data-width', '350');
+            }
         }
     }]);
 
