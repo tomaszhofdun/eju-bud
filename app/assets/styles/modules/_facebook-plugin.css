@@ -1,47 +1,45 @@
 @keyframes slideFacebookAtMedium {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 
-    to {
-        width: 350px;
-    }
+  to {
+    width: 350px;
+  }
 }
 
 @keyframes slideFacebookSmall {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 
-    to {
-        width: 300px;
-    }
+  to {
+    width: 300px;
+  }
 }
 
 .facebook-plugin {
-    /* display: none; */
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 4;
-    width: 0;
-    transition: all .5s ease-in;
+  /* display: none; */
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  width: 0;
+  transition: all 0.5s ease-in;
 
-    &--visible {
-        animation: slideFacebookSmall .5s ease-in 0s 1 both;
+  &--visible {
+    animation: slideFacebookSmall 0.5s ease-in 0s 1 both;
 
-        @mixin atMedium {
-            animation: slideFacebookAtMedium .5s ease-in 0s 1 both;
-
-        }
-
+    @mixin atMedium {
+      animation: slideFacebookAtMedium 0.5s ease-in 0s 1 both;
     }
+  }
 }
 
 .facebook-button {
-    position: fixed;
-    right: 0;
-    top: 20%;
-    z-index: 4;
-    height: 100px;
+  position: fixed;
+  right: 0;
+  top: 20%;
+  z-index: 4;
+  height: 100px;
 }

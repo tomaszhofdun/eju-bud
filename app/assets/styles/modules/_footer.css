@@ -1,85 +1,80 @@
 .footer {
-    background-color: $mainGrey;
-    color: #fff;
-    font-style: italic;
-    overflow: hidden;
+  background-color: $mainGrey;
+  color: #fff;
+  font-style: italic;
+  overflow: hidden;
 
+  &__follows {
+    text-align: center;
+    font-size: 2rem;
+    margin: 49px 0;
 
-    &__follows {
-        text-align: center;
-        font-size: 2rem;
-        margin: 49px 0;
+    @mixin atMedium {
+      text-align: left;
+    }
+  }
 
-        @mixin atMedium {
-            text-align: left;
-        }
+  &__facebook {
+    display: block;
+    margin: 0 auto;
+
+    @mixin atMedium {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    width: 8.625rem;
+    height: auto;
+
+    display: block;
+    margin: 31px auto;
+
+    @mixin atMedium {
+      margin: 65px auto;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0;
+
+    & a {
+      text-decoration: none;
+      color: #fff;
     }
 
-    &__facebook {
-        display: block;
-        margin: 0 auto;
-
-        @mixin atMedium {
-            margin: 0;
-        }
+    @mixin atMedium {
+      font-size: 1rem;
     }
 
-    &__logo {
-        width: 8.625rem;
-        height: auto;
-
-        display: block;
-        margin: 31px auto;
-
-        @mixin atMedium {
-            margin: 65px auto;
-        }
+    @mixin atMedium {
+      float: right;
+      margin: 60px;
+      text-align: left;
     }
 
+    li {
+      position: relative;
+      list-style-type: none;
+      padding: 10px;
 
-    &__list {
-        text-align: center;
-        font-size: 1.6rem;
-        padding: 0;
+      @mixin atMedium {
+        padding: 2px;
+      }
 
-        & a {
-            text-decoration: none;
-            color: #fff;
-        }
-
+      &:before {
         @mixin atMedium {
-            font-size: 1rem;
+          content: "";
+          position: absolute;
+          top: 4px;
+          left: -16px;
+          width: 14px;
+          height: 14px;
+          background-image: url("/assets/images/icons/flower.png");
         }
-
-        @mixin atMedium {
-            float: right;
-            margin: 60px;
-            text-align: left;
-        }
-
-
-        li {
-            position: relative;
-            list-style-type: none;
-            padding: 10px;
-
-            @mixin atMedium {
-                padding: 2px;
-            }
-
-            &:before {
-                @mixin atMedium {
-                    content: "";
-                    position: absolute;
-                    top: 4px;
-                    left: -16px;
-                    width: 14px;
-                    height: 14px;
-                    background-image: url('/assets/images/icons/flower.png');
-                }
-            }
-        }
-
-
+      }
     }
+  }
 }
