@@ -1,0 +1,64 @@
+.icon--svg--calendar
+    {
+    width: 120px;
+    height: 120px;
+    background-image: url("/temp/sprite/css/svg/sprite.css-90d2bf5c.svg"); 
+    background-position: 0 0;
+    display: inline-block;
+}
+.icon--svg--envelope
+    {
+    width: 32px;
+    height: 32px;
+    background-image: url("/temp/sprite/css/svg/sprite.css-90d2bf5c.svg"); 
+    background-position: 96.15384615384616% 57.69230769230769%;
+    display: inline-block;
+}
+.icon--svg--home-nav
+    {
+    width: 30px;
+    height: 30px;
+    background-image: url("/temp/sprite/css/svg/sprite.css-90d2bf5c.svg"); 
+    background-position: 72.38095238095238% 76.19047619047619%;
+    display: inline-block;
+}
+.icon--svg--house
+    {
+    width: 120px;
+    height: 120px;
+    background-image: url("/temp/sprite/css/svg/sprite.css-90d2bf5c.svg"); 
+    background-position: 100% 0;
+    display: inline-block;
+}
+.icon--svg--play-button-left
+    {
+    width: 40px;
+    height: 40px;
+    background-image: url("/temp/sprite/css/svg/sprite.css-90d2bf5c.svg"); 
+    background-position: 60% 60%;
+    display: inline-block;
+}
+.icon--svg--play-button-right
+    {
+    width: 40px;
+    height: 40px;
+    background-image: url("/temp/sprite/css/svg/sprite.css-90d2bf5c.svg"); 
+    background-position: 80% 60%;
+    display: inline-block;
+}
+.icon--svg--stopwatch
+    {
+    width: 120px;
+    height: 120px;
+    background-image: url("/temp/sprite/css/svg/sprite.css-90d2bf5c.svg"); 
+    background-position: 0 100%;
+    display: inline-block;
+}
+.icon--svg--telephone-symbol-button
+    {
+    width: 32px;
+    height: 32px;
+    background-image: url("/temp/sprite/css/svg/sprite.css-90d2bf5c.svg"); 
+    background-position: 57.69230769230769% 76.92307692307692%;
+    display: inline-block;
+}

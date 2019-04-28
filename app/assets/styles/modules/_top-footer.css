@@ -1,40 +1,38 @@
 .top-footer {
-    &__socials {
-        float: right;
-        margin-top: 10px;
+  &__socials {
+    float: right;
+    margin-top: 10px;
 
-        @mixin atMedium {
-            margin-top: 0;
-        }
-
-        &__icons {
-            float: left;
-            margin-top: 20px;
-
-            @mixin atSmall {
-                margin-top: 0;
-            }
-
-            &--facebook {
-                width: 1.8rem;
-                margin: -8px 5px;
-                height: 1.7rem;
-            }
-
-            &--envelope {
-                height: 2.05rem;
-                margin: -11px 5px;
-            }
-
-            &--telephone {
-                height: 2.05rem;
-                margin: -11px 5px;
-            }
-        }
+    @mixin atMedium {
+      margin-top: 0;
     }
 
-    & a {
-        text-decoration: none;
-        color: #333333;
+    &__icons {
+      float: left;
+      margin-top: 20px;
+
+      @mixin atSmall {
+        margin-top: 0;
+      }
+
+      &--facebook {
+        width: 1.8rem;
+        margin: -8px 5px;
+        height: 1.7rem;
+      }
+
+      &--envelope {
+        margin: -11px 5px;
+      }
+
+      &--telephone {
+        margin: -11px 5px;
+      }
     }
+  }
+
+  & a {
+    text-decoration: none;
+    color: #333333;
+  }
 }

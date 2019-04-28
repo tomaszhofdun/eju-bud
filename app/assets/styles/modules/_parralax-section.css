@@ -1,80 +1,74 @@
 .parralax-section {
-    &__img {
-        position: relative;
-        overflow: hidden;
+  &__img {
+    position: relative;
+    overflow: hidden;
+  }
+
+  & img {
+    width: 100%;
+    display: block;
+  }
+
+  &__title {
+    position: absolute;
+    color: #fff;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    top: 30%;
+    padding: 0 0;
+    font-size: 3rem;
+
+    @mixin atMedium {
+      padding: 0 3%;
+      font-size: 4.3rem;
     }
 
-    & img {
-        width: 100%;
-        display: block;
+    @mixin atLarge {
+      top: 40%;
+      padding: 0 10%;
+      font-size: 4.3rem;
+    }
+  }
 
+  &__bg-1 {
+    background-image: url("../../assets/images/jackhammer-Small-i.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 632px;
+    position: relative;
+    overflow: hidden;
+
+    @mixin atMedium {
+      background-image: url("../../assets/images/jackhammer-Medium-i.jpg");
     }
 
-    &__title {
-        position: absolute;
-        color: #fff;
-        font-family: 'Cinzel', serif;
-        font-weight: 700;
-        text-shadow: 2px 2px 4px #000000;
-        text-align: center;
-        top: 30%;
-        padding: 0 0;
-        font-size: 3rem;
+    @mixin atLarge {
+      background-image: url("../../assets/images/jackhammer-Large-i.jpg");
+    }
+  }
 
-        @mixin atMedium {
-            padding: 0 3%;
-            font-size: 4.3rem;
-        }
+  &__bg-2 {
+    background-image: url("../../assets/images/worker-jump-Small-i.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 632px;
+    position: relative;
+    overflow: hidden;
 
-        @mixin atLarge {
-            top: 40%;
-            padding: 0 10%;
-            font-size: 4.3rem;
-        }
+    @mixin atMedium {
+      background-image: url("../../assets/images/worker-jump-Medium-i.jpg");
     }
 
-    &__bg-1 {
-
-        background-image: url("../../assets/images/jackhammer-Small-i.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-        height: 632px;
-        position: relative;
-        overflow: hidden;
-
-        @mixin atMedium {
-            background-image: url("../../assets/images/jackhammer-Medium-i.jpg");
-        }
-
-        @mixin atLarge {
-            background-image: url("../../assets/images/jackhammer-Large-i.jpg");
-        }
-
+    @mixin atLarge {
+      background-image: url("../../assets/images/worker-jump-Large-i.jpg");
     }
-
-    &__bg-2 {
-
-        background-image: url("../../assets/images/worker-jump-Small-i.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-        height: 632px;
-        position: relative;
-        overflow: hidden;
-
-        @mixin atMedium {
-            background-image: url("../../assets/images/worker-jump-Medium-i.jpg");
-        }
-
-        @mixin atLarge {
-            background-image: url("../../assets/images/worker-jump-Large-i.jpg");
-        }
-
-    }
-
+  }
 }
