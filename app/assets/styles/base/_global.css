@@ -17,6 +17,14 @@ a {
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
+.verticalCenter {
+  vertical-align: middle;
+}
+
 .float {
   float: left;
 

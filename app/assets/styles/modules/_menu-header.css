@@ -81,7 +81,6 @@
 
       & li {
         list-style: none;
-        /* padding: 15px 16px; */
 
         @mixin atMedium {
           float: left;
