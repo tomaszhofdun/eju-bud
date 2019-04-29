@@ -11151,7 +11151,7 @@ new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), "80%");
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11165,33 +11165,50 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var MobileMenu = function () {
-    function MobileMenu() {
-        _classCallCheck(this, MobileMenu);
+  function MobileMenu() {
+    _classCallCheck(this, MobileMenu);
 
-        this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
-        this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
-        this.events();
+    // this.menuButton = $(".menu-header__nav--always-visible-button")[0];
+    this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
+    this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
+    this.enywhere = (0, _jquery2.default)(document);
+    this.events();
+  }
+
+  _createClass(MobileMenu, [{
+    key: "events",
+    value: function events() {
+      var that = this;
+      this.menuButton.click(this.toggleTheMenu.bind(this));
+      this.menuButton.click(this.toggleIconMenu.bind(this));
+      this.enywhere.click(function () {
+        if (event.target != (0, _jquery2.default)(".menu-header__nav--always-visible-button")[0]) {
+          that.closeTheMenu();
+          that.toggleIconMenu();
+          console.log(that);
+        } else {
+          // return false;
+        }
+      });
     }
+  }, {
+    key: "toggleTheMenu",
+    value: function toggleTheMenu() {
+      this.menuContent.slideToggle("slow");
+    }
+  }, {
+    key: "closeTheMenu",
+    value: function closeTheMenu() {
+      this.menuContent.slideUp("slow");
+    }
+  }, {
+    key: "toggleIconMenu",
+    value: function toggleIconMenu() {
+      this.menuButton.html() == "≡" ? this.menuButton.html("&times;") : this.menuButton.html("&equiv;");
+    }
+  }]);
 
-    _createClass(MobileMenu, [{
-        key: "events",
-        value: function events() {
-            this.menuButton.click(this.toggleTheMenu.bind(this));
-            this.menuButton.click(this.toggleIconMenu.bind(this));
-        }
-    }, {
-        key: "toggleTheMenu",
-        value: function toggleTheMenu() {
-            this.menuContent.slideToggle("slow");
-        }
-    }, {
-        key: "toggleIconMenu",
-        value: function toggleIconMenu() {
-            this.menuButton.html() == "≡" ? this.menuButton.html("&times;") : this.menuButton.html("&equiv;");
-        }
-    }]);
-
-    return MobileMenu;
+  return MobileMenu;
 }();
 
 exports.default = MobileMenu;
@@ -11898,7 +11915,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11912,52 +11929,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var FacebookPlugin = function () {
-    function FacebookPlugin() {
-        _classCallCheck(this, FacebookPlugin);
+  function FacebookPlugin() {
+    _classCallCheck(this, FacebookPlugin);
 
-        this.facebookDiv = (0, _jquery2.default)(".facebook-plugin");
-        this.facebookButton = (0, _jquery2.default)(".facebook-button")[0];
-        this.enywhere = (0, _jquery2.default)(document);
-        this.widgetWith = (0, _jquery2.default)(".fb-page");
-        this.events();
-        this.keepFacebookWidgetSize();
+    this.facebookDiv = (0, _jquery2.default)(".facebook-plugin");
+    this.facebookButton = (0, _jquery2.default)(".facebook-button")[0];
+    this.enywhere = (0, _jquery2.default)(document);
+    this.widgetWith = (0, _jquery2.default)(".fb-page");
+    this.events();
+    this.keepFacebookWidgetSize();
+  }
+
+  _createClass(FacebookPlugin, [{
+    key: "events",
+    value: function events() {
+      var that = this;
+      this.enywhere.click(function () {
+        if (event.target != that.facebookButton) {
+          that.hideFacebookButton();
+        } else {
+          that.revealFacebookPlugin();
+        }
+      });
     }
+  }, {
+    key: "revealFacebookPlugin",
+    value: function revealFacebookPlugin() {
+      this.facebookDiv.addClass("facebook-plugin--visible");
+    }
+  }, {
+    key: "hideFacebookButton",
+    value: function hideFacebookButton() {
+      this.facebookDiv.removeClass("facebook-plugin--visible");
+    }
+  }, {
+    key: "keepFacebookWidgetSize",
+    value: function keepFacebookWidgetSize() {
+      if ((0, _jquery2.default)(window).width() < 800) {
+        this.widgetWith.attr("data-width", "300");
+        console.log((0, _jquery2.default)(window).width());
+      } else {
+        this.widgetWith.attr("data-width", "350");
+      }
+    }
+  }]);
 
-    _createClass(FacebookPlugin, [{
-        key: "events",
-        value: function events() {
-            var that = this;
-            this.enywhere.click(function () {
-                if (event.target != that.facebookButton) {
-                    that.hideFacebookButton();
-                } else {
-                    that.revealFacebookPlugin();
-                }
-            });
-        }
-    }, {
-        key: "revealFacebookPlugin",
-        value: function revealFacebookPlugin() {
-            this.facebookDiv.addClass("facebook-plugin--visible");
-        }
-    }, {
-        key: "hideFacebookButton",
-        value: function hideFacebookButton() {
-            this.facebookDiv.removeClass("facebook-plugin--visible");
-        }
-    }, {
-        key: "keepFacebookWidgetSize",
-        value: function keepFacebookWidgetSize() {
-            if ((0, _jquery2.default)(window).width() < 800) {
-                this.widgetWith.attr('data-width', '300');
-                console.log((0, _jquery2.default)(window).width());
-            } else {
-                this.widgetWith.attr('data-width', '350');
-            }
-        }
-    }]);
-
-    return FacebookPlugin;
+  return FacebookPlugin;
 }();
 
 exports.default = FacebookPlugin;

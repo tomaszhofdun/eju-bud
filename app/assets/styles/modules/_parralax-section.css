@@ -33,7 +33,7 @@
   }
 
   &__bg-1 {
-    background-image: url("../../assets/images/jackhammer-Small-i.jpg");
+    background-image: url("../../assets/images/jackhammer-Small.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -44,16 +44,16 @@
     overflow: hidden;
 
     @mixin atMedium {
-      background-image: url("../../assets/images/jackhammer-Medium-i.jpg");
+      background-image: url("../../assets/images/jackhammer-Medium.jpg");
     }
 
     @mixin atLarge {
-      background-image: url("../../assets/images/jackhammer-Large-i.jpg");
+      background-image: url("../../assets/images/jackhammer-Large.jpg");
     }
   }
 
   &__bg-2 {
-    background-image: url("../../assets/images/worker-jump-Small-i.jpg");
+    background-image: url("../../assets/images/worker-jump-Small.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -64,11 +64,11 @@
     overflow: hidden;
 
     @mixin atMedium {
-      background-image: url("../../assets/images/worker-jump-Medium-i.jpg");
+      background-image: url("../../assets/images/worker-jump-Medium.jpg");
     }
 
     @mixin atLarge {
-      background-image: url("../../assets/images/worker-jump-Large-i.jpg");
+      background-image: url("../../assets/images/worker-jump-Large.jpg");
     }
   }
 }
