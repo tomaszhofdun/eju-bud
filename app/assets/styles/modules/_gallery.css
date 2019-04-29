@@ -73,8 +73,6 @@
       box-sizing: border-box;
       width: 198px;
       height: 302px;
-      /* background: url("/assets/images/mirror.jpg") center center; */
-      /* background-size: cover; */
       float: left;
       margin-right: 2px;
     }
@@ -83,8 +81,6 @@
       box-sizing: border-box;
       width: 98px;
       height: 150px;
-      /* background: url("/assets/images/mirror.jpg") center center; */
-      /* background-size: cover; */
       float: left;
       margin-bottom: 2px;
     }

@@ -1,10 +1,17 @@
 .top-footer {
+  &__currentDate {
+    display: none;
+    @mixin atMedium {
+      display: block;
+    }
+  }
   &__socials {
-    float: right;
+    float: left;
     margin-top: 10px;
 
     @mixin atMedium {
       margin-top: 0;
+      float: right;
     }
 
     &__icons {

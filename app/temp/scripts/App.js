@@ -11221,7 +11221,7 @@ exports.default = MobileMenu;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11235,27 +11235,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var CurrentDate = function () {
-    function CurrentDate() {
-        _classCallCheck(this, CurrentDate);
+  function CurrentDate() {
+    _classCallCheck(this, CurrentDate);
 
-        this.currentDate = (0, _jquery2.default)(".currentDate");
-        this.formatter = new Intl.DateTimeFormat('pl', {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric'
-        });
-        this.injectDate();
+    this.currentDate = (0, _jquery2.default)(".top-footer__currentDate");
+    this.formatter = new Intl.DateTimeFormat("pl", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+    this.injectDate();
+  }
+
+  _createClass(CurrentDate, [{
+    key: "injectDate",
+    value: function injectDate() {
+      // console.log(this.formatter.format(new Date()));
+      this.currentDate.html(this.formatter.format(new Date()));
     }
+  }]);
 
-    _createClass(CurrentDate, [{
-        key: "injectDate",
-        value: function injectDate() {
-            // console.log(this.formatter.format(new Date()));
-            this.currentDate.html(this.formatter.format(new Date()));
-        }
-    }]);
-
-    return CurrentDate;
+  return CurrentDate;
 }();
 
 exports.default = CurrentDate;
@@ -11268,7 +11268,7 @@ exports.default = CurrentDate;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11282,45 +11282,47 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var GallerySlider = function () {
-    function GallerySlider() {
-        _classCallCheck(this, GallerySlider);
+  function GallerySlider() {
+    _classCallCheck(this, GallerySlider);
 
-        this.buttonLeft = (0, _jquery2.default)(".gallery-thumbnails__button-left");
-        this.buttonRight = (0, _jquery2.default)(".gallery-thumbnails__button-right");
-        this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--slides");
-        this.liczbaSlides = (0, _jquery2.default)(".gallery-thumbnails__container__slide").length;
-        this.slideFlag = 1;
-        this.translate = 0;
-        this.events();
+    this.buttonLeft = (0, _jquery2.default)(".gallery-thumbnails__button-left");
+    this.buttonRight = (0, _jquery2.default)(".gallery-thumbnails__button-right");
+    this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--slides");
+    this.liczbaSlides = (0, _jquery2.default)(".gallery-thumbnails__container__slide").length;
+    this.slideFlag = 1;
+    this.translate = 0;
+    this.events();
+  }
+
+  _createClass(GallerySlider, [{
+    key: "events",
+    value: function events() {
+      this.buttonRight.click(this.slideToRight.bind(this));
+      this.buttonLeft.click(this.slideToLeft.bind(this));
     }
+  }, {
+    key: "slideToRight",
+    value: function slideToRight() {
+      if (this.slideFlag === this.liczbaSlides) {
+        return false;
+      } else {
+        this.galleryThumbnails.css("transform", "translateX(" + (this.translate - 347.6) + "px)");
+        this.translate -= 347.6;
+        this.slideFlag += 1;
+      }
+    }
+  }, {
+    key: "slideToLeft",
+    value: function slideToLeft() {
+      if (this.slideFlag === 1) {} else {
+        this.galleryThumbnails.css("transform", "translateX(" + (this.translate + 347.6) + "px)");
+        this.translate += 347.6;
+        this.slideFlag -= 1;
+      }
+    }
+  }]);
 
-    _createClass(GallerySlider, [{
-        key: "events",
-        value: function events() {
-            this.buttonRight.click(this.slideToRight.bind(this));
-            this.buttonLeft.click(this.slideToLeft.bind(this));
-        }
-    }, {
-        key: "slideToRight",
-        value: function slideToRight() {
-            if (this.slideFlag === this.liczbaSlides - 2) {} else {
-                this.galleryThumbnails.css("transform", "translateX(" + (this.translate - 347.6) + "px)");
-                this.translate -= 347.6;
-                this.slideFlag += 1;
-            }
-        }
-    }, {
-        key: "slideToLeft",
-        value: function slideToLeft() {
-            if (this.slideFlag === 1) {} else {
-                this.galleryThumbnails.css("transform", "translateX(" + (this.translate + 347.6) + "px)");
-                this.translate += 347.6;
-                this.slideFlag -= 1;
-            }
-        }
-    }]);
-
-    return GallerySlider;
+  return GallerySlider;
 }();
 
 exports.default = GallerySlider;
@@ -11448,7 +11450,7 @@ exports.default = RevealOnScroll;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11470,72 +11472,73 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var StickyHeader = function () {
-    function StickyHeader() {
-        _classCallCheck(this, StickyHeader);
+  function StickyHeader() {
+    _classCallCheck(this, StickyHeader);
 
-        this.stickyTrigger = (0, _jquery2.default)(".menu-header");
-        this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2");
-        this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a, .footer__list a");
-        this.createHeaderWaypoint();
-        this.createPageSectionWaypoints();
-        this.addSmoothScrolling();
+    this.stickyTrigger = (0, _jquery2.default)(".menu-header");
+    this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2");
+    this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a, .footer__list a");
+    this.createHeaderWaypoint();
+    this.createPageSectionWaypoints();
+    this.addSmoothScrolling();
+  }
+
+  _createClass(StickyHeader, [{
+    key: "addSmoothScrolling",
+    value: function addSmoothScrolling() {
+      this.headerLinks.smoothScroll({
+        speed: 1000,
+        offset: -50
+      });
     }
+  }, {
+    key: "createHeaderWaypoint",
+    value: function createHeaderWaypoint() {
+      var that = this;
+      new Waypoint({
+        element: this.stickyTrigger[0],
+        handler: function handler(direction) {
+          if (direction == "down") {
+            that.stickyTrigger.addClass("menu-header--sticky");
+          } else {
+            that.stickyTrigger.removeClass("menu-header--sticky");
+          }
+        }
+      });
+    }
+  }, {
+    key: "createPageSectionWaypoints",
+    value: function createPageSectionWaypoints() {
+      var that = this;
+      this.pageSections.each(function () {
+        var currentSection = this;
+        new Waypoint({
+          element: currentSection,
+          handler: function handler(direction) {
+            if (direction == "down") {
+              var specificDataLink = currentSection.getAttribute("data-matching-link");
+              that.headerLinks.removeClass("is-current-link");
+              (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
+            }
+          },
+          offset: "65%"
+        });
+        new Waypoint({
+          element: currentSection,
+          handler: function handler(direction) {
+            if (direction == "up") {
+              var specificDataLink = currentSection.getAttribute("data-matching-link");
+              that.headerLinks.removeClass("is-current-link");
+              (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
+            }
+          },
+          offset: "-20%"
+        });
+      });
+    }
+  }]);
 
-    _createClass(StickyHeader, [{
-        key: "addSmoothScrolling",
-        value: function addSmoothScrolling() {
-            this.headerLinks.smoothScroll({
-                speed: 1000
-            });
-        }
-    }, {
-        key: "createHeaderWaypoint",
-        value: function createHeaderWaypoint() {
-            var that = this;
-            new Waypoint({
-                element: this.stickyTrigger[0],
-                handler: function handler(direction) {
-                    if (direction == "down") {
-                        that.stickyTrigger.addClass("menu-header--sticky");
-                    } else {
-                        that.stickyTrigger.removeClass("menu-header--sticky");
-                    }
-                }
-            });
-        }
-    }, {
-        key: "createPageSectionWaypoints",
-        value: function createPageSectionWaypoints() {
-            var that = this;
-            this.pageSections.each(function () {
-                var currentSection = this;
-                new Waypoint({
-                    element: currentSection,
-                    handler: function handler(direction) {
-                        if (direction == "down") {
-                            var specificDataLink = currentSection.getAttribute("data-matching-link");
-                            that.headerLinks.removeClass("is-current-link");
-                            (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
-                        }
-                    },
-                    offset: '65%'
-                });
-                new Waypoint({
-                    element: currentSection,
-                    handler: function handler(direction) {
-                        if (direction == "up") {
-                            var specificDataLink = currentSection.getAttribute("data-matching-link");
-                            that.headerLinks.removeClass("is-current-link");
-                            (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
-                        }
-                    },
-                    offset: '-20%'
-                });
-            });
-        }
-    }]);
-
-    return StickyHeader;
+  return StickyHeader;
 }();
 
 exports.default = StickyHeader;
