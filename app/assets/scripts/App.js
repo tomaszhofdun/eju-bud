@@ -15,6 +15,6 @@ var gallerySlider = new GallerySlider();
 var ltrScale = new LtrScale();
 var stickyHeader = new StickyHeader();
 var facebookPlugin = new FacebookPlugin();
-new RevealOnScroll($(".huge-icon-section_div"), "70%");
+new RevealOnScroll($(".huge-icon-section_div"), "44%");
 new RevealOnScroll($(".gallery-thumbnails__title"), "70%");
 new RevealOnScroll($(".form__title"), "80%");

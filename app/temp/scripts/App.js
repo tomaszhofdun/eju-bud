@@ -11139,7 +11139,7 @@ var gallerySlider = new _gallerySlider2.default();
 var ltrScale = new _ltrScale2.default();
 var stickyHeader = new _stickyHeader2.default();
 var facebookPlugin = new _facebook2.default();
-new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), "70%");
+new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), "44%");
 new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), "70%");
 new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), "80%");
 
@@ -11388,7 +11388,7 @@ exports.default = LtrScale;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11406,38 +11406,38 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var RevealOnScroll = function () {
-    function RevealOnScroll(elem, offset) {
-        _classCallCheck(this, RevealOnScroll);
+  function RevealOnScroll(elem, offset) {
+    _classCallCheck(this, RevealOnScroll);
 
-        this.itemsToReveal = elem;
-        this.offsetPercentage = offset;
-        this.hide();
-        this.createWaypoints();
+    this.itemsToReveal = elem;
+    this.offsetPercentage = offset;
+    this.hide();
+    this.createWaypoints();
+  }
+
+  _createClass(RevealOnScroll, [{
+    key: "hide",
+    value: function hide() {
+      this.itemsToReveal.addClass("reveal-item--hide");
     }
+  }, {
+    key: "createWaypoints",
+    value: function createWaypoints() {
+      var that = this;
+      this.itemsToReveal.each(function () {
+        var currentItem = this;
+        new Waypoint({
+          element: currentItem,
+          handler: function handler() {
+            (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+          },
+          offset: that.offsetPercentage
+        });
+      });
+    }
+  }]);
 
-    _createClass(RevealOnScroll, [{
-        key: "hide",
-        value: function hide() {
-            this.itemsToReveal.addClass("reveal-item");
-        }
-    }, {
-        key: "createWaypoints",
-        value: function createWaypoints() {
-            var that = this;
-            this.itemsToReveal.each(function () {
-                var currentItem = this;
-                new Waypoint({
-                    element: currentItem,
-                    handler: function handler() {
-                        (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
-                    },
-                    offset: that.offsetPercentage
-                });
-            });
-        }
-    }]);
-
-    return RevealOnScroll;
+  return RevealOnScroll;
 }();
 
 exports.default = RevealOnScroll;
@@ -11471,6 +11471,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// przykleja header od pewnej wysokości oraz podświetla odpowiedni element menu
+
 var StickyHeader = function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
@@ -11478,12 +11480,26 @@ var StickyHeader = function () {
     this.stickyTrigger = (0, _jquery2.default)(".menu-header");
     this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2");
     this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a, .footer__list a");
+    this.lazyLoadImages = (0, _jquery2.default)(".lazyload");
     this.createHeaderWaypoint();
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
+    this.refreshWaypoints();
   }
 
+  // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
+
   _createClass(StickyHeader, [{
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyLoadImages.on("load", function () {
+        Waypoint.refreshAll();
+      });
+    }
+
+    // smooth scrolling
+
+  }, {
     key: "addSmoothScrolling",
     value: function addSmoothScrolling() {
       this.headerLinks.smoothScroll({
@@ -11506,6 +11522,9 @@ var StickyHeader = function () {
         }
       });
     }
+
+    // tworzy waypoints dla każdej sekcji na której jesteśmy
+
   }, {
     key: "createPageSectionWaypoints",
     value: function createPageSectionWaypoints() {
@@ -11521,7 +11540,7 @@ var StickyHeader = function () {
               (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
             }
           },
-          offset: "65%"
+          offset: "20%"
         });
         new Waypoint({
           element: currentSection,
@@ -11532,7 +11551,7 @@ var StickyHeader = function () {
               (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
             }
           },
-          offset: "-20%"
+          offset: "-40%"
         });
       });
     }

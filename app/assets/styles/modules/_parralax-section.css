@@ -33,42 +33,45 @@
   }
 
   &__bg-1 {
-    background-image: url("../../assets/images/jackhammer-Small.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 632px;
-    position: relative;
-    overflow: hidden;
+    &.lazyloaded {
+      background-image: url("../../assets/images/jackhammer-Small.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 632px;
+      position: relative;
+      overflow: hidden;
+      @mixin atMedium {
+        background-image: url("../../assets/images/jackhammer-Medium.jpg");
+      }
 
-    @mixin atMedium {
-      background-image: url("../../assets/images/jackhammer-Medium.jpg");
-    }
-
-    @mixin atLarge {
-      background-image: url("../../assets/images/jackhammer-Large.jpg");
+      @mixin atLarge {
+        background-image: url("../../assets/images/jackhammer-Large.jpg");
+      }
     }
   }
 
   &__bg-2 {
-    background-image: url("../../assets/images/worker-jump-Small.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 632px;
-    position: relative;
-    overflow: hidden;
+    &.lazyloaded {
+      background-image: url("../../assets/images/worker-jump-Small.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 632px;
+      position: relative;
+      overflow: hidden;
 
-    @mixin atMedium {
-      background-image: url("../../assets/images/worker-jump-Medium.jpg");
-    }
+      @mixin atMedium {
+        background-image: url("../../assets/images/worker-jump-Medium.jpg");
+      }
 
-    @mixin atLarge {
-      background-image: url("../../assets/images/worker-jump-Large.jpg");
+      @mixin atLarge {
+        background-image: url("../../assets/images/worker-jump-Large.jpg");
+      }
     }
   }
 }
