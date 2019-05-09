@@ -33,6 +33,7 @@
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-modernizr": "^1.0.0-alpha",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sourcemaps": "^2.1.1",

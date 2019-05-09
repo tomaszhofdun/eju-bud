@@ -2,77 +2,80 @@
 /* Instead edit "gulp/templates/sprite.css" */
 
 .icon {
-    background-image: url("../../assets/images/icons/svg-compiled/sprite-9fdfdde7.svg"); 
+    background-image: url("../../assets/images/icons/svg-compiled/sprite-15da9bf2.svg"); 
+}
+.no-svg .icon {
+    background-image: url("../../assets/images/icons/svg-compiled/sprite-15da9bf2.png"); 
 }
 
 .icon--svg--arrow-pointing-to-left
     {
-    width: 40px;
-    height: 40px;
-    background-position: 60% 60%;
+    width: 42px;
+    height: 42px;
+    background-position: 60.396039603960396% 60.396039603960396%;
     display: inline-block;
 }
 
 .icon--svg--calendar
     {
-    width: 120px;
-    height: 120px;
+    width: 122px;
+    height: 122px;
     background-position: 0 0;
     display: inline-block;
 }
 
 .icon--svg--envelope
     {
-    width: 32px;
-    height: 32px;
-    background-position: 57.69230769230769% 76.92307692307692%;
+    width: 34px;
+    height: 34px;
+    background-position: 98.0952380952381% 58.095238095238095%;
     display: inline-block;
 }
 
 .icon--svg--home-nav
     {
-    width: 30px;
-    height: 30px;
-    background-position: 87.61904761904762% 76.19047619047619%;
+    width: 32px;
+    height: 32px;
+    background-position: 93.39622641509433% 77.35849056603773%;
     display: inline-block;
 }
 
 .icon--svg--house
     {
-    width: 120px;
-    height: 120px;
+    width: 122px;
+    height: 122px;
     background-position: 100% 0;
     display: inline-block;
 }
 
 .icon--svg--play-button-left
     {
-    width: 40px;
-    height: 40px;
-    background-position: 80% 60%;
+    width: 42px;
+    height: 42px;
+    background-position: 81.18811881188118% 60.396039603960396%;
     display: inline-block;
 }
 
 .icon--svg--play-button-right
     {
-    width: 40px;
-    height: 40px;
-    background-position: 100% 60%;
+    width: 42px;
+    height: 42px;
+    background-position: 60.396039603960396% 81.18811881188118%;
     display: inline-block;
 }
 
 .icon--svg--stopwatch
     {
-    width: 120px;
-    height: 120px;
+    width: 122px;
+    height: 122px;
     background-position: 0 100%;
     display: inline-block;
 }
 
 .icon--svg--telephone-symbol-button
     {
-    width: 32px;
-    height: 32px;
-    background-position: 73.07692307692308% 76.92307692307692%;
+    width: 34px;
+    height: 34px;
+    background-position: 78.0952380952381% 78.0952380952381%;
     display: inline-block;
 }

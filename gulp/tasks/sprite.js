@@ -6,8 +6,22 @@ var gulp = require("gulp"),
 
 //   plik konfiguracyjny sprite ze scieżką do template
 config = {
+  shape: {
+    spacing: {
+      padding: 1
+    }
+  },
   mode: {
     css: {
+      variables: {
+        replaceSvgWithPng: function() {
+          return function(sprite, render) {
+            return render(sprite)
+              .split(".svg")
+              .join(".png");
+          };
+        }
+      },
       sprite: "sprite.svg",
       render: {
         css: {
@@ -38,17 +52,20 @@ gulp.task("createPng", ["createSprite"], function() {
 });
 
 // kopiujemy wygenerowany plik css tam gdzie mamy wszystkie style
-gulp.task("copySpriteCss", function() {
+gulp.task("copySpriteCss", ["createSprite"], function() {
   return gulp
     .src("app/temp/sprite/css/*.css")
     .pipe(rename("_sprite.css"))
     .pipe(gulp.dest("app/assets/styles/modules"));
 });
+
+// kopiujemy utworzony zbiorczy svg i png do folderu app/assets/images
 gulp.task("copySpriteSvg", ["createPng"], function() {
   return gulp
     .src("app/temp/sprite/css/**/*.{svg,png}")
     .pipe(gulp.dest("app/assets/images/icons/svg-compiled"));
 });
+// kasujemy folder sprite w katalogu sprite
 gulp.task("endCleaning", ["copySpriteCss", "copySpriteSvg"], function() {
   return del("app/temp/sprite");
 });
