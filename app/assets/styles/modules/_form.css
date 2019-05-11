@@ -49,7 +49,6 @@
     }
 
     &__labels {
-        color: $mainGrey;
         font-size: 1.5rem;
         display: block;
         text-align: center;

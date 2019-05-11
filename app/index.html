@@ -4,19 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="Firma budowlana, kompleksowe remonty, remonty łazienek" />
+  <meta name="keywords" content="Firma budowlana, kompleksowe remonty, remonty łazienek, docieplanie budynków, podwieszanie sufitów, elewacje, szpachlowanie, malowanie, tynki dekoracyjne" />
   <meta name="description" content="Ogólnobudowlana firma z dużym doświadczeniem. Terminowość i szybka realizacja " />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Eju-Bud</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500 | Cinzel:700" rel="stylesheet" />
+  <!-- build:css assets/styles/styles.css -->
   <link rel="stylesheet" href="temp/styles/styles.css" />
+  <!-- endbuild -->
+  <!-- build:js assets/scripts/Vendor.js -->
   <script src="./temp/scripts/Vendor.js"></script>
+  <!-- endbuild -->
 </head>
 
 <body>
-
-
-  <!-- górny footer gdzie są dane kontaktowe, facebook i data -->
   <!-- top-footer -->
   <section class="top-footer">
     <div class="wrapper">
@@ -31,7 +32,7 @@
     </div>
   </section>
 
-  <!-- div dla headera, logo i napis -->
+  <!-- main-header -->
   <header class="main-header">
     <div class="wrapper">
       <div class="row__medium-2">
@@ -43,7 +44,7 @@
     </div>
 
   </header>
-  <!-- div dla menu -->
+  <!-- nav -->
 
   <header class="wrapper--maxWidth menu-header">
     <div class="wrapper wrapper--noTopPadding">
@@ -57,7 +58,6 @@
           <li class="menu-header__nav--always-visible-button">&equiv;</li>
           <div class="menu-header__nav--toggleVisibility">
             <li><a href="">OFERTA</a></li>
-            <!-- <li><a href=""></a></li> -->
             <li><a id="nasze-realizacje-link" href="#nasze-realizacje">NASZE REALIZACJE</a></li>
             <li><a href="cennik.html">CENNIK</a></li>
             <li><a id="nasze-realizacje-link" href="#nasze-realizacje">GALERIA</a></li>
@@ -80,7 +80,7 @@
     </div>
   </div>
 
-  <!-- sekcja główna -->
+  <!-- main-section -->
   <div class="main-section">
     <div class="wrapper main-section--smaller-padding">
       <div class="row">
@@ -146,7 +146,7 @@
     </div>
   </div>
 
-  <!-- następna sekcja -->
+  <!-- huge-icon-section -->
   <div class="wrapper">
     <div class="row huge-icon-section">
       <div class="row__small-4">
@@ -169,7 +169,7 @@
       </div>
     </div>
   </div>
-  <!-- następna sekcja -->
+  <!-- parralax-section -->
   <div class="parralax-section">
     <div class="parralax-section__img">
       <picture>
@@ -195,7 +195,36 @@
       </h1>
     </div>
   </div>
-  <!-- następna sekcja -->
+  <!-- Oferta -->
+  <div id="oferta" class="offer">
+    <div class="row">
+      <h1 data-matching-link="#oferta-link" class="offer__title">Co możemy dla ciebie zrobić</h1>
+      <div class="row__medium-6">
+        <ul class="offer__list">
+          <li>układanie glazury terakoty</li>
+          <li>kompleksowe remonty łazienek wraz z wymianą WOD.-KAN.-CO.</li>
+          <li>podwieszanie sufitów</li>
+          <li>efekty dekoracyjne ścian:</li>
+          <li>tynki dekoracyjne - stiuk</li>
+          <li>marmur klasyczny</li>
+          <li>trawertyn</li>
+        </ul>
+      </div>
+      <div class="row__medium-6">
+        <ul class="offer__list">
+          <li>prace remontowe</li>
+          <li>szpachlowanie, malowanie</li>
+          <li>docieplanie strychów i poddaszy</li>
+          <li>budowanie domów pod klucz</li>
+          <li>remonty domów, mieszkań i biur</li>
+          <li>instalacje WOD-KAN</li>
+          <li>elewacje i docieplanie budynków</li>
+          <li>montaż okien i drzwi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- nasze-realizacje -->
   <div id="nasze-realizacje" class="wrapper">
     <h1 data-matching-link="#nasze-realizacje-link" class="gallery-thumbnails__title">Ostatnie nasze realizacje</h1>
   </div>
@@ -748,7 +777,7 @@
 
     </div>
   </div>
-  <!-- następna sekcja -->
+  <!-- skontaktuj-sie-z-nami -->
 
   <div id="skontaktuj-sie-z-nami" class="wrapper--scroll-positioner"></div>
   <form class="form" method="POST" action="mail.php">
@@ -772,7 +801,7 @@
   </form>
 
 
-  <!-- FOOTER -->
+  <!-- footer -->
   <div class="wrapper__maxWidth">
     <footer class="footer row">
       <div class="row__medium-4">
@@ -804,8 +833,9 @@
 
 
   </div>
-
+  <!-- build:js assets/scripts/App.js -->
   <script src="./temp/scripts/App.js"></script>
+  <!-- endbuild -->
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2"></script>
 </body>

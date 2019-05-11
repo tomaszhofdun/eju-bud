@@ -1,76 +1,6 @@
 .row {
   @mixin clearBoth;
 
-  &__gutter-right {
-    padding-right: 0.237rem;
-
-    &-md {
-      padding-right: 0;
-
-      @mixin atMedium {
-        padding-right: 0.237rem;
-      }
-    }
-
-    &-sm {
-      padding-right: 0;
-
-      @mixin atSmall {
-        padding-right: 0.237rem;
-      }
-    }
-
-  }
-
-  &__gutter-left {
-    padding-left: 0.237rem;
-
-    &-md {
-      padding-left: 0;
-
-      @mixin atMedium {
-        padding-left: 0.237rem;
-      }
-    }
-
-    &-sm {
-      padding-left: 0;
-
-      @mixin atSmall {
-        padding-left: 0.237rem;
-      }
-    }
-
-  }
-
-  &__gutter-top {
-    padding-top: 0.237rem;
-
-    &-md {
-      padding-top: 0;
-
-      @mixin atMedium {
-        padding-top: 0.237rem;
-      }
-    }
-
-  }
-
-  &__gutter-bottom {
-    padding-bottom: 0.237rem;
-
-    &-md {
-      padding-bottom: 0;
-
-      @mixin atMedium {
-        padding-bottom: 0.237rem;
-      }
-    }
-
-  }
-
-
-
   &__medium-12 {
     @mixin atMedium {
       float: left;
@@ -164,6 +94,69 @@
       float: left;
       width: 16.66%;
       /* background-color: rgba(24, 255, 0, 1); */
+    }
+  }
+  &__gutter-right {
+    padding-right: 0.237rem;
+
+    &-md {
+      padding-right: 0;
+
+      @mixin atMedium {
+        padding-right: 0.237rem;
+      }
+    }
+
+    &-sm {
+      padding-right: 0;
+
+      @mixin atSmall {
+        padding-right: 0.237rem;
+      }
+    }
+  }
+
+  &__gutter-left {
+    padding-left: 0.237rem;
+
+    &-md {
+      padding-left: 0;
+
+      @mixin atMedium {
+        padding-left: 0.237rem;
+      }
+    }
+
+    &-sm {
+      padding-left: 0;
+
+      @mixin atSmall {
+        padding-left: 0.237rem;
+      }
+    }
+  }
+
+  &__gutter-top {
+    padding-top: 0.237rem;
+
+    &-md {
+      padding-top: 0;
+
+      @mixin atMedium {
+        padding-top: 0.237rem;
+      }
+    }
+  }
+
+  &__gutter-bottom {
+    padding-bottom: 0.237rem;
+
+    &-md {
+      padding-bottom: 0;
+
+      @mixin atMedium {
+        padding-bottom: 0.237rem;
+      }
     }
   }
 }

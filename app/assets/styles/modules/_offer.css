@@ -1,0 +1,37 @@
+.offer {
+
+    background-color: $formBlue;
+    color: #fff;
+    padding: 2rem 2rem;
+    overflow: hidden;
+    font-weight: 100;
+    font-size: 1.4rem;
+    text-align: center;
+    &__title {
+        font-size: 4em;
+        font-weight: 100;
+  }
+    &__list {
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 0;
+        list-style: disc url(/assets/images/icons/flower.png) inside;
+
+
+        @mixin atMedium {
+        font-size: 1rem;
+        }
+
+        @mixin atMedium {
+        margin: 60px;
+        }
+
+        li {
+        position: relative;
+        list-style-type: disc;
+        padding: 10px;
+        font-size: 1.5rem;
+
+        }
+    }
+}
