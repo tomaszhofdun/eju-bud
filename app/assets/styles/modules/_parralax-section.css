@@ -1,4 +1,5 @@
 .parralax-section {
+  position: relative;
   &__img {
     position: relative;
     overflow: hidden;

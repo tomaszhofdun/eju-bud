@@ -4,19 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="Firma budowlana, kompleksowe remonty, remonty łazienek" />
+  <meta name="keywords" content="Firma budowlana, kompleksowe remonty, remonty łazienek, docieplanie budynków, podwieszanie sufitów, elewacje, szpachlowanie, malowanie, tynki dekoracyjne" />
   <meta name="description" content="Ogólnobudowlana firma z dużym doświadczeniem. Terminowość i szybka realizacja " />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Eju-Bud</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500 | Cinzel:700" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles/styles-21fe236e46.css"/>
+  <link rel="stylesheet" href="assets/styles/styles-fb13203a6d.css"/>
   <script src="assets/scripts/Vendor-cc2152a2de.js"></script>
 </head>
 
 <body>
-
-
-  <!-- górny footer gdzie są dane kontaktowe, facebook i data -->
   <!-- top-footer -->
   <section class="top-footer">
     <div class="wrapper">
@@ -31,11 +28,11 @@
     </div>
   </section>
 
-  <!-- div dla headera, logo i napis -->
+  <!-- main-header -->
   <header class="main-header">
     <div class="wrapper">
       <div class="row__medium-2">
-        <a href="http://eju-bud.pl"><img class="main-header__logo" src="./assets/images/icons/logo_black.png" alt=""></a>
+        <a href="."><img class="main-header__logo" src="./assets/images/icons/logo_black.png" alt=""></a>
       </div>
       <div class="row__medium-10">
         <h1 class="main-header__title">PROFESJONALNE USŁUGI BUDOWLANE</h1>
@@ -43,21 +40,20 @@
     </div>
 
   </header>
-  <!-- div dla menu -->
+  <!-- nav -->
 
   <header class="wrapper--maxWidth menu-header">
     <div class="wrapper wrapper--noTopPadding">
       <nav class="menu-header__nav">
         <ul>
-          <a href="http://eju-bud.pl">
+          <a href=".">
             <div class="menu-header__nav__icon-home">
               <span class="icon icon--svg--home-nav"></span>
             </div>
           </a>
           <li class="menu-header__nav--always-visible-button">&equiv;</li>
           <div class="menu-header__nav--toggleVisibility">
-            <li><a href="">OFERTA</a></li>
-            <!-- <li><a href=""></a></li> -->
+            <li><a id="oferta-link" href="#oferta">OFERTA</a></li>
             <li><a id="nasze-realizacje-link" href="#nasze-realizacje">NASZE REALIZACJE</a></li>
             <li><a href="cennik.html">CENNIK</a></li>
             <li><a id="nasze-realizacje-link" href="#nasze-realizacje">GALERIA</a></li>
@@ -80,7 +76,7 @@
     </div>
   </div>
 
-  <!-- sekcja główna -->
+  <!-- main-section -->
   <div class="main-section">
     <div class="wrapper main-section--smaller-padding">
       <div class="row">
@@ -99,7 +95,7 @@
                 <h1 class="large-hero__title">
                   Kliknij i zobacz spis przykładowych usług które możemy dla ciebie wykonać
                 </h1>
-                <a class="btn btn--large" href="#">
+                <a class="btn btn--large" href="#oferta">
                   Pełna Oferta
                 </a>
               </div>
@@ -146,7 +142,7 @@
     </div>
   </div>
 
-  <!-- następna sekcja -->
+  <!-- huge-icon-section -->
   <div class="wrapper">
     <div class="row huge-icon-section">
       <div class="row__small-4">
@@ -169,7 +165,7 @@
       </div>
     </div>
   </div>
-  <!-- następna sekcja -->
+  <!-- parralax-section -->
   <div class="parralax-section">
     <div class="parralax-section__img">
       <picture>
@@ -195,7 +191,36 @@
       </h1>
     </div>
   </div>
-  <!-- następna sekcja -->
+  <!-- Oferta -->
+  <div id="oferta" class="offer">
+    <div class="row">
+      <h1 data-matching-link="#oferta-link" class="offer__title">Co możemy dla ciebie zrobić</h1>
+      <div class="row__medium-6">
+        <ul class="offer__list">
+          <li>układanie glazury terakoty</li>
+          <li>kompleksowe remonty łazienek wraz z wymianą WOD.-KAN.-CO.</li>
+          <li>podwieszanie sufitów</li>
+          <li>efekty dekoracyjne ścian:</li>
+          <li>tynki dekoracyjne - stiuk</li>
+          <li>marmur klasyczny</li>
+          <li>trawertyn</li>
+        </ul>
+      </div>
+      <div class="row__medium-6">
+        <ul class="offer__list">
+          <li>prace remontowe</li>
+          <li>szpachlowanie, malowanie</li>
+          <li>docieplanie strychów i poddaszy</li>
+          <li>budowanie domów pod klucz</li>
+          <li>remonty domów, mieszkań i biur</li>
+          <li>instalacje WOD-KAN</li>
+          <li>elewacje i docieplanie budynków</li>
+          <li>montaż okien i drzwi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- nasze-realizacje -->
   <div id="nasze-realizacje" class="wrapper">
     <h1 data-matching-link="#nasze-realizacje-link" class="gallery-thumbnails__title">Ostatnie nasze realizacje</h1>
   </div>
@@ -748,11 +773,11 @@
 
     </div>
   </div>
-  <!-- następna sekcja -->
+  <!-- skontaktuj-sie-z-nami -->
 
-  <div id="skontaktuj-sie-z-nami" class="wrapper--scroll-positioner"></div>
+  <div class="wrapper--scroll-positioner"></div>
   <form class="form" method="POST" action="mail.php">
-    <h1 data-matching-link="#skontaktuj-sie-z-nami-link" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
+    <h1 id="skontaktuj-sie-z-nami" data-matching-link="#skontaktuj-sie-z-nami-link" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
     <div class="row__medium-8">
       <label class="form__labels" for="message">Twoja wiadomość*</label>
       <textarea class="form__textarea" rows="8" cols="65" type="text" id="message" name="message" placeholder="Witam, chciałbym zapytać......"></textarea>
@@ -772,12 +797,12 @@
   </form>
 
 
-  <!-- FOOTER -->
+  <!-- footer -->
   <div class="wrapper__maxWidth">
     <footer class="footer row">
       <div class="row__medium-4">
         <ul class="footer__list">
-          <li><a href="">Oferta</a></li>
+          <li><a id="oferta-link" href="#oferta">Oferta</a></li>
           <li><a id="nasze-realizacje-link" href="#nasze-realizacje">Realizacje</a></li>
           <li><a href="cennik.html">Cennik</a></li>
           <li><a id="nasze-realizacje-link" href="#nasze-realizacje">Galeria</a></li>
@@ -785,7 +810,7 @@
         </ul>
       </div>
       <div class="row__medium-4">
-        <a href="http://eju-bud.pl"><img class="lazyload footer__logo" data-src="./assets/images/icons/logo_white.png" alt=""></a>
+        <a href="."><img class="lazyload footer__logo" data-src="./assets/images/icons/logo_white.png" alt=""></a>
       </div>
       <div class="row__medium-4">
         <p class="footer__follows">Śledź nas na <a href="https://www.facebook.com/Zaklad-Og%C3%B3lnobudowlany-Patryk-Springer-285270644961803/" target="_blank"><img class="lazyload footer__facebook" data-src="./assets/images/icons/facebook.png" alt=""></a> </p>
@@ -804,7 +829,7 @@
 
 
   </div>
-  <script src="assets/scripts/App-e1fa033d6d.js"></script>
+  <script src="assets/scripts/App-c1bfae0d21.js"></script>
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2"></script>
 </body>

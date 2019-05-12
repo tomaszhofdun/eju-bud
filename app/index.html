@@ -36,7 +36,7 @@
   <header class="main-header">
     <div class="wrapper">
       <div class="row__medium-2">
-        <a href="http://eju-bud.pl"><img class="main-header__logo" src="./assets/images/icons/logo_black.png" alt=""></a>
+        <a href="."><img class="main-header__logo" src="./assets/images/icons/logo_black.png" alt=""></a>
       </div>
       <div class="row__medium-10">
         <h1 class="main-header__title">PROFESJONALNE USŁUGI BUDOWLANE</h1>
@@ -50,14 +50,14 @@
     <div class="wrapper wrapper--noTopPadding">
       <nav class="menu-header__nav">
         <ul>
-          <a href="http://eju-bud.pl">
+          <a href=".">
             <div class="menu-header__nav__icon-home">
               <span class="icon icon--svg--home-nav"></span>
             </div>
           </a>
           <li class="menu-header__nav--always-visible-button">&equiv;</li>
           <div class="menu-header__nav--toggleVisibility">
-            <li><a href="">OFERTA</a></li>
+            <li><a id="oferta-link" href="#oferta">OFERTA</a></li>
             <li><a id="nasze-realizacje-link" href="#nasze-realizacje">NASZE REALIZACJE</a></li>
             <li><a href="cennik.html">CENNIK</a></li>
             <li><a id="nasze-realizacje-link" href="#nasze-realizacje">GALERIA</a></li>
@@ -99,7 +99,7 @@
                 <h1 class="large-hero__title">
                   Kliknij i zobacz spis przykładowych usług które możemy dla ciebie wykonać
                 </h1>
-                <a class="btn btn--large" href="#">
+                <a class="btn btn--large" href="#oferta">
                   Pełna Oferta
                 </a>
               </div>
@@ -779,9 +779,9 @@
   </div>
   <!-- skontaktuj-sie-z-nami -->
 
-  <div id="skontaktuj-sie-z-nami" class="wrapper--scroll-positioner"></div>
+  <div class="wrapper--scroll-positioner"></div>
   <form class="form" method="POST" action="mail.php">
-    <h1 data-matching-link="#skontaktuj-sie-z-nami-link" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
+    <h1 id="skontaktuj-sie-z-nami" data-matching-link="#skontaktuj-sie-z-nami-link" class="form__title">SKONTAKTUJ SIĘ Z NAMI</h1>
     <div class="row__medium-8">
       <label class="form__labels" for="message">Twoja wiadomość*</label>
       <textarea class="form__textarea" rows="8" cols="65" type="text" id="message" name="message" placeholder="Witam, chciałbym zapytać......"></textarea>
@@ -806,7 +806,7 @@
     <footer class="footer row">
       <div class="row__medium-4">
         <ul class="footer__list">
-          <li><a href="">Oferta</a></li>
+          <li><a id="oferta-link" href="#oferta">Oferta</a></li>
           <li><a id="nasze-realizacje-link" href="#nasze-realizacje">Realizacje</a></li>
           <li><a href="cennik.html">Cennik</a></li>
           <li><a id="nasze-realizacje-link" href="#nasze-realizacje">Galeria</a></li>
@@ -814,7 +814,7 @@
         </ul>
       </div>
       <div class="row__medium-4">
-        <a href="http://eju-bud.pl"><img class="lazyload footer__logo" data-src="./assets/images/icons/logo_white.png" alt=""></a>
+        <a href="."><img class="lazyload footer__logo" data-src="./assets/images/icons/logo_white.png" alt=""></a>
       </div>
       <div class="row__medium-4">
         <p class="footer__follows">Śledź nas na <a href="https://www.facebook.com/Zaklad-Og%C3%B3lnobudowlany-Patryk-Springer-285270644961803/" target="_blank"><img class="lazyload footer__facebook" data-src="./assets/images/icons/facebook.png" alt=""></a> </p>
