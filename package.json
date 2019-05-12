@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tomaszhofdun/eju-bud#readme",
   "dependencies": {
+    "ajv": "^5.5.2",
     "jquery": "^3.2.1",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.0.1",
