@@ -32,7 +32,7 @@
     &--always-visible-button {
       display: block;
       cursor: pointer;
-      font-size: 2rem;
+      font-size: 3rem;
 
       @mixin atMedium {
         display: none;

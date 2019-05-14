@@ -11482,110 +11482,30 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// przykleja header od pewnej wysokości
+// przykleja navbar od pewnej wysokości
 var StickyHeader = function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
     this.navbar = document.getElementById("menu-header");
-    // this.pageSections = $(
-    //   ".gallery-thumbnails__title , .form__title , .parralax-section__bg-2, .offer__title"
-    // );
-    // this.headerLinks = $(
-    //   ".menu-header__nav--toggleVisibility a, .footer__list a, .main-section a"
-    // );
     this.stickyOffset2 = document.getElementById("menu-header").offsetTop;
-    // this.lazyLoadImages = $(".lazyload");
-    // this.createHeaderWaypoint();
-    // this.createPageSectionWaypoints();
-    // this.addSmoothScrolling();
-    // this.refreshWaypoints();
     this.events();
-    // this.sticky = $(".menu-header").offsetTop;
   }
 
   _createClass(StickyHeader, [{
     key: "events",
     value: function events() {
-      // var that = this;
-
       window.onscroll = this.sticky.bind(this);
-      // console.log(this.stickyOffset2);
-
-      // $(window).scroll(this.sticky);
     }
-
-    // var navbar = document.getElementById("navbar");
-
   }, {
     key: "sticky",
     value: function sticky() {
-      // console.log(this.stickyOffset2);
       if (window.pageYOffset > this.stickyOffset2) {
-        // console.log("add class " + window.pageYOffset);
         this.navbar.classList.add("menu-header--sticky");
       } else {
-        // console.log("remove class " + this.stickyOffset2);
         this.navbar.classList.remove("menu-header--sticky");
       }
     }
-
-    // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
-
-    // refreshWaypoints() {
-    //   var that = this;
-    //   this.lazyLoadImages.on("load", function() {
-    //     Waypoint.refreshAll();
-    //     console.log("image loaded");
-    //   });
-    // }
-
-    // smooth scrolling
-
-    // addSmoothScrolling() {
-    //   this.headerLinks.smoothScroll({
-    //     speed: 1000,
-    //     offset: -50
-    //   });
-    // }
-
-    // tworzy waypoints dla każdej sekcji na której jesteśmy
-
-    // createPageSectionWaypoints() {
-    //   var that = this;
-    //   this.pageSections.each(function() {
-    //     var currentSection = this;
-    //     new Waypoint({
-    //       element: currentSection,
-    //       handler: function(direction) {
-    //         if (direction == "down") {
-    //           var specificDataLink = currentSection.getAttribute(
-    //             "data-matching-link"
-    //           );
-    //           that.headerLinks.removeClass("is-current-link");
-    //           $(specificDataLink).addClass("is-current-link");
-    //         } else {
-    //         }
-    //       },
-    //       offset: "40%"
-    //     });
-    //     new Waypoint({
-    //       element: currentSection,
-    //       handler: function(direction) {
-    //         if (direction == "up") {
-    //           var specificDataLink = currentSection.getAttribute(
-    //             "data-matching-link"
-    //           );
-    //           that.headerLinks.removeClass("is-current-link");
-    //           $(specificDataLink).addClass("is-current-link");
-    //         } else {
-    //         }
-    //       },
-    //       offset: "-30%"
-    //     });
-    //   });
-    // }
-
   }]);
 
   return StickyHeader;
@@ -11623,48 +11543,35 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 // podświetla odpowiedni element menu
+// smoothScroll
 
 var NavbarLinks = function () {
   function NavbarLinks() {
     _classCallCheck(this, NavbarLinks);
 
-    // this.navbar = document.getElementById("menu-header");
     this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2, .offer__title");
     this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a, .footer__list a, .main-section a");
-    // this.stickyOffset2 = document.getElementById("menu-header").offsetTop;
     this.lazyLoadImages = (0, _jquery2.default)(".lazyload");
-    // this.createHeaderWaypoint();
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
     this.refreshWaypoints();
-    // this.events();
-    // this.sticky = $(".menu-header").offsetTop;
   }
 
-  //   events() {
-  //     var that = this;
-  //     window.onscroll = this.sticky.bind(this);
-  //     console.log(this.stickyOffset2);
+  // smooth scrolling
 
-  //     $(window).scroll(this.sticky);
-  //   }
-
-  // var navbar = document.getElementById("navbar");
-
-  //   sticky() {
-  //     console.log(this.stickyOffset2);
-  //     if (window.pageYOffset > this.stickyOffset2) {
-  //       console.log("add class " + window.pageYOffset);
-  //       this.navbar.classList.add("menu-header--sticky");
-  //     } else {
-  //       console.log("remove class " + this.stickyOffset2);
-  //       this.navbar.classList.remove("menu-header--sticky");
-  //     }
-  //   }
-
-  // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
 
   _createClass(NavbarLinks, [{
+    key: "addSmoothScrolling",
+    value: function addSmoothScrolling() {
+      this.headerLinks.smoothScroll({
+        speed: 1000,
+        offset: -50
+      });
+    }
+
+    // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
+
+  }, {
     key: "refreshWaypoints",
     value: function refreshWaypoints() {
       var that = this;
@@ -11674,18 +11581,6 @@ var NavbarLinks = function () {
       };
       this.lazyLoadImages.on("load", function () {
         Waypoint.refreshAll();
-        console.log("image loaded");
-      });
-    }
-
-    // smooth scrolling
-
-  }, {
-    key: "addSmoothScrolling",
-    value: function addSmoothScrolling() {
-      this.headerLinks.smoothScroll({
-        speed: 1000,
-        offset: -50
       });
     }
 
