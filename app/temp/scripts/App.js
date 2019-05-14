@@ -11121,11 +11121,15 @@ var _stickyHeader = __webpack_require__(8);
 
 var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
 
-var _facebook = __webpack_require__(10);
+var _navbarLinks = __webpack_require__(9);
+
+var _navbarLinks2 = _interopRequireDefault(_navbarLinks);
+
+var _facebook = __webpack_require__(11);
 
 var _facebook2 = _interopRequireDefault(_facebook);
 
-var _lightbox = __webpack_require__(11);
+var _lightbox = __webpack_require__(12);
 
 var _lightbox2 = _interopRequireDefault(_lightbox);
 
@@ -11138,6 +11142,7 @@ var currentDate = new _currentDate2.default();
 var gallerySlider = new _gallerySlider2.default();
 var ltrScale = new _ltrScale2.default();
 var stickyHeader = new _stickyHeader2.default();
+var navbarLinks = new _navbarLinks2.default();
 var facebookPlugin = new _facebook2.default();
 new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), "44%");
 new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), "70%");
@@ -11473,7 +11478,139 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _jquerySmoothScroll = __webpack_require__(9);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// przykleja header od pewnej wysokości
+var StickyHeader = function () {
+  function StickyHeader() {
+    _classCallCheck(this, StickyHeader);
+
+    this.navbar = document.getElementById("menu-header");
+    // this.pageSections = $(
+    //   ".gallery-thumbnails__title , .form__title , .parralax-section__bg-2, .offer__title"
+    // );
+    // this.headerLinks = $(
+    //   ".menu-header__nav--toggleVisibility a, .footer__list a, .main-section a"
+    // );
+    this.stickyOffset2 = document.getElementById("menu-header").offsetTop;
+    // this.lazyLoadImages = $(".lazyload");
+    // this.createHeaderWaypoint();
+    // this.createPageSectionWaypoints();
+    // this.addSmoothScrolling();
+    // this.refreshWaypoints();
+    this.events();
+    // this.sticky = $(".menu-header").offsetTop;
+  }
+
+  _createClass(StickyHeader, [{
+    key: "events",
+    value: function events() {
+      // var that = this;
+
+      window.onscroll = this.sticky.bind(this);
+      // console.log(this.stickyOffset2);
+
+      // $(window).scroll(this.sticky);
+    }
+
+    // var navbar = document.getElementById("navbar");
+
+  }, {
+    key: "sticky",
+    value: function sticky() {
+      // console.log(this.stickyOffset2);
+      if (window.pageYOffset > this.stickyOffset2) {
+        // console.log("add class " + window.pageYOffset);
+        this.navbar.classList.add("menu-header--sticky");
+      } else {
+        // console.log("remove class " + this.stickyOffset2);
+        this.navbar.classList.remove("menu-header--sticky");
+      }
+    }
+
+    // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
+
+    // refreshWaypoints() {
+    //   var that = this;
+    //   this.lazyLoadImages.on("load", function() {
+    //     Waypoint.refreshAll();
+    //     console.log("image loaded");
+    //   });
+    // }
+
+    // smooth scrolling
+
+    // addSmoothScrolling() {
+    //   this.headerLinks.smoothScroll({
+    //     speed: 1000,
+    //     offset: -50
+    //   });
+    // }
+
+    // tworzy waypoints dla każdej sekcji na której jesteśmy
+
+    // createPageSectionWaypoints() {
+    //   var that = this;
+    //   this.pageSections.each(function() {
+    //     var currentSection = this;
+    //     new Waypoint({
+    //       element: currentSection,
+    //       handler: function(direction) {
+    //         if (direction == "down") {
+    //           var specificDataLink = currentSection.getAttribute(
+    //             "data-matching-link"
+    //           );
+    //           that.headerLinks.removeClass("is-current-link");
+    //           $(specificDataLink).addClass("is-current-link");
+    //         } else {
+    //         }
+    //       },
+    //       offset: "40%"
+    //     });
+    //     new Waypoint({
+    //       element: currentSection,
+    //       handler: function(direction) {
+    //         if (direction == "up") {
+    //           var specificDataLink = currentSection.getAttribute(
+    //             "data-matching-link"
+    //           );
+    //           that.headerLinks.removeClass("is-current-link");
+    //           $(specificDataLink).addClass("is-current-link");
+    //         } else {
+    //         }
+    //       },
+    //       offset: "-30%"
+    //     });
+    //   });
+    // }
+
+  }]);
+
+  return StickyHeader;
+}();
+
+exports.default = StickyHeader;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _jquerySmoothScroll = __webpack_require__(10);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11485,35 +11622,60 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// przykleja header od pewnej wysokości oraz podświetla odpowiedni element menu
+// podświetla odpowiedni element menu
 
-var StickyHeader = function () {
-  function StickyHeader() {
-    _classCallCheck(this, StickyHeader);
+var NavbarLinks = function () {
+  function NavbarLinks() {
+    _classCallCheck(this, NavbarLinks);
 
-    this.stickyTrigger = (0, _jquery2.default)(".menu-header");
+    // this.navbar = document.getElementById("menu-header");
     this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2, .offer__title");
     this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a, .footer__list a, .main-section a");
+    // this.stickyOffset2 = document.getElementById("menu-header").offsetTop;
     this.lazyLoadImages = (0, _jquery2.default)(".lazyload");
-    this.createHeaderWaypoint();
+    // this.createHeaderWaypoint();
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
     this.refreshWaypoints();
+    // this.events();
+    // this.sticky = $(".menu-header").offsetTop;
   }
+
+  //   events() {
+  //     var that = this;
+  //     window.onscroll = this.sticky.bind(this);
+  //     console.log(this.stickyOffset2);
+
+  //     $(window).scroll(this.sticky);
+  //   }
+
+  // var navbar = document.getElementById("navbar");
+
+  //   sticky() {
+  //     console.log(this.stickyOffset2);
+  //     if (window.pageYOffset > this.stickyOffset2) {
+  //       console.log("add class " + window.pageYOffset);
+  //       this.navbar.classList.add("menu-header--sticky");
+  //     } else {
+  //       console.log("remove class " + this.stickyOffset2);
+  //       this.navbar.classList.remove("menu-header--sticky");
+  //     }
+  //   }
 
   // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
 
-  _createClass(StickyHeader, [{
+  _createClass(NavbarLinks, [{
     key: "refreshWaypoints",
     value: function refreshWaypoints() {
+      var that = this;
+      Waypoint.refreshAll();
+      window.onload = function () {
+        Waypoint.refreshAll();
+      };
       this.lazyLoadImages.on("load", function () {
         Waypoint.refreshAll();
         console.log("image loaded");
       });
-      // $(window).on("load", function() {
-      //   Waypoint.refreshAll();
-      //   console.log("df");
-      // });
     }
 
     // smooth scrolling
@@ -11524,22 +11686,6 @@ var StickyHeader = function () {
       this.headerLinks.smoothScroll({
         speed: 1000,
         offset: -50
-      });
-    }
-  }, {
-    key: "createHeaderWaypoint",
-    value: function createHeaderWaypoint() {
-      Waypoint.refreshAll();
-      var that = this;
-      new Waypoint({
-        element: this.stickyTrigger[0],
-        handler: function handler(direction) {
-          if (direction == "down") {
-            that.stickyTrigger.addClass("menu-header--sticky");
-          } else {
-            that.stickyTrigger.removeClass("menu-header--sticky");
-          }
-        }
       });
     }
 
@@ -11577,13 +11723,13 @@ var StickyHeader = function () {
     }
   }]);
 
-  return StickyHeader;
+  return NavbarLinks;
 }();
 
-exports.default = StickyHeader;
+exports.default = NavbarLinks;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11950,7 +12096,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12022,7 +12168,7 @@ var FacebookPlugin = function () {
 exports.default = FacebookPlugin;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

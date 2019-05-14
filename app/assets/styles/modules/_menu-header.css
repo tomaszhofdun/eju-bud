@@ -2,10 +2,17 @@
   background-color: $mainGrey;
   z-index: 2;
 
+  /* .menu-header--sticky & {
+    background-color: blue;
+  } */
+
   &--sticky {
     position: fixed;
     top: 0;
     opacity: 0.8;
+    & + .main-section {
+      margin-top: 64px;
+    }
   }
 
   @mixin atMedium {
@@ -103,4 +110,7 @@
       }
     }
   }
+}
+.menu-header--sticky + .menu-header__nav {
+  padding-top: 300px;
 }
