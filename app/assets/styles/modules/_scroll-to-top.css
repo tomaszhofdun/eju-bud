@@ -1,0 +1,15 @@
+.scrollToTopIcon {
+  position: fixed;
+  opacity: 0.5;
+  display: none;
+
+  &:hover {
+    opacity: 1;
+  }
+  bottom: 30px;
+  right: 20px;
+  @mixin atMedium {
+    bottom: 50px;
+    right: 50px;
+  }
+}

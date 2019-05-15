@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11090,543 +11090,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _mobileMenu = __webpack_require__(3);
-
-var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
-
-var _currentDate = __webpack_require__(4);
-
-var _currentDate2 = _interopRequireDefault(_currentDate);
-
-var _gallerySlider = __webpack_require__(5);
-
-var _gallerySlider2 = _interopRequireDefault(_gallerySlider);
-
-var _ltrScale = __webpack_require__(6);
-
-var _ltrScale2 = _interopRequireDefault(_ltrScale);
-
-var _revealOnScroll = __webpack_require__(7);
-
-var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
-
-var _stickyHeader = __webpack_require__(8);
-
-var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
-
-var _navbarLinks = __webpack_require__(9);
-
-var _navbarLinks2 = _interopRequireDefault(_navbarLinks);
-
-var _facebook = __webpack_require__(11);
-
-var _facebook2 = _interopRequireDefault(_facebook);
-
-var _lightbox = __webpack_require__(12);
-
-var _lightbox2 = _interopRequireDefault(_lightbox);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//lub require("lightbox2");
-
-var mobileMenu = new _mobileMenu2.default();
-var currentDate = new _currentDate2.default();
-var gallerySlider = new _gallerySlider2.default();
-var ltrScale = new _ltrScale2.default();
-var stickyHeader = new _stickyHeader2.default();
-var navbarLinks = new _navbarLinks2.default();
-var facebookPlugin = new _facebook2.default();
-new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), "44%");
-new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), "70%");
-new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), "80%");
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobileMenu = function () {
-  function MobileMenu() {
-    _classCallCheck(this, MobileMenu);
-
-    // this.menuButton = $(".menu-header__nav--always-visible-button")[0];
-    this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
-    this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
-    this.enywhere = (0, _jquery2.default)(document);
-    this.events();
-  }
-
-  _createClass(MobileMenu, [{
-    key: "events",
-    value: function events() {
-      var that = this;
-      this.menuContent.hide();
-      this.menuButton.click(this.toggleTheMenu.bind(this));
-      this.menuButton.click(this.toggleIconMenu.bind(this));
-      this.enywhere.click(function () {
-        if (event.target != (0, _jquery2.default)(".menu-header__nav--always-visible-button")[0]) {
-          that.closeTheMenu();
-          that.toggleIconMenu();
-        } else {
-          return false;
-        }
-      });
-    }
-  }, {
-    key: "toggleTheMenu",
-    value: function toggleTheMenu() {
-      this.menuContent.slideToggle("slow");
-    }
-  }, {
-    key: "closeTheMenu",
-    value: function closeTheMenu() {
-      this.menuContent.slideUp("slow");
-    }
-  }, {
-    key: "toggleIconMenu",
-    value: function toggleIconMenu() {
-      // this.menuContent.css("display")=="none"
-      // ? this.menuButton.html("&equiv;")
-      // : this.menuButton.html("&times;");
-      if ((0, _jquery2.default)(".menu-header__nav--toggleVisibility").height() > 10) {
-        // console.log("none");
-        // console.log($(".menu-header__nav--toggleVisibility").height());
-        this.menuButton.html("&equiv;");
-      } else {
-        // console.log("block");
-        // console.log($(".menu-header__nav--toggleVisibility").height());
-        this.menuButton.html("&times;");
-      }
-      // this.menuButton.html() == "≡"
-      //   ? this.menuButton.html("&times;")
-      //   : this.menuButton.html("&equiv;");
-    }
-  }]);
-
-  return MobileMenu;
-}();
-
-exports.default = MobileMenu;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var CurrentDate = function () {
-  function CurrentDate() {
-    _classCallCheck(this, CurrentDate);
-
-    this.currentDate = (0, _jquery2.default)(".top-footer__currentDate");
-    this.formatter = new Intl.DateTimeFormat("pl", {
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    });
-    this.injectDate();
-  }
-
-  _createClass(CurrentDate, [{
-    key: "injectDate",
-    value: function injectDate() {
-      // console.log(this.formatter.format(new Date()));
-      this.currentDate.html(this.formatter.format(new Date()));
-    }
-  }]);
-
-  return CurrentDate;
-}();
-
-exports.default = CurrentDate;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var GallerySlider = function () {
-  function GallerySlider() {
-    _classCallCheck(this, GallerySlider);
-
-    this.buttonLeft = (0, _jquery2.default)(".gallery-thumbnails__button-left");
-    this.buttonRight = (0, _jquery2.default)(".gallery-thumbnails__button-right");
-    this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--slides");
-    this.liczbaSlides = (0, _jquery2.default)(".gallery-thumbnails__container__slide").length;
-    this.slideFlag = 1;
-    this.translate = 0;
-    this.events();
-  }
-
-  _createClass(GallerySlider, [{
-    key: "events",
-    value: function events() {
-      this.buttonRight.click(this.slideToRight.bind(this));
-      this.buttonLeft.click(this.slideToLeft.bind(this));
-    }
-  }, {
-    key: "slideToRight",
-    value: function slideToRight() {
-      if (this.slideFlag === this.liczbaSlides) {
-        return false;
-      } else {
-        this.galleryThumbnails.css("transform", "translateX(" + (this.translate - 347.6) + "px)");
-        this.translate -= 347.6;
-        this.slideFlag += 1;
-      }
-    }
-  }, {
-    key: "slideToLeft",
-    value: function slideToLeft() {
-      if (this.slideFlag === 1) {} else {
-        this.galleryThumbnails.css("transform", "translateX(" + (this.translate + 347.6) + "px)");
-        this.translate += 347.6;
-        this.slideFlag -= 1;
-      }
-    }
-  }]);
-
-  return GallerySlider;
-}();
-
-exports.default = GallerySlider;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var LtrScale = function () {
-  function LtrScale() {
-    _classCallCheck(this, LtrScale);
-
-    this.container = (0, _jquery2.default)(".mini-gallery");
-    this.button = (0, _jquery2.default)(".mini-gallery__button");
-    this.events();
-  }
-
-  _createClass(LtrScale, [{
-    key: "events",
-    value: function events() {
-      this.container.mouseenter(this.showButton);
-      this.container.mouseleave(this.hideButton);
-    }
-  }, {
-    key: "showButton",
-    value: function showButton() {
-      (0, _jquery2.default)(this).find('a').show("fast");
-    }
-  }, {
-    key: "hideButton",
-    value: function hideButton() {
-      (0, _jquery2.default)(this).find('a').hide("fast");
-    }
-  }]);
-
-  return LtrScale;
-}();
-
-exports.default = LtrScale;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _noframework = __webpack_require__(1);
-
-var _noframework2 = _interopRequireDefault(_noframework);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var RevealOnScroll = function () {
-  function RevealOnScroll(elem, offset) {
-    _classCallCheck(this, RevealOnScroll);
-
-    this.itemsToReveal = elem;
-    this.offsetPercentage = offset;
-    this.hide();
-    this.createWaypoints();
-  }
-
-  _createClass(RevealOnScroll, [{
-    key: "hide",
-    value: function hide() {
-      this.itemsToReveal.addClass("reveal-item--hide");
-    }
-  }, {
-    key: "createWaypoints",
-    value: function createWaypoints() {
-      var that = this;
-      this.itemsToReveal.each(function () {
-        var currentItem = this;
-        new Waypoint({
-          element: currentItem,
-          handler: function handler() {
-            (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
-          },
-          offset: that.offsetPercentage
-        });
-      });
-    }
-  }]);
-
-  return RevealOnScroll;
-}();
-
-exports.default = RevealOnScroll;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// przykleja navbar od pewnej wysokości
-var StickyHeader = function () {
-  function StickyHeader() {
-    _classCallCheck(this, StickyHeader);
-
-    this.navbar = document.getElementById("menu-header");
-    this.stickyOffset2 = document.getElementById("menu-header").offsetTop;
-    this.events();
-  }
-
-  _createClass(StickyHeader, [{
-    key: "events",
-    value: function events() {
-      window.onscroll = this.sticky.bind(this);
-    }
-  }, {
-    key: "sticky",
-    value: function sticky() {
-      if (window.pageYOffset > this.stickyOffset2) {
-        this.navbar.classList.add("menu-header--sticky");
-      } else {
-        this.navbar.classList.remove("menu-header--sticky");
-      }
-    }
-  }]);
-
-  return StickyHeader;
-}();
-
-exports.default = StickyHeader;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _jquerySmoothScroll = __webpack_require__(10);
-
-var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
-
-var _noframework = __webpack_require__(1);
-
-var _noframework2 = _interopRequireDefault(_noframework);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// podświetla odpowiedni element menu
-// smoothScroll
-
-var NavbarLinks = function () {
-  function NavbarLinks() {
-    _classCallCheck(this, NavbarLinks);
-
-    this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2, .offer__title");
-    this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a, .footer__list a, .main-section a");
-    this.lazyLoadImages = (0, _jquery2.default)(".lazyload");
-    this.createPageSectionWaypoints();
-    this.addSmoothScrolling();
-    this.refreshWaypoints();
-  }
-
-  // smooth scrolling
-
-
-  _createClass(NavbarLinks, [{
-    key: "addSmoothScrolling",
-    value: function addSmoothScrolling() {
-      this.headerLinks.smoothScroll({
-        speed: 1000,
-        offset: -50
-      });
-    }
-
-    // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
-
-  }, {
-    key: "refreshWaypoints",
-    value: function refreshWaypoints() {
-      var that = this;
-      Waypoint.refreshAll();
-      window.onload = function () {
-        Waypoint.refreshAll();
-      };
-      this.lazyLoadImages.on("load", function () {
-        Waypoint.refreshAll();
-      });
-    }
-
-    // tworzy waypoints dla każdej sekcji na której jesteśmy
-
-  }, {
-    key: "createPageSectionWaypoints",
-    value: function createPageSectionWaypoints() {
-      var that = this;
-      this.pageSections.each(function () {
-        var currentSection = this;
-        new Waypoint({
-          element: currentSection,
-          handler: function handler(direction) {
-            if (direction == "down") {
-              var specificDataLink = currentSection.getAttribute("data-matching-link");
-              that.headerLinks.removeClass("is-current-link");
-              (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
-            } else {}
-          },
-          offset: "40%"
-        });
-        new Waypoint({
-          element: currentSection,
-          handler: function handler(direction) {
-            if (direction == "up") {
-              var specificDataLink = currentSection.getAttribute("data-matching-link");
-              that.headerLinks.removeClass("is-current-link");
-              (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
-            } else {}
-          },
-          offset: "-30%"
-        });
-      });
-    }
-  }]);
-
-  return NavbarLinks;
-}();
-
-exports.default = NavbarLinks;
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery Smooth Scroll - v2.2.0 - 2017-05-05
  * https://github.com/kswedberg/jquery-smooth-scroll
@@ -11991,7 +11454,612 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _mobileMenu = __webpack_require__(4);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _currentDate = __webpack_require__(5);
+
+var _currentDate2 = _interopRequireDefault(_currentDate);
+
+var _gallerySlider = __webpack_require__(6);
+
+var _gallerySlider2 = _interopRequireDefault(_gallerySlider);
+
+var _ltrScale = __webpack_require__(7);
+
+var _ltrScale2 = _interopRequireDefault(_ltrScale);
+
+var _revealOnScroll = __webpack_require__(8);
+
+var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
+
+var _stickyHeader = __webpack_require__(9);
+
+var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
+
+var _navbarLinks = __webpack_require__(10);
+
+var _navbarLinks2 = _interopRequireDefault(_navbarLinks);
+
+var _scrollToTop = __webpack_require__(11);
+
+var _scrollToTop2 = _interopRequireDefault(_scrollToTop);
+
+var _facebook = __webpack_require__(12);
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
+var _lightbox = __webpack_require__(13);
+
+var _lightbox2 = _interopRequireDefault(_lightbox);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//lub require("lightbox2");
+
+var mobileMenu = new _mobileMenu2.default();
+var currentDate = new _currentDate2.default();
+var gallerySlider = new _gallerySlider2.default();
+var ltrScale = new _ltrScale2.default();
+var stickyHeader = new _stickyHeader2.default();
+var navbarLinks = new _navbarLinks2.default();
+var navbarLinks = new _scrollToTop2.default();
+var facebookPlugin = new _facebook2.default();
+new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), "44%");
+new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), "70%");
+new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), "80%");
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+  function MobileMenu() {
+    _classCallCheck(this, MobileMenu);
+
+    // this.menuButton = $(".menu-header__nav--always-visible-button")[0];
+    this.menuButton = (0, _jquery2.default)(".menu-header__nav--always-visible-button");
+    this.menuContent = (0, _jquery2.default)(".menu-header__nav--toggleVisibility");
+    this.enywhere = (0, _jquery2.default)(document);
+    this.events();
+  }
+
+  _createClass(MobileMenu, [{
+    key: "events",
+    value: function events() {
+      var that = this;
+      this.menuContent.hide();
+      this.menuButton.click(this.toggleTheMenu.bind(this));
+      this.menuButton.click(this.toggleIconMenu.bind(this));
+      this.enywhere.click(function () {
+        if (event.target != (0, _jquery2.default)(".menu-header__nav--always-visible-button")[0]) {
+          that.closeTheMenu();
+          that.toggleIconMenu();
+        } else {
+          return false;
+        }
+      });
+    }
+  }, {
+    key: "toggleTheMenu",
+    value: function toggleTheMenu() {
+      this.menuContent.slideToggle("slow");
+    }
+  }, {
+    key: "closeTheMenu",
+    value: function closeTheMenu() {
+      this.menuContent.slideUp("slow");
+    }
+  }, {
+    key: "toggleIconMenu",
+    value: function toggleIconMenu() {
+      // this.menuContent.css("display")=="none"
+      // ? this.menuButton.html("&equiv;")
+      // : this.menuButton.html("&times;");
+      if ((0, _jquery2.default)(".menu-header__nav--toggleVisibility").height() > 10) {
+        // console.log("none");
+        // console.log($(".menu-header__nav--toggleVisibility").height());
+        this.menuButton.html("&equiv;");
+      } else {
+        // console.log("block");
+        // console.log($(".menu-header__nav--toggleVisibility").height());
+        this.menuButton.html("&times;");
+      }
+      // this.menuButton.html() == "≡"
+      //   ? this.menuButton.html("&times;")
+      //   : this.menuButton.html("&equiv;");
+    }
+  }]);
+
+  return MobileMenu;
+}();
+
+exports.default = MobileMenu;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CurrentDate = function () {
+  function CurrentDate() {
+    _classCallCheck(this, CurrentDate);
+
+    this.currentDate = (0, _jquery2.default)(".top-footer__currentDate");
+    this.formatter = new Intl.DateTimeFormat("pl", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+    this.injectDate();
+  }
+
+  _createClass(CurrentDate, [{
+    key: "injectDate",
+    value: function injectDate() {
+      // console.log(this.formatter.format(new Date()));
+      this.currentDate.html(this.formatter.format(new Date()));
+    }
+  }]);
+
+  return CurrentDate;
+}();
+
+exports.default = CurrentDate;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var GallerySlider = function () {
+  function GallerySlider() {
+    _classCallCheck(this, GallerySlider);
+
+    this.buttonLeft = (0, _jquery2.default)(".gallery-thumbnails__button-left");
+    this.buttonRight = (0, _jquery2.default)(".gallery-thumbnails__button-right");
+    this.galleryThumbnails = (0, _jquery2.default)(".gallery-thumbnails--slides");
+    this.liczbaSlides = (0, _jquery2.default)(".gallery-thumbnails__container__slide").length;
+    this.slideFlag = 1;
+    this.translate = 0;
+    this.events();
+  }
+
+  _createClass(GallerySlider, [{
+    key: "events",
+    value: function events() {
+      this.buttonRight.click(this.slideToRight.bind(this));
+      this.buttonLeft.click(this.slideToLeft.bind(this));
+    }
+  }, {
+    key: "slideToRight",
+    value: function slideToRight() {
+      if (this.slideFlag === this.liczbaSlides) {
+        return false;
+      } else {
+        this.galleryThumbnails.css("transform", "translateX(" + (this.translate - 347.6) + "px)");
+        this.translate -= 347.6;
+        this.slideFlag += 1;
+      }
+    }
+  }, {
+    key: "slideToLeft",
+    value: function slideToLeft() {
+      if (this.slideFlag === 1) {} else {
+        this.galleryThumbnails.css("transform", "translateX(" + (this.translate + 347.6) + "px)");
+        this.translate += 347.6;
+        this.slideFlag -= 1;
+      }
+    }
+  }]);
+
+  return GallerySlider;
+}();
+
+exports.default = GallerySlider;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var LtrScale = function () {
+  function LtrScale() {
+    _classCallCheck(this, LtrScale);
+
+    this.container = (0, _jquery2.default)(".mini-gallery");
+    this.button = (0, _jquery2.default)(".mini-gallery__button");
+    this.events();
+  }
+
+  _createClass(LtrScale, [{
+    key: "events",
+    value: function events() {
+      this.container.mouseenter(this.showButton);
+      this.container.mouseleave(this.hideButton);
+    }
+  }, {
+    key: "showButton",
+    value: function showButton() {
+      (0, _jquery2.default)(this).find('a').show("fast");
+    }
+  }, {
+    key: "hideButton",
+    value: function hideButton() {
+      (0, _jquery2.default)(this).find('a').hide("fast");
+    }
+  }]);
+
+  return LtrScale;
+}();
+
+exports.default = LtrScale;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+  function RevealOnScroll(elem, offset) {
+    _classCallCheck(this, RevealOnScroll);
+
+    this.itemsToReveal = elem;
+    this.offsetPercentage = offset;
+    this.hide();
+    this.createWaypoints();
+  }
+
+  _createClass(RevealOnScroll, [{
+    key: "hide",
+    value: function hide() {
+      this.itemsToReveal.addClass("reveal-item--hide");
+    }
+  }, {
+    key: "createWaypoints",
+    value: function createWaypoints() {
+      var that = this;
+      this.itemsToReveal.each(function () {
+        var currentItem = this;
+        new Waypoint({
+          element: currentItem,
+          handler: function handler() {
+            (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
+          },
+          offset: that.offsetPercentage
+        });
+      });
+    }
+  }]);
+
+  return RevealOnScroll;
+}();
+
+exports.default = RevealOnScroll;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// przykleja navbar od pewnej wysokości
+var StickyHeader = function () {
+  function StickyHeader() {
+    _classCallCheck(this, StickyHeader);
+
+    this.navbar = document.getElementById("menu-header");
+    this.stickyOffset2 = document.getElementById("menu-header").offsetTop;
+    this.events();
+  }
+
+  _createClass(StickyHeader, [{
+    key: "events",
+    value: function events() {
+      window.onscroll = this.sticky.bind(this);
+    }
+  }, {
+    key: "sticky",
+    value: function sticky() {
+      if (window.pageYOffset > this.stickyOffset2) {
+        this.navbar.classList.add("menu-header--sticky");
+      } else {
+        this.navbar.classList.remove("menu-header--sticky");
+      }
+    }
+  }]);
+
+  return StickyHeader;
+}();
+
+exports.default = StickyHeader;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _jquerySmoothScroll = __webpack_require__(2);
+
+var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// podświetla odpowiedni element menu
+// smoothScroll
+
+var NavbarLinks = function () {
+  function NavbarLinks() {
+    _classCallCheck(this, NavbarLinks);
+
+    this.pageSections = (0, _jquery2.default)(".gallery-thumbnails__title , .form__title , .parralax-section__bg-2, .offer__title");
+    this.headerLinks = (0, _jquery2.default)(".menu-header__nav--toggleVisibility a, .footer__list a, .main-section a");
+    this.lazyLoadImages = (0, _jquery2.default)(".lazyload");
+    this.createPageSectionWaypoints();
+    this.addSmoothScrolling();
+    this.refreshWaypoints();
+  }
+
+  // smooth scrolling
+
+
+  _createClass(NavbarLinks, [{
+    key: "addSmoothScrolling",
+    value: function addSmoothScrolling() {
+      this.headerLinks.smoothScroll({
+        speed: 1000,
+        offset: -50
+      });
+    }
+
+    // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
+
+  }, {
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      var that = this;
+      Waypoint.refreshAll();
+      window.onload = function () {
+        Waypoint.refreshAll();
+      };
+      this.lazyLoadImages.on("load", function () {
+        Waypoint.refreshAll();
+      });
+    }
+
+    // tworzy waypoints dla każdej sekcji na której jesteśmy
+
+  }, {
+    key: "createPageSectionWaypoints",
+    value: function createPageSectionWaypoints() {
+      var that = this;
+      this.pageSections.each(function () {
+        var currentSection = this;
+        new Waypoint({
+          element: currentSection,
+          handler: function handler(direction) {
+            if (direction == "down") {
+              var specificDataLink = currentSection.getAttribute("data-matching-link");
+              that.headerLinks.removeClass("is-current-link");
+              (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
+            } else {}
+          },
+          offset: "40%"
+        });
+        new Waypoint({
+          element: currentSection,
+          handler: function handler(direction) {
+            if (direction == "up") {
+              var specificDataLink = currentSection.getAttribute("data-matching-link");
+              that.headerLinks.removeClass("is-current-link");
+              (0, _jquery2.default)(specificDataLink).addClass("is-current-link");
+            } else {}
+          },
+          offset: "-30%"
+        });
+      });
+    }
+  }]);
+
+  return NavbarLinks;
+}();
+
+exports.default = NavbarLinks;
+
+/***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _jquerySmoothScroll = __webpack_require__(2);
+
+var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// przycisk do cofania strony na samą górę
+var ScrollToTop = function () {
+  function ScrollToTop() {
+    _classCallCheck(this, ScrollToTop);
+
+    this.scrollToTopIcon = (0, _jquery2.default)(".scrollToTopIcon");
+    this.addSmoothScrolling();
+    this.events();
+  }
+
+  _createClass(ScrollToTop, [{
+    key: "events",
+    value: function events() {
+      window.onscroll = this.makeVisible.bind(this);
+    }
+  }, {
+    key: "addSmoothScrolling",
+    value: function addSmoothScrolling() {
+      this.scrollToTopIcon.smoothScroll({
+        speed: 1000
+      });
+    }
+  }, {
+    key: "makeVisible",
+    value: function makeVisible() {
+      if (window.pageYOffset > 800) {
+        this.scrollToTopIcon.fadeIn();
+      } else {
+        this.scrollToTopIcon.fadeOut();
+      }
+    }
+  }]);
+
+  return ScrollToTop;
+}();
+
+exports.default = ScrollToTop;
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12063,7 +12131,7 @@ var FacebookPlugin = function () {
 exports.default = FacebookPlugin;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!

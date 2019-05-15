@@ -2,17 +2,25 @@
 /* Instead edit "gulp/templates/sprite.css" */
 
 .icon {
-    background-image: url("../../assets/images/icons/svg-compiled/sprite-15da9bf2.svg"); 
+    background-image: url("../../assets/images/icons/svg-compiled/sprite-f7582c4c.svg"); 
 }
 .no-svg .icon {
-    background-image: url("../../assets/images/icons/svg-compiled/sprite-15da9bf2.png"); 
+    background-image: url("../../assets/images/icons/svg-compiled/sprite-f7582c4c.png"); 
 }
 
 .icon--svg--arrow-pointing-to-left
     {
     width: 42px;
     height: 42px;
-    background-position: 60.396039603960396% 60.396039603960396%;
+    background-position: 73.72881355932203% 60.396039603960396%;
+    display: inline-block;
+}
+
+.icon--svg--arrow-up-on-a-black-circle-background
+    {
+    width: 52px;
+    height: 52px;
+    background-position: 53.982300884955755% 63.541666666666664%;
     display: inline-block;
 }
 
@@ -28,7 +36,7 @@
     {
     width: 34px;
     height: 34px;
-    background-position: 98.0952380952381% 58.095238095238095%;
+    background-position: 84.42622950819673% 82.85714285714286%;
     display: inline-block;
 }
 
@@ -36,7 +44,7 @@
     {
     width: 32px;
     height: 32px;
-    background-position: 93.39622641509433% 77.35849056603773%;
+    background-position: 99.1869918699187% 16.037735849056602%;
     display: inline-block;
 }
 
@@ -44,7 +52,7 @@
     {
     width: 122px;
     height: 122px;
-    background-position: 100% 0;
+    background-position: 78.2051282051282% 0;
     display: inline-block;
 }
 
@@ -52,7 +60,7 @@
     {
     width: 42px;
     height: 42px;
-    background-position: 81.18811881188118% 60.396039603960396%;
+    background-position: 51.69491525423729% 86.13861386138613%;
     display: inline-block;
 }
 
@@ -60,7 +68,7 @@
     {
     width: 42px;
     height: 42px;
-    background-position: 60.396039603960396% 81.18811881188118%;
+    background-position: 69.49152542372882% 86.13861386138613%;
     display: inline-block;
 }
 
@@ -76,6 +84,6 @@
     {
     width: 34px;
     height: 34px;
-    background-position: 78.0952380952381% 78.0952380952381%;
+    background-position: 100% 0;
     display: inline-block;
 }
