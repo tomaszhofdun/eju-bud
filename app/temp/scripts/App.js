@@ -11484,17 +11484,17 @@ var _revealOnScroll = __webpack_require__(8);
 
 var _revealOnScroll2 = _interopRequireDefault(_revealOnScroll);
 
-var _stickyHeader = __webpack_require__(9);
-
-var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
-
-var _navbarLinks = __webpack_require__(10);
+var _navbarLinks = __webpack_require__(9);
 
 var _navbarLinks2 = _interopRequireDefault(_navbarLinks);
 
-var _scrollToTop = __webpack_require__(11);
+var _scrollToTop = __webpack_require__(10);
 
 var _scrollToTop2 = _interopRequireDefault(_scrollToTop);
+
+var _stickyHeader = __webpack_require__(11);
+
+var _stickyHeader2 = _interopRequireDefault(_stickyHeader);
 
 var _facebook = __webpack_require__(12);
 
@@ -11512,13 +11512,15 @@ var mobileMenu = new _mobileMenu2.default();
 var currentDate = new _currentDate2.default();
 var gallerySlider = new _gallerySlider2.default();
 var ltrScale = new _ltrScale2.default();
-var stickyHeader = new _stickyHeader2.default();
 var navbarLinks = new _navbarLinks2.default();
-var navbarLinks = new _scrollToTop2.default();
+
+var scrollToTop = new _scrollToTop2.default();
+var stickyHeader = new _stickyHeader2.default();
+
 var facebookPlugin = new _facebook2.default();
-new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), "44%");
-new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), "70%");
-new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), "80%");
+new _revealOnScroll2.default((0, _jquery2.default)(".huge-icon-section_div"), "300px");
+new _revealOnScroll2.default((0, _jquery2.default)(".gallery-thumbnails__title"), "90%");
+new _revealOnScroll2.default((0, _jquery2.default)(".form__title"), "90%");
 
 /***/ }),
 /* 4 */
@@ -11850,58 +11852,6 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// przykleja navbar od pewnej wysokości
-var StickyHeader = function () {
-  function StickyHeader() {
-    _classCallCheck(this, StickyHeader);
-
-    this.navbar = document.getElementById("menu-header");
-    this.stickyOffset2 = document.getElementById("menu-header").offsetTop;
-    this.events();
-  }
-
-  _createClass(StickyHeader, [{
-    key: "events",
-    value: function events() {
-      window.onscroll = this.sticky.bind(this);
-    }
-  }, {
-    key: "sticky",
-    value: function sticky() {
-      if (window.pageYOffset > this.stickyOffset2) {
-        this.navbar.classList.add("menu-header--sticky");
-      } else {
-        this.navbar.classList.remove("menu-header--sticky");
-      }
-    }
-  }]);
-
-  return StickyHeader;
-}();
-
-exports.default = StickyHeader;
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
 var _jquerySmoothScroll = __webpack_require__(2);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
@@ -11996,7 +11946,7 @@ var NavbarLinks = function () {
 exports.default = NavbarLinks;
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12057,6 +12007,62 @@ var ScrollToTop = function () {
 }();
 
 exports.default = ScrollToTop;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// przykleja navbar od pewnej wysokości
+var StickyHeader = function () {
+  function StickyHeader() {
+    _classCallCheck(this, StickyHeader);
+
+    this.navbar = document.getElementById("menu-header");
+    this.stickyOffset = document.getElementById("menu-header").offsetTop;
+    this.events();
+  }
+
+  _createClass(StickyHeader, [{
+    key: "events",
+    value: function events() {
+      var that = this;
+      (0, _jquery2.default)(window).scroll(function () {
+        that.sticky();
+      });
+    }
+  }, {
+    key: "sticky",
+    value: function sticky() {
+      console.log("sticky");
+      if (window.pageYOffset > this.stickyOffset) {
+        this.navbar.classList.add("menu-header--sticky");
+      } else {
+        this.navbar.classList.remove("menu-header--sticky");
+      }
+    }
+  }]);
+
+  return StickyHeader;
+}();
+
+exports.default = StickyHeader;
 
 /***/ }),
 /* 12 */

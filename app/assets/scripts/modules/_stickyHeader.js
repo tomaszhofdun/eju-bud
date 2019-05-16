@@ -4,16 +4,20 @@ import $ from "jquery";
 class StickyHeader {
   constructor() {
     this.navbar = document.getElementById("menu-header");
-    this.stickyOffset2 = document.getElementById("menu-header").offsetTop;
+    this.stickyOffset = document.getElementById("menu-header").offsetTop;
     this.events();
   }
 
   events() {
-    window.onscroll = this.sticky.bind(this);
+    var that = this;
+    $(window).scroll(function() {
+      that.sticky();
+    });
   }
 
   sticky() {
-    if (window.pageYOffset > this.stickyOffset2) {
+    console.log("sticky");
+    if (window.pageYOffset > this.stickyOffset) {
       this.navbar.classList.add("menu-header--sticky");
     } else {
       this.navbar.classList.remove("menu-header--sticky");

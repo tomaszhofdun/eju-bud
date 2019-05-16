@@ -1,5 +1,5 @@
 <?php
-$to = "tomaszhofdun@gmail.com";
+$to = "kontakt@eju-bud.pl";
 $subject = "Pytanie wysłane za pomocą formularza kontaktowego na stronie eju-bud.com";
 
 $message = $_POST['message'];
