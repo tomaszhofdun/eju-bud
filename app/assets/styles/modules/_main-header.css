@@ -12,6 +12,9 @@
     }
     &--big {
       font-size: 4rem;
+      &--black {
+        color: black;
+      }
     }
   }
 

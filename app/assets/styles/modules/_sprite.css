@@ -2,17 +2,17 @@
 /* Instead edit "gulp/templates/sprite.css" */
 
 .icon {
-    background-image: url("../../assets/images/icons/svg-compiled/sprite-f7582c4c.svg"); 
+    background-image: url("../../assets/images/icons/svg-compiled/sprite-eca8696d.svg"); 
 }
 .no-svg .icon {
-    background-image: url("../../assets/images/icons/svg-compiled/sprite-f7582c4c.png"); 
+    background-image: url("../../assets/images/icons/svg-compiled/sprite-eca8696d.png"); 
 }
 
 .icon--svg--arrow-pointing-to-left
     {
     width: 42px;
     height: 42px;
-    background-position: 73.72881355932203% 60.396039603960396%;
+    background-position: 97.36842105263158% 50.495049504950494%;
     display: inline-block;
 }
 
@@ -20,7 +20,7 @@
     {
     width: 52px;
     height: 52px;
-    background-position: 53.982300884955755% 63.541666666666664%;
+    background-position: 82.99319727891157% 53.125%;
     display: inline-block;
 }
 
@@ -28,7 +28,7 @@
     {
     width: 122px;
     height: 122px;
-    background-position: 0 0;
+    background-position: 54.464285714285715% 0;
     display: inline-block;
 }
 
@@ -36,7 +36,15 @@
     {
     width: 34px;
     height: 34px;
-    background-position: 84.42622950819673% 82.85714285714286%;
+    background-position: 78.2051282051282% 93.33333333333333%;
+    display: inline-block;
+}
+
+.icon--svg--frown
+    {
+    width: 102px;
+    height: 102px;
+    background-position: 50% 85.91549295774648%;
     display: inline-block;
 }
 
@@ -44,7 +52,7 @@
     {
     width: 32px;
     height: 32px;
-    background-position: 99.1869918699187% 16.037735849056602%;
+    background-position: 99.36305732484077% 92.45283018867924%;
     display: inline-block;
 }
 
@@ -52,7 +60,7 @@
     {
     width: 122px;
     height: 122px;
-    background-position: 78.2051282051282% 0;
+    background-position: 0 0;
     display: inline-block;
 }
 
@@ -60,7 +68,7 @@
     {
     width: 42px;
     height: 42px;
-    background-position: 51.69491525423729% 86.13861386138613%;
+    background-position: 80.26315789473684% 76.23762376237623%;
     display: inline-block;
 }
 
@@ -68,7 +76,15 @@
     {
     width: 42px;
     height: 42px;
-    background-position: 69.49152542372882% 86.13861386138613%;
+    background-position: 94.07894736842105% 76.23762376237623%;
+    display: inline-block;
+}
+
+.icon--svg--smile
+    {
+    width: 102px;
+    height: 102px;
+    background-position: 100% 0;
     display: inline-block;
 }
 
@@ -84,6 +100,6 @@
     {
     width: 34px;
     height: 34px;
-    background-position: 100% 0;
+    background-position: 89.1025641025641% 93.33333333333333%;
     display: inline-block;
 }

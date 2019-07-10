@@ -1,7 +1,9 @@
 <?php
-$to = "kontakt@eju-bud.pl";
-$subject = "Pytanie wysłane za pomocą formularza kontaktowego na stronie eju-bud.com";
 
+if (isset($_POST["email"]) && !empty($_POST["email"])) {
+ 
+$to = "patryk.springer@op.pl";
+$subject = "Pytanie wysłane za pomocą formularza kontaktowego na stronie eju-bud.com";
 $message = $_POST['message'];
 $name = $_POST['fname'];
 $email = $_POST['email'];
@@ -37,7 +39,24 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 // More headers
 $headers .= 'From: <'.$email.'>' . "\r\n";
 
-mail($to,$subject,$messageHTML,$headers);
+$result = mail($to,$subject,$messageHTML,$headers);
+if(!$result) {   
+     echo "Error";   
+} else {
+    echo "Success";
+}
+   header('Location: successmail.html');
 
-header('Location: index.html');  
+// else {
+//    header('Location: failmail.html');
+// }
+
+}
+
+
+
+
+
+
+
 ?> 

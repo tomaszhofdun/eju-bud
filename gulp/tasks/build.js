@@ -44,7 +44,12 @@ gulp.task("optimizeImages", ["deleteDistFolder", "icons"], function() {
 
 gulp.task("usemin", ["deleteDistFolder", "css", "scripts"], function() {
   return gulp
-    .src(["./app/index.html", "./app/cennik.html"])
+    .src([
+      "./app/index.html",
+      "./app/cennik.html",
+      "./app/failmail.html",
+      "./app/successmail.html"
+    ])
     .pipe(
       usemin({
         css: [
