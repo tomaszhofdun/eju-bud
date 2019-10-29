@@ -16,7 +16,6 @@ class StickyHeader {
   }
 
   sticky() {
-    console.log("sticky");
     if (window.pageYOffset > this.stickyOffset) {
       this.navbar.classList.add("menu-header--sticky");
     } else {

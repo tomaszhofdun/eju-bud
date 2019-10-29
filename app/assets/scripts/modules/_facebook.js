@@ -28,7 +28,6 @@ class FacebookPlugin {
   keepFacebookWidgetSize() {
     if ($(window).width() < 800) {
       this.widgetWith.attr("data-width", "300");
-      console.log($(window).width());
     } else {
       this.widgetWith.attr("data-width", "350");
     }

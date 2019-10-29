@@ -12,7 +12,6 @@ class CurrentDate {
   }
 
   injectDate() {
-    // console.log(this.formatter.format(new Date()));
     this.currentDate.html(this.formatter.format(new Date()));
   }
 }

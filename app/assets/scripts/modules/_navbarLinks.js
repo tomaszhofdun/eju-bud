@@ -27,7 +27,7 @@ class NavbarLinks {
     });
   }
 
-  // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
+  // odświeża waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
   refreshWaypoints() {
     var that = this;
     Waypoint.refreshAll();

@@ -89,7 +89,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /*!
  * modernizr v3.7.1
- * Build https://modernizr.com/download?-svg-setclasses-dontmin
+ * Build https://modernizr.com/download?-setclasses-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -309,30 +309,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   }
 
   ;
-  /*!
-  {
-    "name": "SVG",
-    "property": "svg",
-    "caniuse": "svg",
-    "tags": ["svg"],
-    "authors": ["Erik Dahlstrom"],
-    "polyfills": [
-      "svgweb",
-      "raphael",
-      "amplesdk",
-      "canvg",
-      "svg-boilerplate",
-      "sie",
-      "dojogfx",
-      "fabricjs"
-    ]
-  }
-  !*/
-  /* DOC
-  Detects support for SVG in `<embed>` or `<object>` elements.
-  */
-
-  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
 
   // Run each test
   testRunner();

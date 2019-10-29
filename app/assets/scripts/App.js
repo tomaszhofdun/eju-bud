@@ -9,7 +9,6 @@ import ScrollToTop from "./modules/_scrollToTop";
 import StickyHeader from "./modules/_stickyHeader";
 import FacebookPlugin from "./modules/_facebook";
 import Lightbox from "lightbox2";
-//lub require("lightbox2");
 
 var mobileMenu = new MobileMenu();
 var currentDate = new CurrentDate();

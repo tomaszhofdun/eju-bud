@@ -29,21 +29,11 @@ class MobileMenu {
     this.menuContent.slideUp("slow");
   }
   toggleIconMenu() {
-    // this.menuContent.css("display")=="none"
-    // ? this.menuButton.html("&equiv;")
-    // : this.menuButton.html("&times;");
     if ($(".menu-header__nav--toggleVisibility").height() > 10) {
-      // console.log("none");
-      // console.log($(".menu-header__nav--toggleVisibility").height());
       this.menuButton.html("&equiv;");
     } else {
-      // console.log("block");
-      // console.log($(".menu-header__nav--toggleVisibility").height());
       this.menuButton.html("&times;");
     }
-    // this.menuButton.html() == "≡"
-    //   ? this.menuButton.html("&times;")
-    //   : this.menuButton.html("&equiv;");
   }
 }
 

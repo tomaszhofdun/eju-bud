@@ -11506,8 +11506,6 @@ var _lightbox2 = _interopRequireDefault(_lightbox);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//lub require("lightbox2");
-
 var mobileMenu = new _mobileMenu2.default();
 var currentDate = new _currentDate2.default();
 var gallerySlider = new _gallerySlider2.default();
@@ -11583,21 +11581,11 @@ var MobileMenu = function () {
   }, {
     key: "toggleIconMenu",
     value: function toggleIconMenu() {
-      // this.menuContent.css("display")=="none"
-      // ? this.menuButton.html("&equiv;")
-      // : this.menuButton.html("&times;");
       if ((0, _jquery2.default)(".menu-header__nav--toggleVisibility").height() > 10) {
-        // console.log("none");
-        // console.log($(".menu-header__nav--toggleVisibility").height());
         this.menuButton.html("&equiv;");
       } else {
-        // console.log("block");
-        // console.log($(".menu-header__nav--toggleVisibility").height());
         this.menuButton.html("&times;");
       }
-      // this.menuButton.html() == "≡"
-      //   ? this.menuButton.html("&times;")
-      //   : this.menuButton.html("&equiv;");
     }
   }]);
 
@@ -11643,7 +11631,6 @@ var CurrentDate = function () {
   _createClass(CurrentDate, [{
     key: "injectDate",
     value: function injectDate() {
-      // console.log(this.formatter.format(new Date()));
       this.currentDate.html(this.formatter.format(new Date()));
     }
   }]);
@@ -11891,7 +11878,7 @@ var NavbarLinks = function () {
       });
     }
 
-    // odświerza waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
+    // odświeża waypoints kiedy wczytuję się jakiś obraz z klasą .lazyload
 
   }, {
     key: "refreshWaypoints",
@@ -12050,7 +12037,6 @@ var StickyHeader = function () {
   }, {
     key: "sticky",
     value: function sticky() {
-      console.log("sticky");
       if (window.pageYOffset > this.stickyOffset) {
         this.navbar.classList.add("menu-header--sticky");
       } else {
@@ -12124,7 +12110,6 @@ var FacebookPlugin = function () {
     value: function keepFacebookWidgetSize() {
       if ((0, _jquery2.default)(window).width() < 800) {
         this.widgetWith.attr("data-width", "300");
-        console.log((0, _jquery2.default)(window).width());
       } else {
         this.widgetWith.attr("data-width", "350");
       }
