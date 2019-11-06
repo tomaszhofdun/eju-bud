@@ -8,17 +8,14 @@ import NavbarLinks from "./modules/_navbarLinks";
 import ScrollToTop from "./modules/_scrollToTop";
 import StickyHeader from "./modules/_stickyHeader";
 import FacebookPlugin from "./modules/_facebook";
-import Lightbox from "lightbox2";
 
 var mobileMenu = new MobileMenu();
 var currentDate = new CurrentDate();
 var gallerySlider = new GallerySlider();
 var ltrScale = new LtrScale();
 var navbarLinks = new NavbarLinks();
-
 var scrollToTop = new ScrollToTop();
 var stickyHeader = new StickyHeader();
-
 var facebookPlugin = new FacebookPlugin();
 new RevealOnScroll($(".huge-icon-section_div"), "300px");
 new RevealOnScroll($(".gallery-thumbnails__title"), "90%");
