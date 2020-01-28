@@ -2,10 +2,10 @@
 /* Instead edit "gulp/templates/sprite.css" */
 
 .icon {
-    background-image: url("../../assets/images/icons/svg-compiled/sprite-eca8696d.svg"); 
+    background-image: url("../../assets/images/icons/svg-compiled/sprite-bdb54255.svg"); 
 }
 .no-svg .icon {
-    background-image: url("../../assets/images/icons/svg-compiled/sprite-eca8696d.png"); 
+    background-image: url("../../assets/images/icons/svg-compiled/sprite-bdb54255.png"); 
 }
 
 .icon--svg--arrow-pointing-to-left
@@ -28,7 +28,7 @@
     {
     width: 122px;
     height: 122px;
-    background-position: 54.464285714285715% 0;
+    background-position: 0 0;
     display: inline-block;
 }
 
@@ -60,7 +60,7 @@
     {
     width: 122px;
     height: 122px;
-    background-position: 0 0;
+    background-position: 54.464285714285715% 0;
     display: inline-block;
 }
 
