@@ -7,14 +7,14 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "app/temp/scripts"),
-    filename: "[name].js"
+    filename: "[name]-bundle.js"
   },
   module: {
     loaders: [
       {
         loader: "babel-loader",
         query: {
-          presets: ["es2015"]
+          presets: ["@babel/preset-env"]
         },
         test: /\.js$/,
         exclude: /node_modules/

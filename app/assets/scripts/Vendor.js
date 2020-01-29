@@ -1,4 +1,4 @@
-import "./modules/modernizr";
+import "../modernizr/modernizr";
 import "picturefill";
 import "lazysizes";
 import "lightbox2";

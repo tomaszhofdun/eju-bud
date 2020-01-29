@@ -10,7 +10,6 @@ mixin = require("postcss-mixins"),
 webpack = require("webpack"),
 rename = require("gulp-rename"),
 svg = require("gulp-svg-sprite"),
-watch = require("gulp-watch"),
 browserSync = require("browser-sync").create(),
 del = require("del"),
 imagemin = require("gulp-imagemin"),
@@ -33,15 +32,16 @@ const { series, parallel } = require('gulp');
 
   // Add classes like "flexbox" to html tag
   
-  gulp.task("setClasses2",function setClasses2(){
+  gulp.task("setClasses2",function setClasses2(cb){
     return gulp
-      .src(["./app/assets/styles/**/*.css", "./app/assets/scripts/**/*.js"])
+      .src(["app/assets/styles/**/*.css", "app/assets/scripts/**/*.js"])
       .pipe(
         modernizr({
           options: ["setClasses"]
         })
       )
-      .pipe(gulp.dest("app/assets/scripts/modules"));
+      .pipe(gulp.dest("app/assets/modernizr"));
+      cb();
   })
 
   ////////////////////////////////////////////////////////////////////////////////////
@@ -50,15 +50,17 @@ const { series, parallel } = require('gulp');
   ////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////
 
-  gulp.task("scripts", function scripts(callback) {
-    webpack(require("./webpack.config.js"), function(err, stats) {
-      if (err) {
-        console.log(err.toString());
-      }
-      console.log(stats.toString());
-      callback();
-    });
-  })
+  gulp.task("scripts", function(callback) {
+    return webpack(require("./webpack.config.js"), function(err, stats) {
+     if (err) {
+       console.log(err.toString());
+     }
+     else {
+       console.log(stats.toString());
+     }
+     callback();
+   });
+ })
   
   ////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////
@@ -78,7 +80,6 @@ const { series, parallel } = require('gulp');
         this.emit("end");
       })
       .pipe(sourcemaps.write())
-  
       .pipe(gulp.dest("app/temp/styles/"));
   })
 
@@ -166,27 +167,26 @@ config = {
   ////////////////////////////////////////////////////////////////////////////////////
 
 
-  gulp.task("monitor", function monitor() {
+  gulp.task("monitor", function(done) {
     browserSync.init({
       notify: true,
       server: {
         baseDir: "./app"
       }
     });
-  
-    watch("app/index.html", function () {
-      browserSync.reload();
-    })
-    watch("app/assets/styles/**/*.css", gulp.series("css","cssInject"))
-    watch("app/assets/scripts/**/*.js", gulp.series("setClasses2","scripts","refreshSite"))
+    gulp.watch("app/index.html", gulp.series("refreshSite"));
+    gulp.watch("app/assets/styles/**/*.css", gulp.series("css","cssInject"));
+    gulp.watch("app/assets/scripts/**/*.js", gulp.series("scripts_with_modernizr","refreshSite"));
+    done();
   } ) 
   
   gulp.task("cssInject", function cssInject() {
     return gulp.src("app/temp/styles/styles.css").pipe(browserSync.stream());
   })
   
-  gulp.task("refreshSite", function refreshSite() {
+  gulp.task("refreshSite", function refreshSite(cb) {
     browserSync.reload();
+    cb();
   })
   
   ////////////////////////////////////////////////////////////////////////////////////

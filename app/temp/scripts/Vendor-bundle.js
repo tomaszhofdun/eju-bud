@@ -10337,27 +10337,28 @@ return jQuery;
 /* 11 */,
 /* 12 */,
 /* 13 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modernizr_modernizr__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modernizr_modernizr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__modernizr_modernizr__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_picturefill__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_picturefill___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_picturefill__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lazysizes__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lazysizes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lazysizes__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lightbox2__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lightbox2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lightbox2__);
 
 
-__webpack_require__(14);
 
-__webpack_require__(15);
 
-__webpack_require__(16);
-
-__webpack_require__(17);
 
 /***/ }),
 /* 14 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /*!
  * modernizr v3.8.0
@@ -10383,21 +10384,20 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
  * information allows you to progressively enhance your pages with a granular level
  * of control over the experience.
 */
+;
 
-;(function (window, document, undefined) {
-
+(function (window, document, undefined) {
   var tests = [];
-
   /**
    * ModernizrProto is the constructor for Modernizr
    *
    * @class
    * @access public
    */
+
   var ModernizrProto = {
     // The current version, dummy
     _version: '3.8.0',
-
     // Any settings that don't work as separate modules
     // can go in here as configuration.
     _config: {
@@ -10406,10 +10406,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       'enableJSClass': true,
       'usePrefixes': true
     },
-
     // Queue of tests
     _q: [],
-
     // Stub these for people who are listening
     on: function on(test, cb) {
       // I don't really think people should do this, but we can
@@ -10423,26 +10421,28 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         cb(self[test]);
       }, 0);
     },
-
     addTest: function addTest(name, fn, options) {
-      tests.push({ name: name, fn: fn, options: options });
+      tests.push({
+        name: name,
+        fn: fn,
+        options: options
+      });
     },
-
     addAsyncTest: function addAsyncTest(fn) {
-      tests.push({ name: null, fn: fn });
+      tests.push({
+        name: null,
+        fn: fn
+      });
     }
-  };
+  }; // Fake some of Object.create so we can force non test results to be non "own" properties.
 
-  // Fake some of Object.create so we can force non test results to be non "own" properties.
   var Modernizr = function Modernizr() {};
-  Modernizr.prototype = ModernizrProto;
 
-  // Leak modernizr globally when you `require` it rather than force it here.
+  Modernizr.prototype = ModernizrProto; // Leak modernizr globally when you `require` it rather than force it here.
   // Overwrite name so constructor name is nicer :D
+
   Modernizr = new Modernizr();
-
   var classes = [];
-
   /**
    * is returns a boolean if the typeof an obj is exactly type.
    *
@@ -10452,18 +10452,19 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    * @param {string} type - A string to compare the typeof against
    * @returns {boolean} true if the typeof the first parameter is exactly the specified type, false otherwise
    */
+
   function is(obj, type) {
-    return (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === type;
+    return _typeof(obj) === type;
   }
 
   ;
-
   /**
    * Run through all tests and detect their support in the current UA.
    *
    * @access private
    * @returns {void}
    */
+
   function testRunner() {
     var featureNames;
     var feature;
@@ -10476,14 +10477,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     for (var featureIdx in tests) {
       if (tests.hasOwnProperty(featureIdx)) {
         featureNames = [];
-        feature = tests[featureIdx];
-        // run the test, throw the return value into the Modernizr,
+        feature = tests[featureIdx]; // run the test, throw the return value into the Modernizr,
         // then based on that boolean, define an appropriate className
         // and push it into an array of classes we'll join later.
         //
         // If there is no name, it's an 'async' test that is run,
         // but not directly added to the object. That should
         // be done with a post-run addTest call.
+
         if (feature.name) {
           featureNames.push(feature.name.toLowerCase());
 
@@ -10493,20 +10494,19 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               featureNames.push(feature.options.aliases[aliasIdx].toLowerCase());
             }
           }
-        }
+        } // Run the test, or use the raw value if it's not a function
 
-        // Run the test, or use the raw value if it's not a function
-        result = is(feature.fn, 'function') ? feature.fn() : feature.fn;
 
-        // Set each of the names on the Modernizr object
+        result = is(feature.fn, 'function') ? feature.fn() : feature.fn; // Set each of the names on the Modernizr object
+
         for (nameIdx = 0; nameIdx < featureNames.length; nameIdx++) {
-          featureName = featureNames[nameIdx];
-          // Support dot properties as sub tests. We don't do checking to make sure
+          featureName = featureNames[nameIdx]; // Support dot properties as sub tests. We don't do checking to make sure
           // that the implied parent tests have been added. You must call them in
           // order (either in the test, or make the parent test a dependency).
           //
           // Cap it to TWO to make the logic simple and because who needs that kind of subtesting
           // hashtag famous last words
+
           featureNameSplit = featureName.split('.');
 
           if (featureNameSplit.length === 1) {
@@ -10525,24 +10525,24 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       }
     }
   }
-  ;
 
+  ;
   /**
    * docElement is a convenience wrapper to grab the root element of the document
    *
    * @access private
    * @returns {HTMLElement|SVGElement} The root element of the document
    */
-  var docElement = document.documentElement;
 
+  var docElement = document.documentElement;
   /**
    * A convenience helper to check if the document we are running in is an SVG document
    *
    * @access private
    * @returns {boolean}
    */
-  var isSVG = docElement.nodeName.toLowerCase() === 'svg';
 
+  var isSVG = docElement.nodeName.toLowerCase() === 'svg';
   /**
    * setClasses takes an array of class names and adds them to the root element
    *
@@ -10552,16 +10552,17 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    */
   // Pass in an and array of class names, e.g.:
   //  ['no-webp', 'borderradius', ...]
+
   function setClasses(classes) {
     var className = docElement.className;
     var classPrefix = Modernizr._config.classPrefix || '';
 
     if (isSVG) {
       className = className.baseVal;
-    }
-
-    // Change `no-js` to `js` (independently of the `enableClasses` option)
+    } // Change `no-js` to `js` (independently of the `enableClasses` option)
     // Handle classPrefix on this too
+
+
     if (Modernizr._config.enableJSClass) {
       var reJS = new RegExp('(^|\\s)' + classPrefix + 'no-js(\\s|$)');
       className = className.replace(reJS, '$1' + classPrefix + 'js$2');
@@ -10572,6 +10573,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       if (classes.length > 0) {
         className += ' ' + classPrefix + classes.join(' ' + classPrefix);
       }
+
       if (isSVG) {
         docElement.className.baseVal = className;
       } else {
@@ -10600,29 +10602,25 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     ]
   }
   !*/
+
   /* DOC
   Detects support for SVG in `<embed>` or `<object>` elements.
   */
 
-  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
+  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect); // Run each test
 
-  // Run each test
-  testRunner();
+  testRunner(); // Remove the "no-js" class if it exists
 
-  // Remove the "no-js" class if it exists
   setClasses(classes);
-
   delete ModernizrProto.addTest;
-  delete ModernizrProto.addAsyncTest;
+  delete ModernizrProto.addAsyncTest; // Run the things that are supposed to run after the tests
 
-  // Run the things that are supposed to run after the tests
   for (var i = 0; i < Modernizr._q.length; i++) {
     Modernizr._q[i]();
-  }
+  } // Leak Modernizr namespace
 
-  // Leak Modernizr namespace
+
   window.Modernizr = Modernizr;
-
   ;
 })(window, document);
 
