@@ -195,8 +195,8 @@ config = {
   ////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////
 
-  gulp.task("deleteDistFolder", function deleteDistFolder() {
-    return del("./dist")
+  gulp.task("deletedocsFolder", function deletedocsFolder() {
+    return del("./docs")
   });
 
   gulp.task("copyOtherFiles", function copyOtherFiles() {
@@ -209,7 +209,7 @@ config = {
       "!./app/temp",
       "!./app/temp/**"
     ];
-    return gulp.src(pathToCopy).pipe(gulp.dest("./dist"));
+    return gulp.src(pathToCopy).pipe(gulp.dest("./docs"));
   });
 
   gulp.task("optimizeAndCopyImages", function optimizeAndCopyImages() {
@@ -228,7 +228,7 @@ config = {
           multipass: true
         })
       )
-      .pipe(gulp.dest("./dist/assets/images"));
+      .pipe(gulp.dest("./docs/assets/images"));
   });
 
   gulp.task("use_min", function use_min() {
@@ -259,12 +259,12 @@ config = {
           ]
         })
       )
-      .pipe(gulp.dest("./dist"));
+      .pipe(gulp.dest("./docs"));
   });
 
   gulp.task("scripts_with_modernizr", gulp.series("setClasses2", "scripts"))
   
   gulp.task("icons", gulp.series("deleteOldSpriteCss", "createSprite",  "copySpriteCss", "createPng", "copySpriteSvg", "endCleaning"))
 
-  gulp.task("build", gulp.series("deleteDistFolder", "copyOtherFiles", "icons", "optimizeAndCopyImages", "css", "scripts_with_modernizr", "use_min"))
+  gulp.task("build", gulp.series("deletedocsFolder", "copyOtherFiles", "icons", "optimizeAndCopyImages", "css", "scripts_with_modernizr", "use_min"))
  
