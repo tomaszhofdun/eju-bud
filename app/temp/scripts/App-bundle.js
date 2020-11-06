@@ -10280,9 +10280,9 @@ jQuery.nodeName = nodeName;
 // https://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
 
 if ( true ) {
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
 		return jQuery;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+	}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 }
 
@@ -11507,9 +11507,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var MobileMenu =
-/*#__PURE__*/
-function () {
+var MobileMenu = /*#__PURE__*/function () {
   function MobileMenu() {
     _classCallCheck(this, MobileMenu);
 
@@ -11577,9 +11575,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var CurrentDate =
-/*#__PURE__*/
-function () {
+var CurrentDate = /*#__PURE__*/function () {
   function CurrentDate() {
     _classCallCheck(this, CurrentDate);
 
@@ -11619,9 +11615,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var GallerySlider =
-/*#__PURE__*/
-function () {
+var GallerySlider = /*#__PURE__*/function () {
   function GallerySlider() {
     _classCallCheck(this, GallerySlider);
 
@@ -11682,9 +11676,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var LtrScale =
-/*#__PURE__*/
-function () {
+var LtrScale = /*#__PURE__*/function () {
   function LtrScale() {
     _classCallCheck(this, LtrScale);
 
@@ -11734,9 +11726,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var RevealOnScroll =
-/*#__PURE__*/
-function () {
+var RevealOnScroll = /*#__PURE__*/function () {
   function RevealOnScroll(elem, offset) {
     _classCallCheck(this, RevealOnScroll);
 
@@ -11795,9 +11785,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
  // podświetla odpowiedni element menu
 // smoothScroll
 
-var NavbarLinks =
-/*#__PURE__*/
-function () {
+var NavbarLinks = /*#__PURE__*/function () {
   function NavbarLinks() {
     _classCallCheck(this, NavbarLinks);
 
@@ -11889,9 +11877,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
  // przycisk do cofania strony na samą górę
 
-var ScrollToTop =
-/*#__PURE__*/
-function () {
+var ScrollToTop = /*#__PURE__*/function () {
   function ScrollToTop() {
     _classCallCheck(this, ScrollToTop);
 
@@ -11943,9 +11929,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
  // przykleja navbar od pewnej wysokości
 
-var StickyHeader =
-/*#__PURE__*/
-function () {
+var StickyHeader = /*#__PURE__*/function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
@@ -11993,9 +11977,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var FacebookPlugin =
-/*#__PURE__*/
-function () {
+var FacebookPlugin = /*#__PURE__*/function () {
   function FacebookPlugin() {
     _classCallCheck(this, FacebookPlugin);
 
