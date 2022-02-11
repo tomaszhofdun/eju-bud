@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/tomaszhofdun/eju-bud#readme",
   "dependencies": {
-    "ajv": "^5.5.2",
+    "ajv": "^6.12.3",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-watch": "^5.0.1",
